@@ -1,13 +1,11 @@
 angular.module('nag.revealingPanel', [
-  'nag.core',
-  'nag.siteOverlay'
+  'nag.core'
 ])
 .directive('nagRevealingPanel', [
   '$compile',
   'nagDefaults',
   'nagHelper',
-  'nagSiteOverlay',
-  function($compile, nagDefaults, nagHelper, nagSiteOverlay){
+  function($compile, nagDefaults, nagHelper){
     return {
       restrict: 'EA',
       priority: 1,
@@ -30,6 +28,7 @@ angular.module('nag.revealingPanel', [
 
         return {
           pre: function(scope, element, attributes) {
+            var overlayElement;
             scope.options = nagDefaults.getRevealingPanelOptions(scope.options);
 
             //see if the content for the panel should be coming from a template file
@@ -40,6 +39,16 @@ angular.module('nag.revealingPanel', [
 
             element.addClass('revealing-panel');
             element.find('.content').addClass(scope.options.position);
+
+            if(scope.options.hasOverlay === true) {
+              overlayElement = $('<div class="site-overlay" ng-if="panelVisible" ng-animate="\'fade\'" ng-class="{\'is-active\': panelVisible}"></div>');
+
+              if(scope.options.overlayClickClose === true) {
+                overlayElement.attr('ng-click', 'hide()');
+              }
+
+              element.append($compile(overlayElement)(scope));
+            }
           },
           post: function(scope, element, attributes) {
             scope.id = nagHelper.generateId('revealing-panel');
@@ -64,24 +73,6 @@ angular.module('nag.revealingPanel', [
             scope.toggle = function() {
               (scope.panelVisible === true) ? scope.hide() : scope.show();
             };
-
-            scope.$watch('panelVisible', function(newValue) {
-              if(newValue === true) {
-                if(scope.options.hasOverlay === true) {
-                  nagSiteOverlay.enable();
-
-                  if(scope.options.overlayClickClose === true) {
-                    nagSiteOverlay.addEvent('click', function() {
-                      scope.hide();
-                    });
-                  }
-                }
-              } else {
-                if(scope.options.hasOverlay === true) {
-                  nagSiteOverlay.disable();
-                }
-              }
-            }, true);
 
             if(scope.options.escapeClose === true) {
               $(document).bind('keydown.' + scope.id, function(event) {

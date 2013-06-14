@@ -1,9 +1,8 @@
 {
   "name": "nucleus-angular-revealing-panel",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "dependencies": {
-    "nucleus-angular-core": "latest",
-    "nucleus-angular-site-overlay":"latest"
+    "nucleus-angular-core": "latest"
   },
   "devDependencies": {
     "jquery": "1.9.1",
