@@ -16,6 +16,7 @@ angular.module('nag.revealingPanel.panel', [
       controller: [
         '$scope',
         function($scope) {
+
           //need to unbind the global events
           $scope.$on('$destroy', function() {
             $(document).unbind('keydown.' + $scope.id);
@@ -26,7 +27,7 @@ angular.module('nag.revealingPanel.panel', [
         //for whatever reason dynamically adding angular attributes can't be done in the pre of the return object
         element.find('.handle').attr('ng-click', 'toggle()');
         element.find('.content').attr('ng-class', "{'is-active': panelVisible}");
-        element.find('.content').attr('ng-animate', "{show: 'fade-in', hide: 'fade-out'}");
+        //element.find('.content').attr('ng-animate', "{show: 'fade-in', hide: 'fade-out'}");
         element.find('.content').attr('nag-revealing-panel-content', '');
 
         return {

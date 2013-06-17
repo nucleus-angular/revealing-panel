@@ -16,10 +16,11 @@ angular.module('nag.revealingPanel.content', [
             scope.$watch('panelVisible', function(newValue) {
               //don't play the animation on initial load
               if(initialLoad === true) {
+                //using custom animate values because we don't want to have the default behaviour that show/hide enter/leave have
                 if(newValue === true) {
-                  animator.show(element);
+                  animator.animate('reveal', element);
                 } else {
-                  animator.hide(element);
+                  animator.animate('conceal', element);
                 }
               } else {
                 //we can now play animations for this element
