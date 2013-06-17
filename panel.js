@@ -27,7 +27,6 @@ angular.module('nag.revealingPanel.panel', [
         //for whatever reason dynamically adding angular attributes can't be done in the pre of the return object
         element.find('.handle').attr('ng-click', 'toggle()');
         element.find('.content').attr('ng-class', "{'is-active': panelVisible}");
-        //element.find('.content').attr('ng-animate', "{show: 'fade-in', hide: 'fade-out'}");
         element.find('.content').attr('nag-revealing-panel-content', '');
 
         return {
@@ -54,10 +53,12 @@ angular.module('nag.revealingPanel.panel', [
               element.append($compile(overlayElement)(scope));
             }
 
-            element.find('.content').css({
-              marginTop: ((element.find('.content').outerHeight() / 2) * -1),
-              marginLeft: ((element.find('.content').outerWidth() / 2) * -1)
-            });
+            if(scope.options.position === 'center') {
+              element.find('.content').css({
+                marginTop: ((element.find('.content').outerHeight() / 2) * -1),
+                marginLeft: ((element.find('.content').outerWidth() / 2) * -1)
+              });
+            }
           },
           post: function(scope, element, attributes) {
 

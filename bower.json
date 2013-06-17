@@ -1,6 +1,6 @@
 {
   "name": "nucleus-angular-revealing-panel",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "dependencies": {
     "nucleus-angular-core": "latest"
   },
