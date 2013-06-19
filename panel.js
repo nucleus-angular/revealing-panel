@@ -11,7 +11,8 @@ angular.module('nag.revealingPanel.panel', [
       restrict: 'EA',
       priority: 1,
       scope: {
-        options: '=nagRevealingPanel'
+        options: '=?nagRevealingPanel',
+        model: '=?'
       },
       controller: [
         '$scope',
@@ -27,7 +28,11 @@ angular.module('nag.revealingPanel.panel', [
         //for whatever reason dynamically adding angular attributes can't be done in the pre of the return object
         element.find('.handle').attr('ng-click', 'toggle()');
         element.find('.content').attr('ng-class', "{'is-active': panelVisible}");
+        element.find('.content').attr('ng-animate', "{reveal: 'reveal-animate', conceal: 'conceal-animate'}");
         element.find('.content').attr('nag-revealing-panel-content', '');
+
+        //this allow us to make sure we can prevent the content in panel from doing weird shift when being revealed/concealed
+        element.find('.content').html($('<div class="inner-content"></div>').html(element.find('.content').html()));
 
         return {
           pre: function(scope, element, attributes) {
@@ -37,7 +42,7 @@ angular.module('nag.revealingPanel.panel', [
             //see if the content for the panel should be coming from a template file
             if(scope.options.contentTemplateUrl) {
               var template = $(nagHelper.getAsyncTemplate(scope.options.contentTemplateUrl, scope.options));
-              element.find('.content').html($compile(template)(scope));
+              element.find('.inner-content').html($compile(template)(scope));
             }
 
             element.addClass('revealing-panel');
