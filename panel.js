@@ -92,11 +92,13 @@ angular.module('nag.revealingPanel.panel', [
 
             if(scope.options.escapeClose === true) {
               $(document).bind('keydown.' + scope.id, function(event) {
-                scope.$apply(function() {
-                  if(event.which === 27) {
-                    scope.hide();
-                  }
-                });
+                if(scope.panelVisible === true) {
+                  scope.$apply(function() {
+                    if(event.which === 27) {
+                      scope.hide();
+                    }
+                  });
+                }
               });
             }
           }
