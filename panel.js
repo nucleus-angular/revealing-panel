@@ -1,3 +1,12 @@
+/**
+ * Panel for revealing panel component
+ *
+ * @module nag.revealingPanel.panel
+ * @ngdirective nagRevealingPanel
+ *
+ * @nghtmlattribute {object} nag-revealing-panel Tell AngularJS this element is a revealing panel component and passed object overwrites option defaults
+ * @nghtmlattribute {object} data-model The data model to us for the panel
+ */
 angular.module('nag.revealingPanel.panel', [
   'nag.core'
 ])
@@ -17,7 +26,6 @@ angular.module('nag.revealingPanel.panel', [
       controller: [
         '$scope',
         function($scope) {
-
           //need to unbind the global events
           $scope.$on('$destroy', function() {
             $(document).unbind('keydown.' + $scope.id);
@@ -37,6 +45,18 @@ angular.module('nag.revealingPanel.panel', [
         return {
           pre: function(scope, element, attributes) {
             var overlayElement;
+            /**
+             * Options for revealing panel (default pull from object is passed in as value for nag-revealing-panel attribute)
+             *
+             * @ngscope
+             * @property {object} options
+             *   @property {string} [options.contentTemplateUrl] Remote url for where the content for the panel is
+             *   @property {string} [options.position="right"] Position of the panel
+             *   @property {string} [options.rootTemplatePath=""] Path added to the revealing panel request for remote templates
+             *   @property {boolean} [options.escapeClose=true] Whether to close panel on escape key
+             *   @property {boolean} [options.hasOverlay=true] Whether to show an overlay with the panel
+             *   @property {boolean} [options.overlayClickClose=true] Whether to close the panel when the overlay it clicked
+             */
             scope.options = nagDefaults.getRevealingPanelOptions(scope.options);
 
             //see if the content for the panel should be coming from a template file
@@ -67,9 +87,28 @@ angular.module('nag.revealingPanel.panel', [
           },
           post: function(scope, element, attributes) {
 
+            /**
+             * Unique id to identify the revealing panel
+             *
+             * @ngscope
+             * @property {string} id
+             */
             scope.id = nagHelper.generateId('revealing-panel');
+
+            /**
+             * Whther or not the panel is currently visible
+             *
+             * @ngscope
+             * @property {boolean} panelVisible
+             */
             scope.panelVisible = false;
 
+            /**
+             * Hides the revealing panel
+             *
+             * @ngscope
+             * @method hide
+             */
             scope.hide = function() {
               scope.panelVisible = false;
 
@@ -78,6 +117,12 @@ angular.module('nag.revealingPanel.panel', [
               }
             };
 
+            /**
+             * Shows the revealing panel
+             *
+             * @ngscope
+             * @method show
+             */
             scope.show = function() {
               if(_(scope.options.showCallback).isFunction()) {
                 scope.options.showCallback();
@@ -86,6 +131,12 @@ angular.module('nag.revealingPanel.panel', [
               scope.panelVisible = true;
             };
 
+            /**
+             * Toggles the display
+             *
+             * @ngscope
+             * @method toggle
+             */
             scope.toggle = function() {
               (scope.panelVisible === true) ? scope.hide() : scope.show();
             };

@@ -1,3 +1,11 @@
+/**
+ * Content element for the revealing panel component
+ *
+ * @module nag.revealingPanel.content
+ * @ngdirective nagRevealingPanelContent
+ *
+ * @nghtmlattribute {empty} nag-revealing-panel-content Tells AngularJS this element is the revealing panel content component
+ */
 angular.module('nag.revealingPanel.content', [
   'nag.core'
 ])
@@ -13,6 +21,11 @@ angular.module('nag.revealingPanel.content', [
           post: function(scope, element, attributes) {
             var animator = $animator(scope, attributes);
 
+            /**
+             * Trigger 'reveal'/'conceal' animations when the panel visibility changes
+             *
+             * @ngwatch panelVisible
+             */
             scope.$watch('panelVisible', function(newValue) {
               //don't play the animation on initial load
               if(initialLoad === true) {
