@@ -8,14 +8,14 @@
  * @nghtmlattribute {object} data-model The data model to us for the panel
  */
 angular.module('nag.revealingPanel.panel', [
+  'ngAnimate',
   'nag.core'
 ])
 .directive('nagRevealingPanel', [
   '$compile',
-  '$animator',
   'nagDefaults',
   'nagHelper',
-  function($compile, $animator, nagDefaults, nagHelper){
+  function($compile, nagDefaults, nagHelper){
     return {
       restrict: 'EA',
       priority: 1,
@@ -36,7 +36,7 @@ angular.module('nag.revealingPanel.panel', [
         //for whatever reason dynamically adding angular attributes can't be done in the pre of the return object
         element.find('.handle').attr('ng-click', 'toggle()');
         element.find('.content').attr('ng-class', "{'is-active': panelVisible}");
-        element.find('.content').attr('ng-animate', "{reveal: 'reveal-animate', conceal: 'conceal-animate'}");
+        //element.find('.content').attr('ng-animate', "{reveal: 'reveal-animate', conceal: 'conceal-animate'}");
         element.find('.content').attr('nag-revealing-panel-content', '');
 
         //this allow us to make sure we can prevent the content in panel from doing weird shift when being revealed/concealed
@@ -69,7 +69,7 @@ angular.module('nag.revealingPanel.panel', [
             element.find('.content').addClass(scope.options.position);
 
             if(scope.options.hasOverlay === true) {
-              overlayElement = $('<div class="site-overlay" ng-if="panelVisible" ng-animate="\'fade\'" ng-class="{\'is-active\': panelVisible}"></div>');
+              overlayElement = $('<div class="site-overlay" ng-class="{\'is-active\': panelVisible}"></div>');
 
               if(scope.options.overlayClickClose === true) {
                 overlayElement.attr('ng-click', 'hide()');

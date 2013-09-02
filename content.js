@@ -10,8 +10,7 @@ angular.module('nag.revealingPanel.content', [
   'nag.core'
 ])
 .directive('nagRevealingPanelContent', [
-  '$animator',
-  function($animator){
+  function(/*$animator*/){
     return {
       restrict: 'EA',
       compile: function(element, attributes, transclude) {
@@ -19,7 +18,7 @@ angular.module('nag.revealingPanel.content', [
         var initialLoad = false;
         return {
           post: function(scope, element, attributes) {
-            var animator = $animator(scope, attributes);
+            //var animator = $animator(scope, attributes);
 
             /**
              * Trigger 'reveal'/'conceal' animations when the panel visibility changes
@@ -31,9 +30,11 @@ angular.module('nag.revealingPanel.content', [
               if(initialLoad === true) {
                 //using custom animate values because we don't want to have the default behaviour that show/hide enter/leave have
                 if(newValue === true) {
-                  animator.animate('reveal', element);
+                  //animator.animate('reveal', element);
+                  //$animator.addClass(element, 'reveal');
                 } else {
-                  animator.animate('conceal', element);
+                  //animator.animate('conceal', element);
+                  //$animator.addClass(element, 'conceal');
                 }
               } else {
                 //we can now play animations for this element
