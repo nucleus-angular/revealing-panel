@@ -1,5 +1,7 @@
 /**
- * Nucleus Angular Revealing panel
+ * # Revealing Panel Module
+ *
+ * This module contain the revealing panel components.
  *
  * @module nag.revealingPanel
  */

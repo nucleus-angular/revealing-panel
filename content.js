@@ -1,11 +1,7 @@
-/**
- * Content element for the revealing panel component
- *
- * @module nag.revealingPanel.content
- * @ngdirective nagRevealingPanelContent
- *
- * @nghtmlattribute {empty} nag-revealing-panel-content Tells AngularJS this element is the revealing panel content component
- */
+/*******************************************************************************************************/
+/* I THINK THIS CAN BE REMOVED BECAUSE OF THE ANIMATION CHANGE IN THE LATEST RC WHICH REMOVES THE NEED */
+/* FOR THIS AS THIS WAS NEEDED ONLY TO BE ABLE TO APPLY ANIMATIONS WHICH NOT CAN BE DONE EASIER ********/
+/*******************************************************************************************************/
 angular.module('nag.revealingPanel.content', [
   'nag.core'
 ])

@@ -1,11 +1,15 @@
 /**
- * Panel for revealing panel component
+ * # Revealing Panel
+ *
+ * This directive provides a way to create a panel that can reveal itself.  If can be used to reveal a panel from all four side (with animations) or from the center of the page (like a page modal window with an overlay).
+ *
+ * EXAMPLES TODO
  *
  * @module nag.revealingPanel.panel
  * @ngdirective nagRevealingPanel
  *
  * @nghtmlattribute {object} nag-revealing-panel Tell AngularJS this element is a revealing panel component and passed object overwrites option defaults
- * @nghtmlattribute {object} data-model The data model to us for the panel
+ * @nghtmlattribute {object} data-model The data model to use for the panel's scope
  */
 angular.module('nag.revealingPanel.panel', [
   'ngAnimate',
