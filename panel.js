@@ -38,10 +38,14 @@ angular.module('nag.revealingPanel.panel', [
       ],
       compile: function(element, attributes, transclude) {
         //for whatever reason dynamically adding angular attributes can't be done in the pre of the return object
-        element.find('.handle').attr('ng-click', 'toggle()');
+        if(attributes.event === 'hover') {
+          element.find('.handle').attr('ng-mouseenter', 'mouseEnter($event)');
+          element.find('.content').attr('ng-mouseleave', 'mouseLeave($event)');
+        } else {
+          element.find('.handle').attr('ng-click', 'toggle()');
+        }
+
         element.find('.content').attr('ng-class', "{'is-active': panelVisible}");
-        //element.find('.content').attr('ng-animate', "{reveal: 'reveal-animate', conceal: 'conceal-animate'}");
-        element.find('.content').attr('nag-revealing-panel-content', '');
 
         //this allow us to make sure we can prevent the content in panel from doing weird shift when being revealed/concealed
         element.find('.content').html($('<div class="inner-content"></div>').html(element.find('.content').html()));
@@ -62,6 +66,12 @@ angular.module('nag.revealingPanel.panel', [
              *   @property {boolean} [options.overlayClickClose=true] Whether to close the panel when the overlay it clicked
              */
             scope.options = nagDefaults.getRevealingPanelOptions(scope.options);
+
+            //if triggering on hover, override certain options
+            if(attributes.event === 'hover') {
+              scope.options.escapeClose = false;
+              scope.options.hasOverlay = false;
+            }
 
             //see if the content for the panel should be coming from a template file
             if(scope.options.contentTemplateUrl) {
@@ -143,6 +153,16 @@ angular.module('nag.revealingPanel.panel', [
              */
             scope.toggle = function() {
               (scope.panelVisible === true) ? scope.hide() : scope.show();
+            };
+
+            scope.mouseEnter = function($event) {
+              $event.stopPropagation();
+              scope.toggle();
+            };
+
+            scope.mouseLeave = function($event) {
+              $event.stopPropagation();
+              scope.toggle();
             };
 
             if(scope.options.escapeClose === true) {
