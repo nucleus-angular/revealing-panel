@@ -1,7 +1,7 @@
 module.exports = {
-  name: 'expander',
+  name: 'revealing panel',
 
-  //need to wait for dalekjs action moveTo to be included
+  //need to wait for dalekjs action moveTo to be included in stable build
   /*'should show content on mouseenter': function(test) {
     test.open('http://localhost:3000/home')
     .wait(500)
@@ -15,6 +15,8 @@ module.exports = {
     test.open('http://localhost:3000/home')
     .wait(500)
     .moveTo('[data-ut="hover"] .handle')
+    //need to make sure the mouse enter the content area in order for the mouseleave event to be triggered
+    .moveTo('[data-ut="hover"] .content')
     .wait(500)
     .moveTo('body')
     .wait(500)
