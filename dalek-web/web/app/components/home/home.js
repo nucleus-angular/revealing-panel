@@ -51,4 +51,7 @@ angular.module('app.home.home', [
   $scope.revealingNoOverlayOptions = {
     hasOverlay: false
   };
+  $scope.revealingContentExternalTemplateOptions = {
+    contentTemplateUrl: '/app/components/home/assets/templates/content-external-template.html'
+  };
 }]);

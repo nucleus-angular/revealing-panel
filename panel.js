@@ -37,7 +37,8 @@ angular.module('nag.revealingPanel.panel', [
       position: 'right',
       closeOnEscape: true,
       hasOverlay: true,
-      closeOnOverlayClick: false
+      closeOnOverlayClick: false,
+      contentTemplateUrl: null
     });
   }
 ])
@@ -80,6 +81,12 @@ angular.module('nag.revealingPanel.panel', [
           pre: function(scope, element, attributes) {
             var overlayElement;
             scope.options = nagDefaults.getOptions('revealingPanel', scope.options);
+
+            //see if the content for the panel should be coming from a template file
+            if(scope.options.contentTemplateUrl) {
+              var template = $(nagHelper.getAsyncTemplate(scope.options.contentTemplateUrl, scope.options));
+              element.find('.inner-content').html($compile(template)(scope));
+            }
 
             //if triggering on hover, override certain options
             if(attributes.event === 'hover') {

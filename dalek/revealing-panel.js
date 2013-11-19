@@ -155,5 +155,14 @@ module.exports = {
     .wait(300)
       .assert.doesntExist('[data-ut="no-overlay"] .site-overlay', 'no overlay')
     .done();
+  },
+
+  'should be able to load content for revealing panel from an external template': function(test) {
+    test.open('http://localhost:3000/home')
+    .wait(500)
+    .click('[data-ut="content-external-template"] .handle')
+    .wait(300)
+      .assert.text('[data-ut="content-external-template"] .content', 'This is from an external file', 'content loaded from external template')
+    .done();
   }
 }
