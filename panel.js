@@ -12,7 +12,8 @@
  *
  * @nghtmlattribute {object} nag-revealing-panel Tell AngularJS this element is a revealing panel component and passed object overwrites option defaults
  * @nghtmlattribute {object} data-model The data model to use for the panel's scope
- * $nghtmlattribute {string} data-event TODO
+ * @nghtmlattribute {string} data-event TODO
+ * @nghtmlattribute {string} data-id Unique name for the revelaing panel
  */
 angular.module('nag.revealingPanel.panel', [
   'ngAnimate',
@@ -46,13 +47,16 @@ angular.module('nag.revealingPanel.panel', [
   '$compile',
   'nagDefaults',
   'nagHelper',
-  function($compile, nagDefaults, nagHelper){
+  '$animate',
+  '$rootScope',
+  function($compile, nagDefaults, nagHelper, $animate, $rootScope){
     return {
       restrict: 'EA',
       templateUrl: nagHelper.templateUrl,
       scope: {
         options: '=?nagRevealingPanel',
-        model: '=?'
+        model: '=?',
+        id: '@'
       },
       controller: [
         '$scope',
@@ -64,6 +68,10 @@ angular.module('nag.revealingPanel.panel', [
         }
       ],
       compile: function(element, attributes, transclude) {
+        if(!attributes.id) {
+          throw new Error('HTML data-id attribute must be provides for the directive');
+        }
+
         //for whatever reason dynamically adding angular attributes can't be done in the pre of the return object
         if(attributes.event === 'hover') {
           element.find('.handle').attr('ng-mouseenter', 'mouseEnter($event)');
@@ -71,8 +79,6 @@ angular.module('nag.revealingPanel.panel', [
         } else {
           element.find('.handle').attr('ng-click', 'toggle()');
         }
-
-        element.find('.content').attr('ng-class', "{'is-active': panelVisible}");
 
         //this allow us to make sure we can prevent the content in panel from doing weird shift when being revealed/concealed
         element.find('.content').html($('<div class="inner-content"></div>').html(element.find('.content').html()));
@@ -107,14 +113,14 @@ angular.module('nag.revealingPanel.panel', [
             }
           },
           post: function(scope, element, attributes) {
-
+            var contentElement = element.find('.content');
             /**
              * Unique id to identify the revealing panel
              *
              * @ngscope
              * @property {string} id
              */
-            scope.id = nagHelper.generateId('revealing-panel');
+            scope.id = attributes.id;
 
             /**
              * Whther or not the panel is currently visible
@@ -131,6 +137,8 @@ angular.module('nag.revealingPanel.panel', [
              * @method hide
              */
             scope.hide = function() {
+              $animate.removeClass(contentElement, 'reveal');
+
               scope.panelVisible = false;
 
               if(_(scope.options.hideCallback).isFunction()) {
@@ -145,6 +153,11 @@ angular.module('nag.revealingPanel.panel', [
              * @method show
              */
             scope.show = function() {
+              $animate.addClass(contentElement, 'reveal', function() {
+                //provide a hook to run javascript after the animation as been completed
+                $rootScope.$broadcast('NagRevealingPanel[' + scope.id.replace(/(\-[a-z])/g, function($1){return $1.toUpperCase().replace('-','');}) +']/animationComplete');
+              });
+
               if(_(scope.options.showCallback).isFunction()) {
                 scope.options.showCallback();
               }

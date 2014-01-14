@@ -21,7 +21,7 @@ html {
 body {
   font-size: 1.3rem; }
 
-/* normalize.css v2.1.2 | MIT License | git.io/normalize */
+/*! normalize.css v2.1.2 | MIT License | git.io/normalize */
 /* ==========================================================================
    HTML5 display definitions
    ========================================================================== */
@@ -878,6 +878,8 @@ button {
   display: inline-block; }
   .extend-text .container.auto-complete.is-active .display {
     border-radius: 5px 5px 0 0; }
+.extend-text input {
+  width: 100%; }
 .extend-text ul,
 .extend-text li {
   margin: 0;
@@ -1085,8 +1087,6 @@ button {
 .grid .ui-resizable-e {
   right: 0; }
 
-form label {
-  display: block; }
 form.one-line label {
   display: inline-block;
   text-align: right; }
@@ -1115,14 +1115,6 @@ input[type="text"], textarea {
 
 .input-element {
   position: relative; }
-  .input-element :not(.plain) input:not(.plain).ng-invalid {
-    border-color: #b03f39; }
-    .input-element :not(.plain) input:not(.plain).ng-invalid:focus {
-      border-color: #8c322d; }
-  .input-element :not(.plain) input:not(.plain).ng-valid {
-    border-color: #3fb039; }
-    .input-element :not(.plain) input:not(.plain).ng-valid:focus {
-      border-color: #328c2d; }
   .input-element > .container {
     *zoom: 1;
     display: inline-block;
@@ -1132,19 +1124,24 @@ input[type="text"], textarea {
       display: table; }
     .input-element > .container:after {
       clear: both; }
-  .input-element .icons {
-    position: absolute;
-    bottom: 0rem;
-    left: -1.6rem; }
+    .input-element > .container:not(.plain) input:not(.plain).ng-invalid {
+      border-color: #b03f39; }
+      .input-element > .container:not(.plain) input:not(.plain).ng-invalid:focus {
+        border-color: #8c322d; }
+    .input-element > .container:not(.plain) input:not(.plain).ng-valid {
+      border-color: #3fb039; }
+      .input-element > .container:not(.plain) input:not(.plain).ng-valid:focus {
+        border-color: #328c2d; }
   .input-element input[type="text"] ~ .icons {
     bottom: 1.5rem; }
-  .input-element .valid-icon {
+  .input-element .valid-icon:before {
     color: #007f02;
     content: "\e00b"; }
-  .input-element .invalid-icon {
+  .input-element .invalid-icon:before {
     color: #7f0400;
     content: "\e00d"; }
-  .input-element span.input-message {
+  .input-element .input-message.inline {
+    display: inline;
     padding-left: 5px; }
 
 .notify {
@@ -1178,16 +1175,18 @@ input[type="text"], textarea {
   border-radius: 0 0 3px 3px;
   z-index: 10001; }
 
-.revealing-panel .content {
+.revealing-panel > .content {
   position: fixed;
   z-index: 11000;
   background-color: white;
   overflow: hidden; }
-  .revealing-panel .content.absolute {
+  .revealing-panel > .content.absolute {
     position: absolute; }
-  .revealing-panel .content.conceal-animate, .revealing-panel .content.is-active {
-    overflow: auto; }
-  .revealing-panel .content.center {
+  .revealing-panel > .content.reveal {
+    overflow: visible; }
+  .revealing-panel > .content.reveal-add, .revealing-panel > .content.reveal-remove {
+    overflow: hidden; }
+  .revealing-panel > .content.center {
     top: 50%;
     left: 50%;
     height: 500px;
@@ -1196,113 +1195,114 @@ input[type="text"], textarea {
     opacity: 1;
     border: 1px solid black;
     margin: calc(-500px / 2) 0 0 calc(-500px / 2); }
-    .revealing-panel .content.center.is-active {
+    .revealing-panel > .content.center.reveal, .revealing-panel > .content.center.reveal-add, .revealing-panel > .content.center.reveal-remove {
       display: inline-block; }
-    .revealing-panel .content.center.is-active-add, .revealing-panel .content.center.is-active-remove {
+    .revealing-panel > .content.center.reveal {
+      opacity: 1; }
+    .revealing-panel > .content.center.reveal-add, .revealing-panel > .content.center.reveal-remove {
       -webkit-transition: opacity 0.25s linear;
       -moz-transition: opacity 0.25s linear;
-      transition: opacity 0.25s linear;
-      display: inline-block; }
-    .revealing-panel .content.center.is-active-add {
+      transition: opacity 0.25s linear; }
+    .revealing-panel > .content.center.reveal-add {
       opacity: 0; }
-    .revealing-panel .content.center.is-active-add.is-active-add-active {
+    .revealing-panel > .content.center.reveal-add.reveal-add-active {
       opacity: 1; }
-    .revealing-panel .content.center.is-active-remove {
+    .revealing-panel > .content.center.reveal-remove {
       opacity: 1; }
-    .revealing-panel .content.center.is-active-remove.is-active-remove-active {
+    .revealing-panel > .content.center.reveal-remove.reveal-remove-active {
       opacity: 0; }
-  .revealing-panel .content.left {
+  .revealing-panel > .content.left {
     top: 0;
     left: 0;
     bottom: 0;
     width: 0; }
-    .revealing-panel .content.left.is-active {
+    .revealing-panel > .content.left.reveal {
       border-right: 1px solid black;
       width: 500px; }
-    .revealing-panel .content.left.is-active-add, .revealing-panel .content.left.is-active-remove {
+    .revealing-panel > .content.left.reveal-add, .revealing-panel > .content.left.reveal-remove {
       -webkit-transition: width 0.25s linear;
       -moz-transition: width 0.25s linear;
       transition: width 0.25s linear;
       border-right: 1px solid black; }
-    .revealing-panel .content.left.is-active-add {
+    .revealing-panel > .content.left.reveal-add {
       width: 0; }
-    .revealing-panel .content.left.is-active-add.is-active-add-active {
+    .revealing-panel > .content.left.reveal-add.reveal-add-active {
       width: 500px; }
-    .revealing-panel .content.left.is-active-remove {
+    .revealing-panel > .content.left.reveal-remove {
       width: 500px; }
-    .revealing-panel .content.left.is-active-remove.is-active-remove-active {
+    .revealing-panel > .content.left.reveal-remove.reveal-remove-active {
       width: 0; }
-    .revealing-panel .content.left .inner-content {
-      min-width: 500px; }
-  .revealing-panel .content.right {
+    .revealing-panel > .content.left .inner-content {
+      min-width: 499px; }
+  .revealing-panel > .content.right {
     top: 0;
     right: 0;
     bottom: 0;
     width: 0; }
-    .revealing-panel .content.right.is-active {
+    .revealing-panel > .content.right.reveal {
       border-left: 1px solid black;
       width: 500px; }
-    .revealing-panel .content.right.is-active-add, .revealing-panel .content.right.is-active-remove {
+    .revealing-panel > .content.right.reveal-add, .revealing-panel > .content.right.reveal-remove {
       -webkit-transition: width 0.25s linear;
       -moz-transition: width 0.25s linear;
       transition: width 0.25s linear;
       border-left: 1px solid black; }
-    .revealing-panel .content.right.is-active-add {
+    .revealing-panel > .content.right.reveal-add {
       width: 0; }
-    .revealing-panel .content.right.is-active-add.is-active-add-active {
+    .revealing-panel > .content.right.reveal-add.reveal-add-active {
       width: 500px; }
-    .revealing-panel .content.right.is-active-remove {
+    .revealing-panel > .content.right.reveal-remove {
       width: 500px; }
-    .revealing-panel .content.right.is-active-remove.is-active-remove-active {
+    .revealing-panel > .content.right.reveal-remove.reveal-remove-active {
       width: 0; }
-    .revealing-panel .content.right .inner-content {
-      min-width: 500px; }
-  .revealing-panel .content.top {
+    .revealing-panel > .content.right .inner-content {
+      min-width: 499px; }
+  .revealing-panel > .content.top {
     top: 0;
     left: 0;
     right: 0;
     height: 0; }
-    .revealing-panel .content.top.is-active {
+    .revealing-panel > .content.top.reveal {
       border-bottom: 1px solid black;
       height: 500px; }
-    .revealing-panel .content.top.is-active-add, .revealing-panel .content.top.is-active-remove {
+    .revealing-panel > .content.top.reveal-add, .revealing-panel > .content.top.reveal-remove {
       -webkit-transition: height 0.25s linear;
       -moz-transition: height 0.25s linear;
       transition: height 0.25s linear;
       border-bottom: 1px solid black; }
-    .revealing-panel .content.top.is-active-add {
+    .revealing-panel > .content.top.reveal-add {
       height: 0; }
-    .revealing-panel .content.top.is-active-add.is-active-add-active {
+    .revealing-panel > .content.top.reveal-add.reveal-add-active {
       height: 500px; }
-    .revealing-panel .content.top.is-active-remove {
+    .revealing-panel > .content.top.reveal-remove {
       height: 500px; }
-    .revealing-panel .content.top.is-active-remove.is-active-remove-active {
+    .revealing-panel > .content.top.reveal-remove.reveal-remove-active {
       height: 0; }
-    .revealing-panel .content.top .inner-content {
-      min-height: 500px; }
-  .revealing-panel .content.bottom {
+    .revealing-panel > .content.top .inner-content {
+      min-height: 499px; }
+  .revealing-panel > .content.bottom {
     bottom: 0;
     left: 0;
     right: 0;
     height: 0; }
-    .revealing-panel .content.bottom.is-active {
+    .revealing-panel > .content.bottom.reveal {
       border-top: 1px solid black;
       height: 500px; }
-    .revealing-panel .content.bottom.is-active-add, .revealing-panel .content.bottom.is-active-remove {
+    .revealing-panel > .content.bottom.reveal-add, .revealing-panel > .content.bottom.reveal-remove {
       -webkit-transition: height 0.25s linear;
       -moz-transition: height 0.25s linear;
       transition: height 0.25s linear;
       border-top: 1px solid black; }
-    .revealing-panel .content.bottom.is-active-add {
+    .revealing-panel > .content.bottom.reveal-add {
       height: 0; }
-    .revealing-panel .content.bottom.is-active-add.is-active-add-active {
+    .revealing-panel > .content.bottom.reveal-add.reveal-add-active {
       height: 500px; }
-    .revealing-panel .content.bottom.is-active-remove {
+    .revealing-panel > .content.bottom.reveal-remove {
       height: 500px; }
-    .revealing-panel .content.bottom.is-active-remove.is-active-remove-active {
+    .revealing-panel > .content.bottom.reveal-remove.reveal-remove-active {
       height: 0; }
-    .revealing-panel .content.bottom .inner-content {
-      min-height: 500px; }
+    .revealing-panel > .content.bottom .inner-content {
+      min-height: 499px; }
 
 .site-overlay {
   position: fixed;

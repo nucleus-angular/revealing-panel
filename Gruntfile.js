@@ -3,7 +3,6 @@ var glob = require('glob');
 var exec = require('child_process').exec;
 var sys = require('sys');
 var colors = require('colors');
-var execSync = require('execSync');
 var uglifyjs = require('uglify-js');
 var cleanCss = require('clean-css');
 var mkdirp = require('mkdirp');
