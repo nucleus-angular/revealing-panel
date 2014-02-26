@@ -15,13 +15,12 @@
  * @nghtmlattribute {string} data-event TODO
  * @nghtmlattribute {string} data-id Unique name for the revelaing panel
  */
-angular.module('nag.revealingPanel.panel', [
-  'ngAnimate',
+angular.module('nag.revealingPanel.configurator', [
   'nag.core'
 ])
-.config([
-  'nagDefaultsProvider',
-  function(nagDefaultsProvider) {
+.run([
+  'nagDefaults',
+  function(nagDefaults) {
     /**
      * Options for revealing panel (default pull from object is passed in as value for nag-revealing-panel attribute)
      *
@@ -33,7 +32,7 @@ angular.module('nag.revealingPanel.panel', [
      *   @property {boolean} [options.hasOverlay=true] Whether to show an overlay with the panel (has no effect when data-event is hover)
      *   @property {boolean} [options.closeOnOverlayClick=true] Whether to close the panel when the overlay it clicked (has no effect when data-event is hover)
      */
-    nagDefaultsProvider.setOptions('revealingPanel', {
+    nagDefaults.setOptions('revealingPanel', {
       rootTemplatePath: '',
       position: 'right',
       closeOnEscape: true,
@@ -42,6 +41,11 @@ angular.module('nag.revealingPanel.panel', [
       contentTemplateUrl: null
     });
   }
+]);
+angular.module('nag.revealingPanel.panel', [
+  'nag.revealingPanel.configurator',
+  'ngAnimate',
+  'nag.core'
 ])
 .directive('nagRevealingPanel', [
   '$compile',
