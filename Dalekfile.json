@@ -1,0 +1,8 @@
+{
+  "tests": [
+    "dalek/revealing-panel.js"
+  ],
+  "browser": [
+    "chrome"
+  ]
+}

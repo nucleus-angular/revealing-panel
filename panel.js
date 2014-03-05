@@ -26,14 +26,12 @@ angular.module('nag.revealingPanel.configurator', [
      *
      * @ngscope
      * @property {object} options
-     *   @property {string} [options.rootTemplatePath=""] Path added to the revealing panel request for remote templates
      *   @property {string} [options.position="right"] Position of the panel
      *   @property {boolean} [options.closeOnEscape=true] Whether to close panel on escape key (has no effect when data-event is hover)
      *   @property {boolean} [options.hasOverlay=true] Whether to show an overlay with the panel (has no effect when data-event is hover)
      *   @property {boolean} [options.closeOnOverlayClick=true] Whether to close the panel when the overlay it clicked (has no effect when data-event is hover)
      */
     nagDefaults.setOptions('revealingPanel', {
-      rootTemplatePath: '',
       position: 'right',
       closeOnEscape: true,
       hasOverlay: true,
