@@ -7,7 +7,7 @@
  *
  * EXAMPLES TODO
  *
- * @module nag.revealingPanel.panel
+ * @module nag.revealingPanel
  * @ngdirective nagRevealingPanel
  *
  * @nghtmlattribute {object} nag-revealing-panel Tell AngularJS this element is a revealing panel component and passed object overwrites option defaults

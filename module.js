@@ -13,6 +13,11 @@ angular.module('nag.revealingPanel', [
   'nagDefaults',
   function(nagDefaults) {
     /**
+     * @ignore Property definations for revealing panel directive.
+     *
+     * @module nagRevealingPanel
+     */
+    /**
      * Options for revealing panel (default pull from object is passed in as value for nag-revealing-panel attribute)
      *
      * @ngscope
