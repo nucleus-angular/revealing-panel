@@ -2,6 +2,7 @@
   "tests": [
     "dalek/revealing-panel.js"
   ],
+  "logLevel": "1",
   "browser": [
     "chrome"
   ]
