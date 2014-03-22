@@ -2,7 +2,7 @@
   "name": "nucleus-angular-revealing-panel",
   "version": "0.5.0",
   "dependencies": {
-    "nucleus-angular-core": "0.5.0"
+    "nucleus-angular-core": "master"
   },
   "devDependencies": {
     "jquery": "2.x.x",
@@ -11,6 +11,6 @@
     "angular": "1.2.x",
     "angular-animate": "1.2.x",
     "angular-ui-router": "0.2.0",
-    "nucleus-angular-sass-framework": "0.5.0"
+    "nucleus-angular-sass-framework": "master"
   }
 }
