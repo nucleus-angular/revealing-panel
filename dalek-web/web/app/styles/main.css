@@ -1,32 +1,190 @@
-[class*="nag-icon-font-"]:before,
-[class*="nag-icon-font-"]:after, .input-element .valid-icon:before,
-.input-element .invalid-icon:before, .tree .tree-element > .tree-label:before,
-.tree .tree-element.tree-expanded > .tree-label:before, .message .icon:before {
-  font-family: 'nag-icon-font';
-  font-style: normal;
-  speak: none;
-  font-weight: normal;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  display: inline-block; }
-
+/**
+ * @section Variables
+ *
+ * There are a number of pre-defined global variables that you can use.
+ */
+/**
+ * @section Variables
+ * @subsection Colors
+ *
+ * These are the only color that should be used within the application.
+ */
+/**
+ * @var $color-rosewood
+ */
+/**
+ * @var $color-maroon
+ */
+/**
+ * @var $color-medium-carmine
+ * @var $color-medium-carmine-l50
+ * @var $color-medium-carmine-d30
+ */
+/**
+ * @var $color-dawn-pink
+ */
+/**
+ * @var $color-crusoe
+ */
+/**
+ * @var $color-japanese-laurel
+ */
+/**
+ * @var $color-apple
+ * @var $color-apple-l50
+ * @var $color-apple-d30
+ */
+/**
+ * @var $color-panache
+ */
+/**
+ * @var $color-downriver
+ */
+/**
+ * @var $color-dark-blue
+ */
+/**
+ * @var $color-san-marino
+ */
+/**
+ * @var $color-chetwode-blue
+ */
+/**
+ * @var $color-snuff
+ */
+/**
+ * @var $color-olive
+ */
+/**
+ * @var $color-rio-grande
+ */
+/**
+ * @var $color-yellow
+ */
+/**
+ * @var $color-portafino
+ */
+/**
+ * @var $color-black
+ */
+/**
+ * @var $color-tundora
+ */
+/**
+ * @var $color-gray
+ */
+/**
+ * @var $color-silver-chalice
+ */
+/**
+ * @var $color-silver
+ * @var $color-silver-d20
+ */
+/**
+ * @var $color-gallery
+ */
+/**
+ * @var $color-white
+ * @var $color-white-d15
+ */
+/**
+ * @section Variables
+ * @subsection Percentage
+ *
+ * General percentage values.
+ *
+ * @todo see if we can get rid of these
+ *
+ * @var $percentage-dark
+ * @var $percentage-darker
+ * @var $percentage-darkest
+ * @var $percentage-light
+ * @var $percentage-lighter
+ * @var $percentage-lightest
+ */
+/**
+ * @section Variables
+ * @subsection Font
+ *
+ * Variables that deal with fonts.
+ *
+ * @var $font-size
+ * @var $font-family
+ */
+/**
+ * @section Variables
+ * @subsection Valid Colors
+ *
+ * These are colors used to indicator something is valid.
+ *
+ * @var $border-color-valid
+ * @var $background-color-valid
+ * @var $color-valid
+ */
+/**
+ * @section Variables
+ * @subsection Invalid Colors
+ *
+ * These are colors used to indicator something is invalid.
+ *
+ * @var $border-color-invalid
+ * @var $background-color-invalid
+ * @var $color-invalid
+ */
+/**
+ * @section Variables
+ * @subsection Forms
+ *
+ * These are variables used for from styles
+ *
+ * @var $border-input
+ * @var $box-shadow-input
+ * @var $box-shadow-focus-input
+ */
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
+/*! normalize.css v3.0.1 | MIT License | git.io/normalize */
+/* MODIFIED */
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ * 3. Reset font size so 1rem == 10px
+ */
 html {
-  font-size: 62.5%; }
+  font-family: sans-serif;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+  font-size: 62.5%;
+  /* 3 */ }
 
+/**
+ * Remove default margin.
+ */
 body {
+  margin: 0;
   font-size: 1.3rem; }
 
-/*! normalize.css v2.1.2 | MIT License | git.io/normalize */
-/* ==========================================================================
-   HTML5 display definitions
+p {
+  margin: .5em 0; }
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+/* HTML5 display definitions
    ========================================================================== */
 /**
- * Correct `block` display not defined in IE 8/9.
+ * Correct `block` display not defined for any HTML5 element in IE 8/9.
+ * Correct `block` display not defined for `details` or `summary` in IE 10/11 and Firefox.
+ * Correct `block` display not defined for `main` in IE 11.
  */
 article,
 aside,
@@ -43,12 +201,17 @@ summary {
   display: block; }
 
 /**
- * Correct `inline-block` display not defined in IE 8/9.
+ * 1. Correct `inline-block` display not defined in IE 8/9.
+ * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
  */
 audio,
 canvas,
+progress,
 video {
-  display: inline-block; }
+  display: inline-block;
+  /* 1 */
+  vertical-align: baseline;
+  /* 2 */ }
 
 /**
  * Prevent modern browsers from displaying `audio` without controls.
@@ -59,41 +222,20 @@ audio:not([controls]) {
   height: 0; }
 
 /**
- * Address styling not present in IE 8/9.
+ * Address `[hidden]` styling not present in IE 8/9/10.
+ * Hide the `template` element in IE 8/9/11, Safari, and Firefox < 22.
  */
-[hidden] {
+[hidden],
+template {
   display: none; }
 
-/* ==========================================================================
-   Base
+/* Links
    ========================================================================== */
 /**
- * 1. Set default font family to sans-serif.
- * 2. Prevent iOS text size adjust after orientation change, without disabling
- *    user zoom.
+ * Remove the gray background color from active links in IE 10.
  */
-html {
-  font-family: proxima-nova, Arial, sans-serif;
-  /* 1 */
-  -ms-text-size-adjust: 100%;
-  /* 2 */
-  -webkit-text-size-adjust: 100%;
-  /* 2 */ }
-
-/**
- * Remove default margin.
- */
-body {
-  margin: 0; }
-
-/* ==========================================================================
-   Links
-   ========================================================================== */
-/**
- * Address `outline` inconsistency between Chrome and other browsers.
- */
-a:focus {
-  outline: thin dotted; }
+a {
+  background: transparent; }
 
 /**
  * Improve readability when focused and also mouse hovered in all browsers.
@@ -102,66 +244,37 @@ a:active,
 a:hover {
   outline: 0; }
 
-/* ==========================================================================
-   Typography
+/* Text-level semantics
    ========================================================================== */
 /**
- * Address variable `h1` font-size and margin within `section` and `article`
- * contexts in Firefox 4+, Safari 5, and Chrome.
- */
-/**
- * Address styling not present in IE 8/9, Safari 5, and Chrome.
+ * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
  */
 abbr[title] {
   border-bottom: 1px dotted; }
 
 /**
- * Address style set to `bolder` in Firefox 4+, Safari 5, and Chrome.
+ * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
  */
 b,
 strong {
   font-weight: bold; }
 
 /**
- * Address styling not present in Safari 5 and Chrome.
+ * Address styling not present in Safari and Chrome.
  */
 dfn {
   font-style: italic; }
 
 /**
- * Address differences between Firefox and other browsers.
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari, and Chrome.
  */
-hr {
-  height: 0; }
-
 /**
  * Address styling not present in IE 8/9.
  */
 mark {
   background: #ff0;
   color: #000; }
-
-/**
- * Correct font family set oddly in Safari 5 and Chrome.
- */
-code,
-kbd,
-pre,
-samp {
-  font-family: monospace, serif;
-  font-size: 1em; }
-
-/**
- * Improve readability of pre-formatted text in all browsers.
- */
-pre {
-  white-space: pre-wrap; }
-
-/**
- * Set consistent quote types.
- */
-q {
-  quotes: "\201C" "\201D" "\2018" "\2019"; }
 
 /**
  * Address inconsistent and variable font size in all browsers.
@@ -185,76 +298,85 @@ sup {
 sub {
   bottom: -0.25em; }
 
-/* ==========================================================================
-   Embedded content
+/* Embedded content
    ========================================================================== */
 /**
- * Remove border when inside `a` element in IE 8/9.
+ * Remove border when inside `a` element in IE 8/9/10.
  */
 img {
   border: 0; }
 
 /**
- * Correct overflow displayed oddly in IE 9.
+ * Correct overflow not hidden in IE 9/10/11.
  */
 svg:not(:root) {
   overflow: hidden; }
 
-/* ==========================================================================
-   Figures
+/* Grouping content
    ========================================================================== */
 /**
- * Address margin not present in IE 8/9 and Safari 5.
+ * Address margin not present in IE 8/9 and Safari.
  */
 figure {
-  margin: 0; }
+  margin: 1em 40px; }
 
-/* ==========================================================================
-   Forms
+/**
+ * Address differences between Firefox and other browsers.
+ */
+hr {
+  height: 0; }
+
+/**
+ * Contain overflow in all browsers.
+ */
+pre {
+  overflow: auto; }
+
+/**
+ * Address odd `em`-unit font size rendering in all browsers.
+ */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em; }
+
+/* Forms
    ========================================================================== */
 /**
- * Define consistent border, margin, and padding.
+ * Known limitation: by default, Chrome and Safari on OS X allow very limited
+ * styling of `select`, unless a `border` property is set.
  */
-fieldset {
-  border: 1px solid #c0c0c0;
-  margin: 0 2px;
-  padding: 0.35em 0.625em 0.75em; }
-
 /**
- * 1. Correct `color` not being inherited in IE 8/9.
- * 2. Remove padding so people aren't caught out if they zero out fieldsets.
- */
-legend {
-  border: 0;
-  /* 1 */
-  padding: 0;
-  /* 2 */ }
-
-/**
- * 1. Correct font family not being inherited in all browsers.
- * 2. Correct font size not being inherited in all browsers.
- * 3. Address margins set differently in Firefox 4+, Safari 5, and Chrome.
+ * 1. Correct color not being inherited.
+ *    Known issue: affects color of disabled elements.
+ * 2. Correct font properties not being inherited.
+ * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
  */
 button,
 input,
+optgroup,
 select,
 textarea {
+  color: inherit;
+  /* 1 */
+  font: inherit;
+  /* 2 */
   margin: 0;
   /* 3 */ }
 
 /**
- * Address Firefox 4+ setting `line-height` on `input` using `!important` in
- * the UA stylesheet.
+ * Address `overflow` set to `hidden` in IE 8/9/10/11.
  */
-button,
-input {
-  line-height: normal; }
+button {
+  overflow: visible; }
 
 /**
  * Address inconsistent `text-transform` inheritance for `button` and `select`.
  * All other form control elements do not inherit `text-transform` values.
- * Correct `button` style inheritance in Chrome, Safari 5+, and IE 8+.
- * Correct `select` style inheritance in Firefox 4+ and Opera.
+ * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
+ * Correct `select` style inheritance in Firefox.
  */
 button,
 select {
@@ -284,32 +406,6 @@ html input[disabled] {
   cursor: default; }
 
 /**
- * 1. Address box sizing set to `content-box` in IE 8/9.
- * 2. Remove excess padding in IE 8/9.
- */
-input[type="checkbox"],
-input[type="radio"] {
-  padding: 0;
-  /* 2 */ }
-
-/**
- * 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome.
- * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
- *    (include `-moz` to future-proof).
- */
-input[type="search"] {
-  -webkit-appearance: textfield;
-  /* 1 */ }
-
-/**
- * Remove inner padding and search cancel button in Safari 5 and Chrome
- * on OS X.
- */
-input[type="search"]::-webkit-search-cancel-button,
-input[type="search"]::-webkit-search-decoration {
-  -webkit-appearance: none; }
-
-/**
  * Remove inner padding and border in Firefox 4+.
  */
 button::-moz-focus-inner,
@@ -318,17 +414,85 @@ input::-moz-focus-inner {
   padding: 0; }
 
 /**
- * 1. Remove default vertical scrollbar in IE 8/9.
- * 2. Improve readability and alignment in all browsers.
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
  */
-textarea {
-  overflow: auto;
+input {
+  line-height: normal; }
+
+/**
+ * It's recommended that you don't attempt to style these elements.
+ * Firefox's implementation doesn't respect box-sizing, padding, or width.
+ *
+ * 1. Address box sizing set to `content-box` in IE 8/9/10.
+ * 2. Remove excess padding in IE 8/9/10.
+ */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
   /* 1 */
-  vertical-align: top;
+  padding: 0;
   /* 2 */ }
 
-/* ==========================================================================
-   Tables
+/**
+ * Fix the cursor style for Chrome's increment/decrement buttons. For certain
+ * `font-size` values of the `input`, it causes the cursor style of the
+ * decrement button to change from `default` to `text`.
+ */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto; }
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari and Chrome
+ *    (include `-moz` to future-proof).
+ */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */ }
+
+/**
+ * Remove inner padding and search cancel button in Safari and Chrome on OS X.
+ * Safari (but not Chrome) clips the cancel button when the search input has
+ * padding (and `textfield` appearance).
+ */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+/**
+ * Define consistent border, margin, and padding.
+ */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em; }
+
+/**
+ * 1. Correct `color` not being inherited in IE 8/9/10/11.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
+
+/**
+ * Remove default vertical scrollbar in IE 8/9/10/11.
+ */
+textarea {
+  overflow: auto; }
+
+/**
+ * Don't inherit the `font-weight` (applied by a rule above).
+ * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
+ */
+optgroup {
+  font-weight: bold; }
+
+/* Tables
    ========================================================================== */
 /**
  * Remove most spacing between table cells.
@@ -336,6 +500,10 @@ textarea {
 table {
   border-collapse: collapse;
   border-spacing: 0; }
+
+td,
+th {
+  padding: 0; }
 
 ::-webkit-input-placeholder {
   font-style: italic;
@@ -348,15 +516,6 @@ table {
 :-ms-input-placeholder {
   font-style: italic;
   font-size: 13px; }
-
-ul {
-  margin: 0;
-  padding: 0;
-  list-style: none; }
-
-a {
-  color: #879fdc;
-  text-decoration: none; }
 
 h1 {
   font-size: 3.2rem;
@@ -382,136 +541,69 @@ h6 {
   font-size: 1.1rem;
   margin: 0 0 1rem 0; }
 
+a {
+  color: #0002ab;
+  text-decoration: none; }
+
 body {
   color: #414141; }
 
 .success-text {
-  color: #007f02; }
+  color: #007e01; }
 
 .notice-text {
-  color: #0002ac; }
+  color: #0002ab; }
 
 .warning-text {
   color: #cfcf00; }
 
 .error-text,
 .danger-text {
-  color: #7f0400; }
+  color: #7a0200; }
 
-@font-face {
-  font-family: 'nag-icon-font';
-  src: url("../../components/nucleus-angular-sass-framework/assets/fonts/nag-icon-font.eot");
-  src: url("../../components/nucleus-angular-sass-framework/assets/fonts/nag-icon-font.eot?#iefix") format("embedded-opentype"), url("../../components/nucleus-angular-sass-framework/assets/fonts/nag-icon-font.svg#entypo") format("svg"), url("../../components/nucleus-angular-sass-framework/assets/fonts/nag-icon-font.woff") format("woff"), url("../../components/nucleus-angular-sass-framework/assets/fonts/nag-icon-font.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal; }
-
-/* Use the following CSS code if you want to have a class per icon */
-.nag-icon-font-first:before {
-  content: "\e000"; }
-
-.nag-icon-font-backward:before {
-  content: "\e001"; }
-
-.nag-icon-font-forward:before {
-  content: "\e002"; }
-
-.nag-icon-font-last:before {
-  content: "\e003"; }
-
-.nag-icon-font-arrow-up:before {
-  content: "\e004"; }
-
-.nag-icon-font-arrow-right:before {
-  content: "\e005"; }
-
-.nag-icon-font-arrow-down:before {
-  content: "\e006"; }
-
-.nag-icon-font-arrow-left:before {
-  content: "\e007"; }
-
-.nag-icon-font-arrow-top-down:before {
-  content: "\e008"; }
-
-.nag-icon-font-gear:before {
-  content: "\e009"; }
-
-.nag-icon-font-warning-triangle:before {
-  content: "\e00a"; }
-
-.nag-icon-font-success-circle:before {
-  content: "\e00b"; }
-
-.nag-icon-font-notice-circle:before {
-  content: "\e00c"; }
-
-.nag-icon-font-error-circle:before {
-  content: "\e00d"; }
-
-.nag-icon-font-x:before {
-  content: "\e00e"; }
-
-.nag-icon-font-video:before {
-  content: "\e00f"; }
-
-.nag-icon-font-assessment:before {
-  content: "\e010"; }
-
-.nag-icon-font-play:before {
-  content: "\e011"; }
-
-.nag-icon-font-volume-high:before {
-  content: "\e012"; }
-
-.nag-icon-font-volume-medium:before {
-  content: "\e013"; }
-
-.nag-icon-font-volume-low:before {
-  content: "\e014"; }
-
-.nag-icon-font-volume-mute:before {
-  content: "\e015"; }
-
-.nag-icon-font-reload:before {
-  content: "\e016"; }
-
-.nag-icon-font-expand:before {
-  content: "\e017"; }
-
-.nag-icon-font-contract:before {
-  content: "\e018"; }
-
-.nag-icon-font-pause:before {
-  content: "\e019"; }
-
+/**
+ * @section Animations
+ *
+ * This is the collection of the animations that are defined.
+ */
+/**
+ * @section Animations
+ * subsection Fade In
+ * @animation fadeIn
+ *
+ * Provides a smooth animation of the element's `opacity` from `0` to `1`.
+ */
 @-webkit-keyframes fadeIn {
   0% {
     opacity: 0; }
 
   100% {
     opacity: 1; } }
-
 @-moz-keyframes fadeIn {
   0% {
     opacity: 0; }
 
   100% {
     opacity: 1; } }
-
 @-o-keyframes fadeIn {
   0% {
     opacity: 0; }
 
   100% {
     opacity: 1; } }
-
 @keyframes fadeIn {
   0% {
     opacity: 0; }
 
   100% {
     opacity: 1; } }
-
+/**
+ * @section Animations
+ * @subsection Fade Out
+ * @animation fadeOut
+ *
+ * Provides a smooth animation of the element's `opacity` from `1` to `0` and also adds `display: none` at the end of the animation.
+ */
 @-webkit-keyframes fadeOut {
   0% {
     opacity: 1; }
@@ -519,7 +611,6 @@ body {
   100% {
     opacity: 0;
     display: none; } }
-
 @-moz-keyframes fadeOut {
   0% {
     opacity: 1; }
@@ -527,7 +618,6 @@ body {
   100% {
     opacity: 0;
     display: none; } }
-
 @-o-keyframes fadeOut {
   0% {
     opacity: 1; }
@@ -535,7 +625,6 @@ body {
   100% {
     opacity: 0;
     display: none; } }
-
 @keyframes fadeOut {
   0% {
     opacity: 1; }
@@ -543,275 +632,512 @@ body {
   100% {
     opacity: 0;
     display: none; } }
-
-.content-box {
+/**
+ * @section Cards
+ * @subsection Card Arrow
+ *
+ * You can use the `card-arrow()` mixin in order to add an arrow.  The `with-arrow` class should work however if you need custom coloring, then you need to
+ * manually call the mixin yourself.
+ *
+ * @mixin card-arrow
+ * @param $color-border The color of the border
+ * @param $fill-color The color of the triangle
+ * @param $triangle-position Where the triangle should point
+ */
+/**
+ * @title Cards
+ * @section Cards
+ *
+ * A card is a generic content container that can content a header and content section indicated by the `content` class.
+ *
+ * ```html
+ * <div class="card">
+ *   <header>Title</header>
+ *   <div class="content">
+ *     Some content for this card
+ *   </div>
+ * </div>
+ * ```
+ */
+.card {
   position: relative;
   display: inline-block;
   margin: 15px 0;
   border-radius: 3px;
-  border: 1px solid #878787;
-  background-color: #f0f0f0; }
-  .content-box.with-top-arrow:before {
+  border: 1px solid gray;
+  background-color: #efefef;
+  /**
+   * @section Cards
+   * @subsection With Arrow
+   *
+   * You can add a arrow to the content box (for maybe a tooltip or something similar) by adding the class `with-arrow` to the container.
+   *
+   * ```html
+   * <div class="card with-arrow">
+   *   <header>Title</header>
+   *   <div class="content">
+   *     Some content for this card
+   *   </div>
+   * </div>
+   * ```
+   *
+   * If the card has not header, you must also provide the `no-header` class to make sure the triangle color is correct.
+   *
+   * ```html
+   * <div class="card with-arrow no-header">
+   *   <div class="content">
+   *     Some content for this card
+   *   </div>
+   * </div>
+   * ```
+   */ }
+  .card.with-arrow:before {
     height: 0;
     width: 0;
-    border-color: transparent;
-    border-style: solid;
-    border-width: 0.7rem;
-    border-bottom-color: #878787;
+    border-left: 0.7rem solid transparent;
+    border-right: 0.7rem solid transparent;
+    border-bottom: 0.7rem solid gray;
     content: '';
     display: block;
     position: absolute;
-    top: -15px;
+    top: -7px;
     left: 17px; }
-  .content-box.with-top-arrow:after {
+  .card.with-arrow:after {
     height: 0;
     width: 0;
-    border-color: transparent;
-    border-style: solid;
-    border-width: 0.7rem;
-    border-bottom-color: #f0f0f0;
+    border-left: 0.7rem solid transparent;
+    border-right: 0.7rem solid transparent;
+    border-bottom: 0.7rem solid #efefef;
     content: '';
     display: block;
     position: absolute;
-    top: -14px;
+    top: -6px;
     left: 17px; }
-  .content-box.with-top-arrow.no-header:before {
+  .card.with-arrow.no-header:before {
     height: 0;
     width: 0;
-    border-color: transparent;
-    border-style: solid;
-    border-width: 0.7rem;
-    border-bottom-color: #878787;
+    border-left: 0.7rem solid transparent;
+    border-right: 0.7rem solid transparent;
+    border-bottom: 0.7rem solid gray;
     content: '';
     display: block;
     position: absolute;
-    top: -15px;
+    top: -7px;
     left: 17px; }
-  .content-box.with-top-arrow.no-header:after {
+  .card.with-arrow.no-header:after {
     height: 0;
     width: 0;
-    border-color: transparent;
-    border-style: solid;
-    border-width: 0.7rem;
-    border-bottom-color: white;
+    border-left: 0.7rem solid transparent;
+    border-right: 0.7rem solid transparent;
+    border-bottom: 0.7rem solid white;
     content: '';
     display: block;
     position: absolute;
-    top: -14px;
+    top: -6px;
     left: 17px; }
-  .content-box header {
-    *zoom: 1;
+  .card header {
     border-radius: 3px;
-    color: #879fdc;
+    color: #869edb;
     font-weight: 600;
-    padding: 8px; }
-    .content-box header:before, .content-box header:after {
-      content: " ";
-      display: table; }
-    .content-box header:after {
+    padding: 5px;
+    /**
+     * @section Cards
+     * @subsection Header Border
+     *
+     * You can add a border to the header by adding the `border` class to the header.
+     *
+     * ```html
+     * <div class="card">
+     *   <header class="border">Title</header>
+     *   <div class="content">
+     *     Some content for this card
+     *   </div>
+     * </div>
+     * ```
+     */
+    /**
+     * @section Cards
+     * @subsection Header Actions
+     *
+     * You can provide action element to the header by adding the `action` class to the element in the header.
+     *
+     * ```html
+     * <div class="card">
+     *   <header>Title<span class="action close">X</span></header>
+     *   <div class="content">
+     *     Some content for this card
+     *   </div>
+     * </div>
+     * ```
+     */ }
+    .card header:after {
+      content: "";
+      display: table;
       clear: both; }
-    .content-box header.border {
-      border-bottom: 1px solid #cdcdcd;
-      border-radius: 3px 3px 0 0; }
-    .content-box header ~ .content {
+    .card header ~ .content {
       border-radius: 0 0 3px 3px; }
-    .content-box header > .button-drop-down.actions,
-    .content-box header > .close {
+    .card header.border {
+      border-bottom: 1px solid #414141;
+      border-radius: 3px 3px 0 0; }
+    .card header > .action {
       font-size: 1rem;
       float: right;
       cursor: pointer;
-      text-transform: uppercase;
       position: relative;
       top: 2px; }
-  .content-box .content {
+  .card .content {
     border-radius: 3px;
     background-color: white;
     padding: 8px; }
 
-.breadcrumbs {
-  display: inline-block;
-  box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.35);
-  overflow: hidden;
-  border-radius: 5px;
-  /*Lets add the numbers for each link using CSS counters. flag is the name of the counter. to be defined using counter-reset in the parent element of the links*/
-  counter-reset: flag; }
-
-.breadcrumbs a {
-  text-decoration: none;
-  outline: none;
-  display: block;
-  float: left;
-  font-size: 12px;
-  line-height: 36px;
-  color: white;
-  padding: 0 10px 0 60px;
-  background: #666;
-  background: linear, false, #666666, #333333;
-  position: relative; }
-
-.breadcrumbs a:last-child {
-  margin: 0; }
-
-/*since the first link does not have a triangle before it we can reduce the left padding to make it look consistent with other links*/
-.breadcrumbs a:first-child {
-  padding-left: 46px;
-  border-radius: 5px 0 0 5px;
-  /*to match with the parent's radius*/ }
-
-.breadcrumbs a:first-child:before {
-  left: 14px; }
-
-.breadcrumbs a:last-child {
-  border-radius: 0 5px 5px 0;
-  /*this was to prevent glitches on hover*/
-  padding-right: 20px; }
-
-/*hover/active styles*/
-.breadcrumbs a.active, .breadcrumbs a:hover {
-  background: #333;
-  background: linear, false, #333333, black; }
-
-.breadcrumbs a.active:after, .breadcrumbs a:hover:after {
-  background: #333;
-  background: linear, 135deg, #333333, black; }
-
-/*adding the arrows for the breadcrumbs using rotated pseudo elements*/
-.breadcrumbs a:after {
-  content: '';
-  position: absolute;
-  top: 0;
-  right: -18px;
-  /*half of square's length*/
-  /*same dimension as the line-height of .breadcrumbs a */
-  width: 36px;
-  height: 36px;
-  /*as you see the rotated square takes a larger height. which makes it tough to position it properly. So we are going to scale it down so that the diagonals become equal to the line-height of the link. We scale it to 70.7% because if square's:
-  length = 1; diagonal = (1^2 + 1^2)^0.5 = 1.414 (pythagoras theorem)
-  if diagonal required = 1; length = 1/1.414 = 0.707*/
-  -webkit-transform: scale(0.707) rotate(45deg);
-  -moz-transform: scale(0.707) rotate(45deg);
-  -ms-transform: scale(0.707) rotate(45deg);
-  -o-transform: scale(0.707) rotate(45deg);
-  transform: scale(0.707) rotate(45deg);
-  /*we need to prevent the arrows from getting buried under the next link*/
-  z-index: 1;
-  /*background same as links but the gradient will be rotated to compensate with the transform applied*/
-  background: #666;
-  background: linear, 135deg, #666666, #333333;
-  /*stylish arrow design using box shadow*/
-  box-shadow: 2px -2px 0 2px rgba(0, 0, 0, 0.4), 3px -3px 0 2px rgba(255, 255, 255, 0.1);
-  /*
-    5px - for rounded arrows and
-    50px - to prevent hover glitches on the border created using shadows*/
-  border-radius: 0 5px 0 50px; }
-
-/*we dont need an arrow after the last link*/
-.breadcrumbs a:last-child:after {
-  content: none; }
-
-/*we will use the :before element to show numbers*/
-.breadcrumbs a:before {
-  content: counter(flag);
-  counter-increment: flag;
-  /*some styles now*/
-  border-radius: 100%;
-  width: 20px;
-  height: 20px;
-  line-height: 20px;
-  margin: 8px 0;
-  position: absolute;
-  top: 0;
-  left: 30px;
-  background: #444;
-  background: linear, false, #444444, #222222;
-  font-weight: bold;
-  text-align: center; }
-
-.flat a, .flat a:after {
-  background: white;
-  color: black; }
-
-.flat a:before {
-  background: white;
-  box-shadow: 0 0 0 1px #ccc; }
-
-.flat a:hover, .flat a.active,
-.flat a:hover:after, .flat a.active:after {
-  background: #9EEB62; }
-
+/**
+ * @section Buttons
+ * @subsection Button Size
+ *
+ * This mixin adds the appropriate sizing properties for the different support sizes.  The following sizes are supported:
+ *
+ * - small
+ * - normal (default)
+ * - large
+ * - largest
+ *
+ * @mixin button-size
+ * @param $size string Button size
+ */
+/**
+ * @section Buttons
+ * @subsection Button Color
+ *
+ * This mixin adds the appropriate shadow colors for the different button states.
+ *
+ * @mixin button-color
+ * @param $button-main-color color Button main background color
+ * @param $button-text-color color Button text color
+ */
+/**
+ * @section Buttons
+ *
+ * Standard button.
+ *
+ * ```html
+ * <button>Default</button>
+ * ```
+ */
 button {
   padding: 4px 12px;
+  /**
+   * @section Buttons
+   * @subsection Quiet
+   *
+   * A quiet button is a button that looks like regular test until you hover over it (using the `quiet` class).
+   *
+   * ```html
+   * <button>Default</button>
+   * ```
+   */
+  /**
+   * @section Buttons
+   * @subsection Border
+   *
+   * If you wish to added a border to the button, add the `border` class.
+   *
+   * ```html
+   * <button class="border">Border</button>
+   * ```
+   */
   border-radius: 3px;
   position: relative;
   border: none;
   font-weight: bold;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  cursor: pointer;
+  font-size: 1.2rem;
+  /**
+   * @section Buttons
+   * @subsection Sizes
+   *
+   * Button can have 3 additional sizes in addition to the defualt size.
+   *
+   * You can add a `small` class.
+   *
+   * ```html
+   * <button class="small">Small</button>
+   * ```
+   *
+   * You can add a `large` class.
+   *
+   * ```html
+   * <button class="large">Large</button>
+   * ```
+   *
+   * You can add a `largest` class.
+   *
+   * ```html
+   * <button class="largest">Largest</button>
+   * ```
+   */
+  /**
+   * @section Buttons
+   * @subsection States
+   *
+   * Buttons can have a number of differnt states that change the color of the button.
+   *
+   * The `primary` class can be added to indicate the primary action to be done.
+   *
+   * ```html
+   * <button class="primary">Primary</button>
+   * ```
+   *
+   * The `caution` class can be added to indicate that you should be careful in clicking the button.
+   *
+   * ```html
+   * <button class="caution">Caution</button>
+   * ```
+   *
+   * The `danger` class can be added to indicate a negative action will be performed when clicking the button (like removing a record).
+   *
+   * ```html
+   * <button class="danger">Danger</button>
+   * ```
+   *
+   * The `safe` class can be added to indicate a positive action will be performed when clicking the button (like adding a record).
+   *
+   * ```html
+   * <button class="safe">Safe</button>
+   * ```
+   */
+  /**
+   * @section Buttons
+   * @subsection Disabled
+   *
+   * Disabled button will automatically appear faded and have the proper cursor to indicate the button can't be clicked on.
+   *
+   * ```html
+   * <button disabled>Disabled</button>
+   * ```
+   */
+  /**
+   * @section Buttons
+   * @subsection Square
+   *
+   * Button are rounded by default however you can add the `square` class to remove the rounded corners.
+   *
+   * ```html
+   * <button class="square">Square</button>
+   * ```
+   */ }
   button.quiet {
     color: #414141; }
   button:not(.quiet) {
     color: white;
     background-color: #aaaaaa; }
+  button.border {
+    border: 1px solid #5e5e5e; }
   button:hover:not([disabled]):not(.solid-color) {
-    background-color: #bbbbbb; }
+    box-shadow: inset 0 0 20px #5e5e5e; }
   button:active:not([disabled]):not(.solid-color), button.is-active:not([disabled]):not(.solid-color) {
-    background-color: #9d9d9d; }
+    box-shadow: inset 0 0 30px #5e5e5e; }
+  button:focus {
+    outline: none; }
   button.small {
     font-size: 1rem;
-    line-height: 1rem;
     padding: 3px 9px; }
   button.large {
     font-size: 1.8rem;
-    line-height: 1.8rem;
     padding: 5px 15px; }
   button.largest {
     font-size: 2.4rem;
-    line-height: 2.4rem;
     padding: 6px 18px; }
-  button.primary.quiet {
-    color: #414141; }
-  button.primary:not(.quiet) {
-    color: white;
-    background-color: #879fdc; }
-  button.primary:hover:not([disabled]):not(.solid-color) {
-    background-color: #9fb2e3; }
-  button.primary:active:not([disabled]):not(.solid-color), button.primary.is-active:not([disabled]):not(.solid-color) {
-    background-color: #738fd6; }
-  button.caution.quiet {
-    color: #414141; }
-  button.caution:not(.quiet) {
-    color: white;
-    background-color: #cfcf00; }
-  button.caution:hover:not([disabled]):not(.solid-color) {
-    background-color: #d8d833; }
-  button.caution:active:not([disabled]):not(.solid-color), button.caution.is-active:not([disabled]):not(.solid-color) {
-    background-color: #b5b500; }
-  button.danger.quiet {
-    color: #414141; }
-  button.danger:not(.quiet) {
-    color: white;
-    background-color: #b03f39; }
-  button.danger:hover:not([disabled]):not(.solid-color) {
-    background-color: #bf6560; }
-  button.danger:active:not([disabled]):not(.solid-color), button.danger.is-active:not([disabled]):not(.solid-color) {
-    background-color: #9d3833; }
-  button.safe.quiet {
-    color: #414141; }
-  button.safe:not(.quiet) {
-    color: white;
-    background-color: #3fb039; }
-  button.safe:hover:not([disabled]):not(.solid-color) {
-    background-color: #65bf60; }
-  button.safe:active:not([disabled]):not(.solid-color), button.safe.is-active:not([disabled]):not(.solid-color) {
-    background-color: #389d33; }
+  button.primary {
+    /**
+     * @section Buttons
+     * @subsection Quiet
+     *
+     * A quiet button is a button that looks like regular test until you hover over it (using the `quiet` class).
+     *
+     * ```html
+     * <button>Default</button>
+     * ```
+     */
+    /**
+     * @section Buttons
+     * @subsection Border
+     *
+     * If you wish to added a border to the button, add the `border` class.
+     *
+     * ```html
+     * <button class="border">Border</button>
+     * ```
+     */ }
+    button.primary.quiet {
+      color: #414141; }
+    button.primary:not(.quiet) {
+      color: white;
+      background-color: #869edb; }
+    button.primary.border {
+      border: 1px solid #2e4c9a; }
+    button.primary:hover:not([disabled]):not(.solid-color) {
+      box-shadow: inset 0 0 20px #2e4c9a; }
+    button.primary:active:not([disabled]):not(.solid-color), button.primary.is-active:not([disabled]):not(.solid-color) {
+      box-shadow: inset 0 0 30px #2e4c9a; }
+  button.caution {
+    /**
+     * @section Buttons
+     * @subsection Quiet
+     *
+     * A quiet button is a button that looks like regular test until you hover over it (using the `quiet` class).
+     *
+     * ```html
+     * <button>Default</button>
+     * ```
+     */
+    /**
+     * @section Buttons
+     * @subsection Border
+     *
+     * If you wish to added a border to the button, add the `border` class.
+     *
+     * ```html
+     * <button class="border">Border</button>
+     * ```
+     */ }
+    button.caution.quiet {
+      color: #414141; }
+    button.caution:not(.quiet) {
+      color: white;
+      background-color: #cfcf00; }
+    button.caution.border {
+      border: 1px solid #363600; }
+    button.caution:hover:not([disabled]):not(.solid-color) {
+      box-shadow: inset 0 0 20px #363600; }
+    button.caution:active:not([disabled]):not(.solid-color), button.caution.is-active:not([disabled]):not(.solid-color) {
+      box-shadow: inset 0 0 30px #363600; }
+  button.danger {
+    /**
+     * @section Buttons
+     * @subsection Quiet
+     *
+     * A quiet button is a button that looks like regular test until you hover over it (using the `quiet` class).
+     *
+     * ```html
+     * <button>Default</button>
+     * ```
+     */
+    /**
+     * @section Buttons
+     * @subsection Border
+     *
+     * If you wish to added a border to the button, add the `border` class.
+     *
+     * ```html
+     * <button class="border">Border</button>
+     * ```
+     */ }
+    button.danger.quiet {
+      color: #414141; }
+    button.danger:not(.quiet) {
+      color: white;
+      background-color: #b03a38; }
+    button.danger.border {
+      border: 1px solid #3c1413; }
+    button.danger:hover:not([disabled]):not(.solid-color) {
+      box-shadow: inset 0 0 20px #3c1413; }
+    button.danger:active:not([disabled]):not(.solid-color), button.danger.is-active:not([disabled]):not(.solid-color) {
+      box-shadow: inset 0 0 30px #3c1413; }
+  button.safe {
+    /**
+     * @section Buttons
+     * @subsection Quiet
+     *
+     * A quiet button is a button that looks like regular test until you hover over it (using the `quiet` class).
+     *
+     * ```html
+     * <button>Default</button>
+     * ```
+     */
+    /**
+     * @section Buttons
+     * @subsection Border
+     *
+     * If you wish to added a border to the button, add the `border` class.
+     *
+     * ```html
+     * <button class="border">Border</button>
+     * ```
+     */ }
+    button.safe.quiet {
+      color: #414141; }
+    button.safe:not(.quiet) {
+      color: white;
+      background-color: #3eb038; }
+    button.safe.border {
+      border: 1px solid #153c13; }
+    button.safe:hover:not([disabled]):not(.solid-color) {
+      box-shadow: inset 0 0 20px #153c13; }
+    button.safe:active:not([disabled]):not(.solid-color), button.safe.is-active:not([disabled]):not(.solid-color) {
+      box-shadow: inset 0 0 30px #153c13; }
   button[disabled] {
-    opacity: 0.5; }
-  button.border {
-    border: 1px solid black; }
-  button.shadow {
-    box-shadow: 0 0 5px #878787; }
+    opacity: 0.5;
+    cursor: not-allowed; }
   button.square {
     border-radius: 0; }
 
+/**
+ * @section Button Drop Down
+ *
+ * A button that when clicked expands a drop down menu.
+ *
+ * ```html
+ * <div class="button-drop-down">
+ *   <button class="solid-color">test</button>
+ *   <div class="content">content</div>
+ * </div>
+ * ```
+ *
+ * When the container has the `is-active` class, the content for the drop down is displayed.
+ *
+ * ```html
+ * <div class="button-drop-down is-active" style="margin-bottom: 30px;">
+ *   <button class="solid-color">test</button>
+ *   <div class="content" style="width: 200px;">content</div>
+ * </div>
+ * ```
+ *
+ * You can use button classes too:
+ *
+ * ```html
+ * <div class="button-drop-down is-active" style="margin-bottom: 30px;">
+ *   <button class="solid-color small">test</button>
+ *   <div class="content" style="width: 200px;">content</div>
+ * </div>
+ * ```
+ *
+ * ```html
+ * <div class="button-drop-down is-active" style="margin-bottom: 30px;">
+ *   <button class="solid-color large">test</button>
+ *   <div class="content" style="width: 200px;">content</div>
+ * </div>
+ * ```
+ *
+ * ```html
+ * <div class="button-drop-down is-active" style="margin-bottom: 30px;">
+ *   <button class="solid-color largest">test</button>
+ *   <div class="content" style="width: 200px;">content</div>
+ * </div>
+ * ```
+ *
+ * Note the some button classes will cause visual issue.
+ *
+ * ```html
+ * <div class="button-drop-down border is-active" style="margin-bottom: 30px;">
+ *   <button class="solid-color largest">test</button>
+ *   <div class="content" style="width: 200px;">content</div>
+ * </div>
+ * ```
+ *
+ * Since buttons by default have a inset shadow to better indicate they are clickable items, when using it within the content of a button drop down, it is
+ * recommended that you use `solid-color` class on the button.
+ */
 .button-drop-down {
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -821,339 +1147,827 @@ button {
   position: relative;
   color: white;
   font-weight: 200;
-  display: inline-block; }
+  display: inline-block;
+  /**
+   * @section Button Drop Down
+   * @subsection Not Positioned
+   *
+   * By default, the content of the button drop down is position absolute however if you don't want this (useful if you need something like fixed positioning),
+   * you can add the `not-positioned` class to the container.
+   */
+  /**
+   * @section Button Drop Down
+   * @subsection Border
+   *
+   * If you wish to have a border, add a `border` class to the container.
+   *
+   * ```html
+   * <div class="button-drop-down border">
+   *   <button class="solid-color">test</button>
+   *   <div class="content" style="width: 200px;">content</div>
+   * </div>
+   * ```
+   *
+   * ```html
+   * <div class="button-drop-down border is-active" style="margin-bottom: 30px;">
+   *   <button class="solid-color">test</button>
+   *   <div class="content" style="width: 200px;">content</div>
+   * </div>
+   * ```
+   */
+  /**
+   * @section Button Drop Down
+   * @subsection Left
+   *
+   * By default, the button drop down content extends over the right side of the button.  To make the button drop down content extend over the left side of the,
+   * button, add a `left` class to the container.
+   *
+   * ```html
+   * <div style="position: relative; height: 60px;">
+   *   <div class="button-drop-down left is-active" style="margin-bottom: 30px;position: absolute; right: 0;">
+   *     <button class="solid-color">test</button>
+   *     <div class="content" style="width: 200px;">content</div>
+   *   </div>
+   * </div>
+   * ```
+   */
+  /**
+   * @section Button Drop Down
+   * @subsection Square
+   *
+   * By default, the button drop down has rounded corners but if you don't want that, add a `square` class to the container.
+   *
+   * ```html
+   * <div class="button-drop-down square is-active" style="margin-bottom: 30px;">
+   *   <button class="solid-color">test</button>
+   *   <div class="content" style="width: 200px;">content</div>
+   * </div>
+   * ```
+   */ }
+  .button-drop-down.is-active button {
+    border-bottom: none;
+    border-radius: 3px 3px 0 0;
+    z-index: 502; }
+  .button-drop-down.is-active .content {
+    display: inherit; }
   .button-drop-down button {
     z-index: 495; }
-    .button-drop-down button.is-active {
-      border-bottom: none;
-      border-radius: 3px 3px 0 0;
-      z-index: 502; }
-      .button-drop-down button.is-active.border {
-        padding: 4px 12px 5px 12px; }
-        .button-drop-down button.is-active.border.small {
-          font-size: 1rem;
-          line-height: 1rem;
-          padding: 3px 9px 4px 9px; }
-        .button-drop-down button.is-active.border.large {
-          font-size: 1.8rem;
-          line-height: 1.8rem;
-          padding: 5px 15px 6px 15px; }
-        .button-drop-down button.is-active.border.largest {
-          font-size: 2.4rem;
-          line-height: 2.4rem;
-          padding: 6px 18px 7px 18px; }
   .button-drop-down .content {
-    position: absolute;
-    left: 0;
+    display: none;
     border-radius: 0 3px 3px 3px;
     padding: 5px;
-    background-color: #9d9d9d;
-    z-index: 501;
+    background-color: #aaaaaa;
+    z-index: 501; }
+  .button-drop-down:not(.not-positioned) > .content {
+    position: absolute;
+    left: 0;
     width: 100%;
     top: 100%; }
+  .button-drop-down.border.is-active button {
+    border-bottom: none; }
+  .button-drop-down.border button {
+    border: 1px solid black; }
   .button-drop-down.border .content {
     border: 1px solid black;
     top: 97%; }
-  .button-drop-down.shadow .content {
-    border: none;
-    box-shadow: 0 0 5px #9d9d9d; }
   .button-drop-down.left .content {
     left: auto;
     right: 0;
     border-radius: 3px 0 3px 3px; }
-  .button-drop-down.square button.square {
+  .button-drop-down.square button {
     border-radius: 0; }
   .button-drop-down.square .content {
     border-radius: 0; }
 
+/**
+ * @section Expander
+ *
+ * Expander is an element that toggle display of the content.  The container must have the `expander` class and it's dom must have an element with the `handle`
+ * class and `content` class.  The content is only visable when the container has a class of `is-active`.
+ *
+ * ```html
+ * <div class="expander">
+ *   <div class="handle">Handle</div>
+ *   <div class="content">Content</div>
+ * </div>
+ * ```
+ *
+ * ```html
+ * <div class="expander is-active">
+ *   <div class="handle">Handle</div>
+ *   <div class="content">Content</div>
+ * </div>
+ * ```
+ */
+.expander.is-active > .content {
+  display: block; }
 .expander > .handle {
   cursor: pointer; }
 .expander > .content {
   display: none; }
-  .expander > .content.is-active {
-    display: block; }
 
-.extend-text .container {
+/**
+ * @section Extend Text
+ *
+ * This component extends the capibilities of your standard text box/textarea elements.
+ */
+.extend-text {
   position: relative;
-  display: inline-block; }
-  .extend-text .container.auto-complete.is-active .display {
-    border-radius: 5px 5px 0 0; }
-.extend-text input {
-  width: 100%; }
-.extend-text ul,
-.extend-text li {
-  margin: 0;
-  padding: 0 1px 1px 0; }
-.extend-text ul {
-  list-style: none;
-  cursor: text; }
-.extend-text li {
-  cursor: pointer; }
-.extend-text .tag-container {
-  position: absolute;
-  z-index: 2; }
-  .extend-text .tag-container ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    float: left; }
-.extend-text .tag {
   display: inline-block;
-  margin-right: 6px;
-  float: left;
-  position: relative; }
-  .extend-text .tag.selected .text {
-    border: 1px solid red; }
-  .extend-text .tag .text {
+  /**
+   * @section Extend Text
+   * @subsection Tagging
+   *
+   * One functionality of extend text is the ability of tagging or selecting multiple values with in a text box.
+   *
+   * ```html
+   * <div class="extend-text is-active" style="width: 500px;">
+   *   <input class="display" type="text" />
+   *   <div class="tag-container" style="top: 8px; left: 4px;">
+   *     <ul class="tags">
+   *       <li class="tag">
+   *         <span data-value="tag-value">tag value</span>
+   *         <img class="remove svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/x.svg" />
+   *       </li>
+   *       <li class="tag">
+   *         <span data-value="tag-value2">tag value2</span>
+   *         <img class="remove svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/x.svg" />
+   *       </li>
+   *       <li class="tag">
+   *         <span data-value="tag-value3">tag value3</span>
+   *         <img class="remove svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/x.svg" />
+   *       </li>
+   *     </ul>
+   *   </div>
+   * </div>
+   * ```
+   */
+  /**
+   * @section Extend Text
+   * @subsection Auto Complete
+   *
+   * One functionality of extend text is the ability of doing an auto complete.
+   *
+   * ```html
+   * <div class="extend-text auto-complete" style="width: 500px;">
+   *   <div class="container">
+   *     <input class="display" type="text" />
+   *   </div>
+   * </div>
+   * ```
+   *
+   * ```html
+   * <div class="extend-text is-active auto-complete" style="width: 500px;">
+   *   <input class="display" type="text" />
+   *   <div class="auto-complete-options" style="top: 33px;">
+   *     <ul>
+   *       <li data-value="auto complete option1">auto complete option1</li>
+   *       <li data-value="auto complete option1">auto complete option1</li>
+   *       <li data-value="auto complete option1">auto complete option1</li>
+   *     </ul>
+   *   </div>
+   * </div>
+   * ```
+   */
+  /**
+   * @section Extend Text
+   * @subsection Auto-Complete - New Indicator
+   *
+   * If you want to allow the use to enter a value that the auto complete does not give you, you can use the `new-indicator` class.
+   *
+   * ```html
+   * <div class="extend-text auto-complete" style="width: 500px;">
+   *   <input class="display" type="text" />
+   *   <div class="new-indicator">New</div>
+   * </div>
+   * ```
+   */ }
+  .extend-text.auto-complete.is-active .display {
+    border-radius: 5px 5px 0 0; }
+  .extend-text input {
+    width: 100%; }
+  .extend-text ul,
+  .extend-text li {
+    margin: 0;
+    padding: 0; }
+  .extend-text ul {
+    cursor: text; }
+  .extend-text li {
+    cursor: pointer; }
+  .extend-text .tag-container {
+    position: absolute;
+    z-index: 2; }
+    .extend-text .tag-container ul {
+      padding: 0;
+      margin: 0;
+      float: left; }
+  .extend-text .tag {
     display: inline-block;
+    margin-right: 6px;
+    float: left;
+    position: relative;
     background-color: #b8d7eb;
     border: 1px solid #5f868e;
     border-radius: 2px;
-    padding: 0 2px; }
-  .extend-text .tag .remove {
-    position: relative;
-    left: 1px;
-    cursor: pointer; }
-.extend-text .display {
-  z-index: 1;
-  overflow: hidden;
-  white-space: nowrap;
-  height: inherit; }
-.extend-text .auto-complete-options {
-  position: absolute;
-  border: 2px solid #6c6c6c;
-  box-sizing: border-box;
-  background-color: white;
-  z-index: 1;
-  border-top: none;
-  max-height: 300px;
-  overflow: auto; }
-  .extend-text .auto-complete-options li {
-    padding: 3px 6px; }
-  .extend-text .auto-complete-options .is-focused {
-    background: #E1E9F6; }
-.extend-text .new-indicator {
-  position: absolute;
-  top: 11px;
-  right: 8px; }
+    padding: 0 2px;
+    /**
+     * @section Extend Text
+     * @subsection Tagging - Selected Tag
+     *
+     * Add the `selected` class to a tag to change the border color.
+     *
+     * ```html
+     * <div class="extend-text is-active" style="width: 500px;">
+     *   <input class="display" type="text" />
+     *   <div class="tag-container" style="top: 8px; left: 4px;">
+     *     <ul class="tags">
+     *       <li class="tag">
+     *         <span data-value="tag-value">tag value</span>
+     *       </li>
+     *       <li class="tag selected">
+     *         <span data-value="tag-value2">tag value2</span>
+     *       </li>
+     *       <li class="tag">
+     *         <span data-value="tag-value3">tag value3</span>
+     *       </li>
+     *     </ul>
+     *   </div>
+     * </div>
+     * ```
+     */
+    /**
+     * @section Extend Text
+     * @subsection Tagging - Remove Icon
+     *
+     * You can also add an svg icon to indicate you want to remove the tag by adding the svg with the `remove` class.
+     *
+     * ```html
+     * <div class="extend-text is-active" style="width: 500px;">
+     *   <input class="display" type="text" />
+     *   <div class="tag-container" style="top: 8px; left: 4px;">
+     *     <ul class="tags">
+     *       <li class="tag">
+     *         <span data-value="tag-value">tag value</span>
+     *         <img class="remove svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/x.svg" />
+     *       </li>
+     *       <li class="tag">
+     *         <span data-value="tag-value2">tag value2</span>
+     *         <img class="remove svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/x.svg" />
+     *       </li>
+     *       <li class="tag">
+     *         <span data-value="tag-value3">tag value3</span>
+     *         <img class="remove svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/x.svg" />
+     *       </li>
+     *     </ul>
+     *   </div>
+     * </div>
+     * ```
+     */ }
+    .extend-text .tag.selected {
+      border-color: red; }
+    .extend-text .tag .remove {
+      cursor: pointer;
+      width: 10px;
+      height: 10px; }
+  .extend-text .display {
+    z-index: 1;
+    overflow: hidden;
+    height: inherit; }
+  .extend-text .auto-complete-options {
+    position: absolute;
+    border: 2px solid #595959;
+    box-sizing: border-box;
+    background-color: white;
+    z-index: 1;
+    border-top: none;
+    max-height: 300px;
+    overflow: auto;
+    width: 100%;
+    border-radius: 0 0 5px 5px;
+    /**
+     * @section Extend Text
+     * @subsection Auto Complete - Focused Item
+     *
+     * To highlight an auto complete option, add the `is-focused` class to the item.
+     *
+     * ```html
+     * <div class="extend-text is-active auto-complete" style="width: 500px;">
+     *   <input class="display" type="text" />
+     *   <div class="auto-complete-options" style="top: 33px;">
+     *     <ul>
+     *       <li data-value="auto complete option1">auto complete option1</li>
+     *       <li class="is-focused" data-value="auto complete option1">auto complete option1</li>
+     *       <li data-value="auto complete option1">auto complete option1</li>
+     *     </ul>
+     *   </div>
+     * </div>
+     * ```
+     */ }
+    .extend-text .auto-complete-options li {
+      padding: 3px 6px; }
+    .extend-text .auto-complete-options .is-focused {
+      background: #E1E9F6; }
+  .extend-text .new-indicator {
+    position: absolute;
+    top: 11px;
+    right: 8px; }
 
+/**
+ * @section Extend Text
+ * @subsection Auto Complete & Tagging
+ *
+ * The Auto Complete and Tagging styling can co-exist.
+ *
+ * ```html
+ * <div class="extend-text is-active auto-complete" style="width: 500px;">
+ *   <input class="display" type="text" />
+ *   <div class="tag-container" style="top: 8px; left: 4px;">
+ *     <ul class="tags">
+ *       <li class="tag">
+ *         <span data-value="tag-value">tag value</span>
+ *         <img class="remove svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/x.svg" />
+ *       </li>
+ *       <li class="tag">
+ *         <span data-value="tag-value2">tag value2</span>
+ *         <img class="remove svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/x.svg" />
+ *       </li>
+ *       <li class="tag">
+ *         <span data-value="tag-value3">tag value3</span>
+ *         <img class="remove svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/x.svg" />
+ *       </li>
+ *     </ul>
+ *   </div>
+ *   <div class="auto-complete-options" style="top: 33px;">
+ *     <ul>
+ *       <li data-value="auto complete option1">auto complete option1</li>
+ *       <li class="is-focused" data-value="auto complete option1">auto complete option1</li>
+ *       <li data-value="auto complete option1">auto complete option1</li>
+ *     </ul>
+ *   </div>
+ * </div>
+ * ```
+ */
+/**
+ * @section Extend Text
+ * @subsection Validation
+ *
+ * The extend text component also works with the input elements validation.
+ *
+ * Valid
+ *
+ * ```html
+ * <div class="input-element valid">
+ *   <div class="container">
+ *     <div class="extend-text is-active auto-complete" style="width: 500px;">
+ *        <input class="display" type="text" />
+ *        <div class="tag-container" style="top: 8px; left: 4px;">
+ *          <ul class="tags">
+ *            <li class="tag">
+ *              <span data-value="tag-value">tag value</span>
+ *              <img class="remove svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/x.svg" />
+ *            </li>
+ *            <li class="tag">
+ *              <span data-value="tag-value2">tag value2</span>
+ *              <img class="remove svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/x.svg" />
+ *            </li>
+ *            <li class="tag">
+ *              <span data-value="tag-value3">tag value3</span>
+ *              <img class="remove svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/x.svg" />
+ *            </li>
+ *          </ul>
+ *        </div>
+ *        <div class="auto-complete-options" style="top: 33px;">
+ *          <ul>
+ *            <li data-value="auto complete option1">auto complete option1</li>
+ *            <li class="is-focused" data-value="auto complete option1">auto complete option1</li>
+ *            <li data-value="auto complete option1">auto complete option1</li>
+ *          </ul>
+ *        </div>
+ *     </div>
+ *   </div>
+ *   <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/check.svg" />
+ *   <div class="input-message inline">Valid</div>
+ * </div>
+ * ```
+ *
+ * Invalid
+ *
+ * ```html
+ * <div class="input-element invalid">
+ *   <div class="container">
+ *     <div class="extend-text is-active auto-complete" style="width: 500px;">
+ *        <input class="display" type="text" />
+ *        <div class="tag-container" style="top: 8px; left: 4px;">
+ *          <ul class="tags">
+ *            <li class="tag">
+ *              <span data-value="tag-value">tag value</span>
+ *              <img class="remove svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/x.svg" />
+ *            </li>
+ *            <li class="tag">
+ *              <span data-value="tag-value2">tag value2</span>
+ *              <img class="remove svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/x.svg" />
+ *            </li>
+ *            <li class="tag">
+ *              <span data-value="tag-value3">tag value3</span>
+ *              <img class="remove svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/x.svg" />
+ *            </li>
+ *          </ul>
+ *        </div>
+ *        <div class="auto-complete-options" style="top: 33px;">
+ *          <ul>
+ *            <li data-value="auto complete option1">auto complete option1</li>
+ *            <li class="is-focused" data-value="auto complete option1">auto complete option1</li>
+ *            <li data-value="auto complete option1">auto complete option1</li>
+ *          </ul>
+ *        </div>
+ *     </div>
+ *   </div>
+ *   <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/x.svg" />
+ *   <div class="input-message inline">Invalid</div>
+ * </div>
+ * ```
+ */
 .invalid .extend-text .auto-complete-options {
-  border-color: #8c322d; }
+  border-color: #b03a38; }
 
 .valid .extend-text .auto-complete-options {
-  border-color: #328c2d; }
+  border-color: #3eb038; }
 
-.grid ul,
-.grid li {
-  padding: 0;
-  margin: 0; }
+/**
+ * @section Forms
+ *
+ * These are the styles available for displaying forms.
+ *
+ * By default, `label` and `input` elements each display on there own line unless the `input` is wrapped within the `label`.
+ *
+ * ```html
+ * <form>
+ *   <div>
+ *     <label for="first-name">First Name</label>
+ *     <input id="first-name" type="text" />
+ *   </div>
+ *   <div>
+ *     <label for="last-name">Last Name</label>
+ *     <input id="last-name" type="text" />
+ *   </div>
+ *   <div>
+ *     <label for="is-active"><input id="is-active" type="checkbox" /> Is Active</label>
+ *   </div>
+ *   <div>
+ *     <label for="country">Select Country</label>
+ *     <select id="country">
+ *       <option>USA</option>
+ *       <option>Other</option>
+ *     </select>
+ *   <div>
+ *   <div>
+ *     <label>Is Admin</label>
+ *     <label for="is-admin-yes" /><input id="is-admin-yes" name="isAdmin" type="radio"> Yes</label>
+ *     <label for="is-admin-no"><input id="is-admin-no" name="isAdmin" type="radio" /> No</label>
+ *   </div>
+ * </form>
+ * ```
+ */
+form {
+  /**
+   * @section Forms
+   * @subsection Compact
+   *
+   * If you wish labels and input to be displayed on the same line regardless of how the dom is structure, add the `compact` class to the form.
+   *
+   * ```html
+   * <form class="compact">
+   *   <div>
+   *     <label for="first-name">First Name</label>
+   *     <input id="first-name" type="text" />
+   *   </div>
+   *   <div>
+   *     <label for="last-name">Last Name</label>
+   *     <input id="last-name" type="text" />
+   *   </div>
+   *   <div>
+   *     <label for="is-active"><input id="is-active" type="checkbox" /> Is Active</label>
+   *   </div>
+   *   <div>
+   *     <label for="country">Select Country</label>
+   *     <select id="country">
+   *       <option>USA</option>
+   *       <option>Other</option>
+   *     </select>
+   *   <div>
+   *   <div>
+   *     <label>Is Admin</label>
+   *     <label for="is-admin-yes" /><input id="is-admin-yes" name="isAdmin" type="radio"> Yes</label>
+   *     <label for="is-admin-no"><input id="is-admin-no" name="isAdmin" type="radio" /> No</label>
+   *   </div>
+   * </form>
+   * ```
+   */ }
+  form.compact label,
+  form.compact .label {
+    display: inline-block;
+    text-align: right;
+    padding-right: 10px; }
 
-.grid-header-data-cell,
-.grid-data-cell,
-.grid-actions {
+label,
+.label {
+  display: block; }
+
+input ~ label {
   display: inline-block; }
 
-.grid {
-  display: block;
-  border: 1px solid black;
-  min-height: 75px; }
-
-.grid .grid-header {
-  -webkit-user-select: "none";
-  -moz-user-select: "none";
-  -ms-user-select: "none";
-  user-select: "none";
-  padding: 5px; }
-
-.grid .data-header > li,
-.grid .record-item > li {
-  height: 100%; }
-
-.grid .data-header {
-  -webkit-user-select: "none";
-  -moz-user-select: "none";
-  -ms-user-select: "none";
-  user-select: "none"; }
-
-.grid .grid-header .settings {
-  display: inline-block;
-  float: right;
-  cursor: pointer; }
-
-.grid .grid-header .settings:after {
-  content: "\e009"; }
-
-.grid .data {
-  position: relative;
-  overflow: auto;
-  width: 100%; }
-
-.grid .data.selectable {
-  -webkit-user-select: "none";
-  -moz-user-select: "none";
-  -ms-user-select: "none";
-  user-select: "none";
-  cursor: pointer; }
-
-.grid .data .data-header [class*="sort-"]:after,
-.grid .grid-header .settings:after,
-.grid .data .data-header .sortable:after {
-  font-family: 'nag-icon-font';
-  font-style: normal;
-  speak: none;
-  font-weight: normal;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  display: inline-block;
-  float: right;
-  width: 16px;
-  text-align: center; }
-
-.grid .data .data-header .sort-desc:after {
-  content: "\e004"; }
-
-.grid .data .data-header .sort-asc:after {
-  content: "\e006"; }
-
-.grid .data .data-header .sortable {
-  cursor: pointer; }
-
-.grid .data .data-header .sortable:not([class*="sort-"]):after {
-  content: "\e008"; }
-
-.grid .data .data-header .text {
-  display: inline-block;
-  padding-right: 5px; }
-
-.grid .data > ul li {
-  position: relative;
-  display: inline-block;
-  overflow: hidden; }
-
-.grid .data > ul {
-  border-top: 1px solid black;
-  display: inline-block;
-  white-space: nowrap;
-  width: 100%; }
-
-.grid .data > ul:last-of-type {
-  border-bottom: 1px solid black; }
-
-.grid .data > ul li {
-  border-right: 1px solid black;
-  padding: 3px; }
-
-.grid .data > ul li:last-child {
-  border-right: none; }
-
-.grid .controls a,
-.grid .controls span[class^="font-icon-"],
-.grid .controls span,
-.grid .controls input {
-  vertical-align: middle;
-  text-decoration: none;
-  color: black; }
-
-.grid .grid-footer {
-  padding: 6px 5px 5px 5px; }
-
-.grid .grid-wrapper {
-  position: relative;
-  box-sizing: border-box; }
-
-.grid .loading {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  background-color: rgba(0, 0, 0, 0.5); }
-
-.grid .loading .text {
-  border-radius: 10px;
-  margin: 20px auto 0 auto;
-  width: 53px;
-  padding: 10px;
-  background-color: white; }
-
-.grid .settings {
-  position: absolute;
-  top: 5px;
-  right: 5px;
-  border: 1px solid black;
-  background-color: white;
-  z-index: 1001; }
-
-.grid .ui-resizable-e {
-  right: 0; }
-
-form.one-line label {
-  display: inline-block;
-  text-align: right; }
-  form.one-line label.with-separator:after {
-    content: ":"; }
-form.compact .input-element {
-  display: inline-block;
-  padding-left: 1.6rem; }
-form.compact .valid-icon.before,
-form.compact .invalid-icon.before {
-  left: 0; }
-
-label.container {
-  display: inline-block; }
-
-input[type="text"], textarea {
+input:not([type]),
+input[type="text"],
+textarea {
   border-radius: 5px;
-  border: 2px solid #878787;
-  padding: 5px;
+  border: 2px solid #595959;
+  padding: 2px;
   margin: 5px 0;
   outline: none;
-  box-shadow: inset 0px 0px 15px #f0f0f0; }
-  input[type="text"]:focus, textarea:focus {
-    border-color: #6c6c6c;
-    box-shadow: inset 0px 0px 15px silver; }
+  box-shadow: inset 0px 0px 15px #efefef; }
+  input:not([type]):focus,
+  input[type="text"]:focus,
+  textarea:focus {
+    box-shadow: inset 0px 0px 15px #a7a7a7; }
 
+input[type="radio"],
+input[type="checkbox"] {
+  margin: 5px; }
+
+input[disabled] {
+  opacity: .7; }
+
+/**
+ * @section Input Element
+ *
+ * There is a special structure that can be used by added the `input-element` class to a containing element to support custom data validation styling.
+ *
+ * ```html
+ * <form class="compact">
+ *   <div>
+ *     <div class="input-element valid">
+ *       <div class="container">
+ *         <label for="first-name">First Name</label>
+ *         <input id="first-name" type="text" />
+ *       </div>
+ *       <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/check.svg" />
+ *       <div class="input-message inline">Valid</div>
+ *     </div>
+ *   </div>
+ *   <div>
+ *     <div class="input-element valid">
+ *       <div class="container">
+ *         <label for="last-name">Last Name</label>
+ *         <input id="last-name" type="text" />
+ *       </div>
+ *       <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/check.svg" />
+ *       <div class="input-message inline">Valid</div>
+ *     </div>
+ *   </div>
+ *   <div>
+ *     <div class="input-element invalid">
+ *       <div class="container">
+ *         <label for="is-active"><input id="is-active" type="checkbox" /> Is Active</label>
+ *       </div>
+ *       <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/x.svg" />
+ *     </div>
+ *   </div>
+ *   <div>
+ *     <div class="input-element invalid">
+ *       <div class="container">
+ *         <label for="country">Select Country</label>
+ *         <select id="country">
+ *           <option>USA</option>
+ *           <option>Other</option>
+ *         </select>
+ *       </div>
+ *       <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/x.svg" />
+ *     </div>
+ *   <div>
+ *   <div>
+ *     <div class="input-element valid">
+ *       <div class="container">
+ *         <label>Is Admin</label>
+ *         <label for="is-admin-yes" /><input id="is-admin-yes" name="isAdmin" type="radio"> Yes</label>
+ *         <label for="is-admin-no"><input id="is-admin-no" name="isAdmin" type="radio" /> No</label>
+ *       </div>
+ *       <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/check.svg" />
+ *     </div>
+ *   </div>
+ * </form>
+ * ```
+ */
 .input-element {
-  position: relative; }
+  position: relative;
+  /**
+   * @section Input Element
+   * @subsection Plain
+   *
+   * By default, the `input` element will be colored based on validation however if you wish to keep in `input` itself plain, add the `plain` class to the
+   * container element.
+   *
+   * ```html
+   * <div class="input-element invalid plain">
+   *   <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/x.svg" />
+   *   <div class="container">
+   *     <input type="text" class="ng-invalid" />
+   *   </div>
+   *   <div class="input-message">Invalid</div>
+   * </div>
+   * <div class="input-element valid plain">
+   *   <div class="container">
+   *     <input type="text" class="ng-valid" />
+   *   </div>
+   *   <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/check.svg" />
+   *   <div class="input-message">Valid</div>
+   * </div>
+   * ```
+   */
+  /**
+   * @section Input Element
+   * @subsection Icon
+   *
+   * You you provide an icon for the input element that is SVG, you just need to add the `icon` class to the element.
+   *
+   * ```html
+   * <div class="input-element valid">
+   *   <div class="container">
+   *     <input type="text" class="ng-valid" />
+   *   </div>
+   *   <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/check.svg" />
+   * </div>
+   * ```
+   */
+  /**
+   * @section Input Element
+   * @subsection Message
+   *
+   * You you provide message element (useful for showing success/error message) by adding the `message` class to the element.
+   *
+   * ```html
+   * <div class="input-element valid">
+   *   <div class="container">
+   *     <input type="text" class="ng-valid" />
+   *   </div>
+   *   <div class="input-message">Valid</div>
+   * </div>
+   * ```
+   *
+   * By defualt it is displayed `block` but you can add the `inline` class to the message element to have it displayed `inline`.
+   *
+   * ```html
+   * <div class="input-element valid">
+   *   <div class="container">
+   *     <input type="text" class="ng-valid" />
+   *   </div>
+   *   <div class="input-message inline">Valid</div>
+   * </div>
+   * ```
+   */ }
+  .input-element:not(.plain) {
+    /**
+     * @section Input Element
+     * @subsection Invalid
+     *
+     * If an input element is invalid, you need to add the `invalid` class on the container.
+     *
+     * ```html
+     * <div class="input-element invalid">
+     *   <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/x.svg" />
+     *   <div class="container">
+     *     <input type="text" class="ng-invalid" />
+     *   </div>
+     *   <div class="input-message">Invalid</div>
+     * </div>
+     * ```
+     */
+    /**
+     * @section Input Element
+     * @subsection Valid
+     *
+     * If an input element is valid, you need to add the `valid` class on the container.
+     *
+     * ```html
+     * <div class="input-element valid">
+     *   <div class="container">
+     *     <input type="text" class="ng-valid" />
+     *   </div>
+     *   <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/check.svg" />
+     *   <div class="input-message">Valid</div>
+     * </div>
+     * ```
+     */ }
+    .input-element:not(.plain).invalid input,
+    .input-element:not(.plain).invalid textarea {
+      border-color: #b03a38;
+      background-color: #f9eeee;
+      /*&:focus {
+        border-color: $color-medium-carmine-d30;
+      }*/ }
+    .input-element:not(.plain).valid input,
+    .input-element:not(.plain).valid textarea {
+      border-color: #3eb038;
+      background-color: #eef9ee;
+      /*&:focus {
+        border-color: $color-apple-d30;
+      }*/ }
+  .input-element.invalid .icon {
+    fill: #7a0200; }
+  .input-element.invalid .input-message {
+    color: #7a0200; }
+  .input-element.valid .icon {
+    fill: #007e01; }
+  .input-element.valid .input-message {
+    color: #007e01; }
   .input-element > .container {
-    *zoom: 1;
     display: inline-block;
     position: relative; }
-    .input-element > .container:before, .input-element > .container:after {
-      content: " ";
-      display: table; }
     .input-element > .container:after {
+      content: "";
+      display: table;
       clear: both; }
-    .input-element > .container:not(.plain) input:not(.plain).ng-invalid {
-      border-color: #b03f39; }
-      .input-element > .container:not(.plain) input:not(.plain).ng-invalid:focus {
-        border-color: #8c322d; }
-    .input-element > .container:not(.plain) input:not(.plain).ng-valid {
-      border-color: #3fb039; }
-      .input-element > .container:not(.plain) input:not(.plain).ng-valid:focus {
-        border-color: #328c2d; }
-  .input-element input[type="text"] ~ .icons {
-    bottom: 1.5rem; }
-  .input-element .valid-icon:before {
-    color: #007f02;
-    content: "\e00b"; }
-  .input-element .invalid-icon:before {
-    color: #7f0400;
-    content: "\e00d"; }
+  .input-element .icon {
+    vertical-align: middle; }
   .input-element .input-message.inline {
-    display: inline;
-    padding-left: 5px; }
+    display: inline; }
 
+/**
+ * @section Notify
+ *
+ * Notify is a way to unobtrusively display a message to the user, be default it display in the top right corner.
+ *
+ * ```html
+ * <a id="default" class="show-notify" href>click me to show default notify (auto removed in 2 seconds)</a>
+ * <div class="notify message notice" data-id="default">
+ *   <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/info.svg" />This is a notification message.
+ * </div>
+ * ```
+ *
+ * Notify elements are `position: fixed` so just add `top`/`bottom`/`left`/`right` to the container to position it.
+ *
+ * ```html
+ * <a id="positioned" class="show-notify" href>click me to show positioned notify (auto removed in 2 seconds)</a>
+ * <div class="notify message danger" data-id="positioned" style="top: 300px; left: 150px; right: auto;">
+ *   <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/x.svg" />This is a positioned notification message.
+ * </div>
+ * ```
+ *
+ * <script type="text/javascript">
+ * $(document).ready(function() {
+ *   $('.notify').hide();
+ *
+ *   $('.show-notify').click(function(event) {
+ *     event.preventDefault();
+ *     $('body').append($('[data-id=' + $(this).attr('id') + ']').clone().show());
+ *     setTimeout(function() {
+ *       $('body > .notify').remove();
+ *     }, 2000);
+ *   });
+ * });
+ * </script>
+ */
 .notify {
   position: fixed;
-  top: 0;
-  left: 0;
+  top: 15px;
+  right: 15px;
   z-index: 9999;
   display: inline-block; }
+  .notify.absolute {
+    position: fixed; }
 
-.notify.absolute {
-  position: absolute; }
-
+/**
+ * @section Site Loader
+ *
+ * Site loader in a way to indicate the the site is working.
+ */
+/**
+ * @section Site Loader
+ * @subsection Blocking
+ *
+ * @TODO: MAke it possible to do blocking but display like a non-blocking (display content but don't let the user click on anything).
+ *
+ * The blocking site loader take the full screen and blocks the user from doing anything while the loader is up.
+ *
+ * ```html
+ * <a class="show-site-loader" href>click me to show blocking site loader (auto removed in 2 seconds)</a>
+ * <div class="site-loader">
+ *   <div class="text">The application is loading...</div>
+ * </div>
+ * ```
+ *
+ * <script type="text/javascript">
+ * $(document).ready(function() {
+ *   $('.show-site-loader').click(function(event) {
+ *     event.preventDefault();
+ *     $('.site-loader').addClass('is-active');
+ *
+ *     setTimeout(function() {
+ *      $('.site-loader').removeClass('is-active');
+ *     }, 2000);
+ *   });
+ * });
+ * </script>
+ */
 .site-loader {
   position: fixed;
   top: 0;
@@ -1161,32 +1975,122 @@ input[type="text"], textarea {
   right: 0;
   bottom: 0;
   background-color: white;
-  z-index: 10000; }
+  z-index: 10001;
+  display: none; }
+  .site-loader.is-active {
+    display: block; }
   .site-loader .text {
     padding-top: 50px;
-    width: 300px;
-    margin: 0 auto;
     z-index: 1001;
     text-align: center; }
 
-.non-blocking-loader .message {
+/**
+ * @section Site Loader
+ * @subsection Non-Blocking
+ *
+ * The non-blocking loaded is used let the user know the application is working but they can still click around.  This used a specially styled notify/message element.
+ *
+ * ```html
+ * <a class="show-non-blocking" href>click me to show non-blocking site loader (auto removed in 2 seconds)</a>
+ * <div class="notify message danger non-blocking-loader">The site is working...</div>
+ * ```
+ *
+ * <script type="text/javascript">
+ * $(document).ready(function() {
+ *   $('.notify').hide();
+ *
+ *   $('.show-non-blocking').click(function(event) {
+ *     event.preventDefault();
+ *     $('body').append($('.notify').clone().show());
+ *     setTimeout(function() {
+ *       $('body > .notify').remove();
+ *     }, 2000);
+ *   });
+ * });
+ * </script>
+ */
+.non-blocking-loader.message {
+  top: 0;
+  right: 50%;
+  margin-right: -150px;
+  width: 300px;
+  text-align: center;
   border-top: none;
   padding: 0.25em 0.5em;
   border-radius: 0 0 3px 3px;
-  z-index: 10001; }
+  z-index: 10000; }
 
-.revealing-panel > .content {
-  position: fixed;
-  z-index: 11000;
-  background-color: white;
-  overflow: hidden; }
-  .revealing-panel > .content.absolute {
+/**
+ * @section Revealing Panel
+ *
+ * Revealing panel is a type of modal window system that displays a site overlay and content on top of that overlay.  There are a number of different ways to display the revealing panel.
+ *
+ * @TODO: add example using absolute positioning
+ * @TODO: add animations in (needs to support angular)
+ *
+ * You can display the panel on all 4 sides on the page.
+ *
+ * ```html
+ * <ul>
+ *   <li><a class="show-revealing-panel" href data-position="center">click me to show revealing panel center (auto removed in 2 seconds)</a></li>
+ *   <li><a class="show-revealing-panel" href data-position="left">click me to show revealing panel left (auto removed in 2 seconds)</a></li>
+ *   <li><a class="show-revealing-panel" href data-position="top">click me to show revealing panel top (auto removed in 2 seconds)</a></li>
+ *   <li><a class="show-revealing-panel" href data-position="right">click me to show revealing panel right (auto removed in 2 seconds)</a></li>
+ *   <li><a class="show-revealing-panel" href data-position="bottom">click me to show revealing panel bottom (auto removed in 2 seconds)</a></li>
+ * </ul>
+ * <div class="revealing-panel">
+ *   <div class="site-overlay"></div>
+ *   <div class="content">Revealing panel content</div>
+ * </div>
+ * ```
+ *
+ * <script type="text/javascript">
+ * $(document).ready(function() {
+ *   $('.show-revealing-panel').click(function(event) {
+ *     event.preventDefault();
+ *     var position = $(this).data('position');
+ *     $('.revealing-panel').addClass('is-active').addClass(position);
+ *     $('.site-overlay').addClass('is-active');
+ *
+ *     setTimeout(function() {
+ *       $('.revealing-panel').removeClass('is-active').removeClass(position);
+ *       $('.site-overlay').removeClass('is-active');
+ *     }, 2000);
+ *   });
+ * });
+ * </script>
+ */
+/*
+ * @section Revealing Panel
+ * @subsection Reveal Animation
+ *
+ * @TODO: have animation based on is-active class
+ *
+ * Added css for angular animation
+ *
+ * @mixin reveal-animation
+ * @param $property
+ * @param $start-value
+ * @param $end-value
+ * @param $duration
+ * @param $timing-function
+ * @param $border-side
+ * @param $border-size
+ * @param $border-type
+ * @param $color-gray
+ */
+.revealing-panel {
+  /*&.reveal {
+    overflow: visible;
+  }
+
+  &.reveal-add,
+  &.reveal-remove {
+    overflow: hidden;
+  }*/ }
+  .revealing-panel.absolute > .content {
     position: absolute; }
-  .revealing-panel > .content.reveal {
-    overflow: visible; }
-  .revealing-panel > .content.reveal-add, .revealing-panel > .content.reveal-remove {
-    overflow: hidden; }
-  .revealing-panel > .content.center {
+  .revealing-panel.center > .content {
     top: 50%;
     left: 50%;
     height: 500px;
@@ -1194,116 +2098,75 @@ input[type="text"], textarea {
     display: none;
     opacity: 1;
     border: 1px solid black;
-    margin: calc(-500px / 2) 0 0 calc(-500px / 2); }
-    .revealing-panel > .content.center.reveal, .revealing-panel > .content.center.reveal-add, .revealing-panel > .content.center.reveal-remove {
-      display: inline-block; }
-    .revealing-panel > .content.center.reveal {
-      opacity: 1; }
-    .revealing-panel > .content.center.reveal-add, .revealing-panel > .content.center.reveal-remove {
-      -webkit-transition: opacity 0.25s linear;
-      -moz-transition: opacity 0.25s linear;
-      transition: opacity 0.25s linear; }
-    .revealing-panel > .content.center.reveal-add {
-      opacity: 0; }
-    .revealing-panel > .content.center.reveal-add.reveal-add-active {
-      opacity: 1; }
-    .revealing-panel > .content.center.reveal-remove {
-      opacity: 1; }
-    .revealing-panel > .content.center.reveal-remove.reveal-remove-active {
-      opacity: 0; }
-  .revealing-panel > .content.left {
+    margin: calc(-500px / 2) 0 0 calc(-500px / 2);
+    /*&.reveal,
+    &.reveal-add,
+    &.reveal-remove {
+      display: inline-block;
+    }*/ }
+  .revealing-panel.left.is-active > .content {
+    width: 500px; }
+  .revealing-panel.left > .content {
     top: 0;
     left: 0;
     bottom: 0;
     width: 0; }
-    .revealing-panel > .content.left.reveal {
-      border-right: 1px solid black;
-      width: 500px; }
-    .revealing-panel > .content.left.reveal-add, .revealing-panel > .content.left.reveal-remove {
-      -webkit-transition: width 0.25s linear;
-      -moz-transition: width 0.25s linear;
-      transition: width 0.25s linear;
-      border-right: 1px solid black; }
-    .revealing-panel > .content.left.reveal-add {
-      width: 0; }
-    .revealing-panel > .content.left.reveal-add.reveal-add-active {
-      width: 500px; }
-    .revealing-panel > .content.left.reveal-remove {
-      width: 500px; }
-    .revealing-panel > .content.left.reveal-remove.reveal-remove-active {
-      width: 0; }
-    .revealing-panel > .content.left .inner-content {
-      min-width: 499px; }
-  .revealing-panel > .content.right {
+  .revealing-panel.right.is-active > .content {
+    width: 500px; }
+  .revealing-panel.right > .content {
     top: 0;
     right: 0;
     bottom: 0;
     width: 0; }
-    .revealing-panel > .content.right.reveal {
-      border-left: 1px solid black;
-      width: 500px; }
-    .revealing-panel > .content.right.reveal-add, .revealing-panel > .content.right.reveal-remove {
-      -webkit-transition: width 0.25s linear;
-      -moz-transition: width 0.25s linear;
-      transition: width 0.25s linear;
-      border-left: 1px solid black; }
-    .revealing-panel > .content.right.reveal-add {
-      width: 0; }
-    .revealing-panel > .content.right.reveal-add.reveal-add-active {
-      width: 500px; }
-    .revealing-panel > .content.right.reveal-remove {
-      width: 500px; }
-    .revealing-panel > .content.right.reveal-remove.reveal-remove-active {
-      width: 0; }
-    .revealing-panel > .content.right .inner-content {
-      min-width: 499px; }
-  .revealing-panel > .content.top {
+  .revealing-panel.top.is-active > .content {
+    height: 500px; }
+  .revealing-panel.top > .content {
     top: 0;
     left: 0;
     right: 0;
     height: 0; }
-    .revealing-panel > .content.top.reveal {
-      border-bottom: 1px solid black;
-      height: 500px; }
-    .revealing-panel > .content.top.reveal-add, .revealing-panel > .content.top.reveal-remove {
-      -webkit-transition: height 0.25s linear;
-      -moz-transition: height 0.25s linear;
-      transition: height 0.25s linear;
-      border-bottom: 1px solid black; }
-    .revealing-panel > .content.top.reveal-add {
-      height: 0; }
-    .revealing-panel > .content.top.reveal-add.reveal-add-active {
-      height: 500px; }
-    .revealing-panel > .content.top.reveal-remove {
-      height: 500px; }
-    .revealing-panel > .content.top.reveal-remove.reveal-remove-active {
-      height: 0; }
-    .revealing-panel > .content.top .inner-content {
-      min-height: 499px; }
-  .revealing-panel > .content.bottom {
+  .revealing-panel.bottom.is-active > .content {
+    height: 500px; }
+  .revealing-panel.bottom > .content {
     bottom: 0;
     left: 0;
     right: 0;
     height: 0; }
-    .revealing-panel > .content.bottom.reveal {
-      border-top: 1px solid black;
-      height: 500px; }
-    .revealing-panel > .content.bottom.reveal-add, .revealing-panel > .content.bottom.reveal-remove {
-      -webkit-transition: height 0.25s linear;
-      -moz-transition: height 0.25s linear;
-      transition: height 0.25s linear;
-      border-top: 1px solid black; }
-    .revealing-panel > .content.bottom.reveal-add {
-      height: 0; }
-    .revealing-panel > .content.bottom.reveal-add.reveal-add-active {
-      height: 500px; }
-    .revealing-panel > .content.bottom.reveal-remove {
-      height: 500px; }
-    .revealing-panel > .content.bottom.reveal-remove.reveal-remove-active {
-      height: 0; }
-    .revealing-panel > .content.bottom .inner-content {
-      min-height: 499px; }
+  .revealing-panel > .content {
+    position: fixed;
+    z-index: 11000;
+    background-color: white;
+    overflow: hidden;
+    display: none; }
+  .revealing-panel.is-active > .content {
+    display: block; }
 
+/**
+ * @section Site Overlay
+ *
+ * @TODO: make it possible to put a site overlay within an element inside of only the entire page
+ * @TODO: add animation is (needs to support angular animation)
+ *
+ * A site overlay is an element that fades everything behind it (z-index wise) in order to focus attention to anything above the site overlay.
+ *
+ * ```html
+ * <a class="show-site-overlay" href>click me to show site overlay (auto removed in 2 seconds)</a>
+ * <div class="site-overlay"></div>
+ * ```
+ *
+ * <script type="text/javascript">
+ * $(document).ready(function() {
+ *   $('.show-site-overlay').click(function(event) {
+ *     event.preventDefault();
+ *     $('.site-overlay').addClass('is-active');
+ *
+ *     setTimeout(function() {
+ *     $('.site-overlay').removeClass('is-active');
+ *     }, 2000);
+ *   });
+ * });
+ * </script>
+ */
 .site-overlay {
   position: fixed;
   top: 0;
@@ -1313,23 +2176,66 @@ input[type="text"], textarea {
   background-color: black;
   opacity: 0.5;
   z-index: 999;
-  display: none; }
+  display: none;
+    /*&.is-active-add,
+    &.is-active-remove {
+        @include transition(opacity .25s linear);
+        display: block;
+    }
+
+    &.is-active-add {
+        opacity: 0;
+    }
+
+    &.is-active-add.is-active-add-active {
+        opacity: 0.5;
+    }
+
+    &.is-active-remove {
+        opacity: 0.5;
+    }
+
+    &.is-active-remove.is-active-remove-active {
+        opacity: 0;
+    }*/ }
   .site-overlay.is-active {
     display: block; }
-  .site-overlay.is-active-add, .site-overlay.is-active-remove {
-    -webkit-transition: opacity 0.25s linear;
-    -moz-transition: opacity 0.25s linear;
-    transition: opacity 0.25s linear;
-    display: block; }
-  .site-overlay.is-active-add {
-    opacity: 0; }
-  .site-overlay.is-active-add.is-active-add-active {
-    opacity: 0.5; }
-  .site-overlay.is-active-remove {
-    opacity: 0.5; }
-  .site-overlay.is-active-remove.is-active-remove-active {
-    opacity: 0; }
 
+/**
+ * @section SVG Icons
+ *
+ * SVG icons, default all icons to 16x16.
+ *
+ * ```html
+ * <img class="svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/check.svg" />
+ * ```
+ */
+.svg-icon {
+  width: 16px;
+  height: 16px; }
+
+/**
+ * @section Tabs
+ *
+ * Tabs allow you segment data and use the same screen space.
+ *
+ * Tabs are contained in an element with the `tabs-container` class and each tab should also have the `tab` class.
+ *
+ * Tab contents are in elements with the `tab-content` class.
+ *
+ * The active tab and tab content should have the `is-active` class.
+ *
+ * ```html
+ * <div class="tabs">
+ *   <div class="tabs-container">
+ *     <span class="tab">Tab 1</span>
+ *     <span class="tab is-active">Tab 2</span>
+ *   </div>
+ *   <div class="tab-content">Tab content 1</div>
+ *   <div class="tab-content is-active">Tab content 2</div>
+ * <div>
+ * ```
+ */
 .tabs,
 .tabs-container {
   margin: 0;
@@ -1338,167 +2244,473 @@ input[type="text"], textarea {
 .tabs .tab {
   padding: 3px;
   display: inline-block;
-  border: 1px solid #cdcdcd;
+  border: 1px solid #414141;
   border-bottom: none;
   cursor: pointer; }
 
 .tabs .tab.is-active {
-  background-color: #cdcdcd; }
+  background-color: #c1c1c1; }
 
 .tabs .tab-content {
   display: none; }
 
 .tabs .tab-content.is-active {
-  border-top: 1px solid #cdcdcd;
+  border-top: 1px solid #414141;
   display: block; }
 
-.tooltip .handle {
-  display: inline-block; }
+/**
+ * @section Tooltip
+ *
+ * A tooltip is a way to display additional infomation when a user interact with an element (like hovering the mouse over it on clicking on it).
+ *
+ * It will content a element with the `handle` class that the user can interact with and an element with the `content` class that is the tooltip content.
+ *
+ * ```html
+ * <div class="tooltip" style="margin-left: 100px;">
+ *   <span class="handle"><img class="svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/question-mark.svg" /></span>
+ *   <div class="content">This is a tooltip content</div>
+ * </div>
+ * ```
+ *
+ * If you add the `is-active` class to the main tooltip container, the content will show.
+ *
+ * ```html
+ * <div class="tooltip is-active" style="margin-left: 100px; margin-bottom: 50px;">
+ *   <span class="handle"><img class="svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/question-mark.svg" /></span>
+ *   <div class="content">This is a tooltip content</div>
+ * </div>
+ * ```
+ *
+ * Positioning the tooltip is just a matter of setting the `top`/`left`/`right`/`bottom` properties.
+ *
+ * ```html
+ * <div class="tooltip is-active" style="margin-left: 250px; margin-bottom: 50px;">
+ *   <span class="handle"><img class="svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/question-mark.svg" /></span>
+ *   <div class="content" style="left: -158px;">This is a tooltip content</div>
+ * </div>
+ * ```
+ */
+.tooltip {
+  position: relative; }
+  .tooltip.is-active .content {
+    display: block; }
+  .tooltip .handle {
+    display: inline-block; }
+  .tooltip .content {
+    position: absolute;
+    padding: 5px;
+    background: white;
+    border: 1px solid black;
+    display: none; }
 
-.tooltip .content {
-  position: absolute;
-  padding: 5px;
-  background: white;
-  border: 1px solid black; }
-
-/* tree system */
-.tree > ul,
-.tree .tree-element > ul {
-  padding: 0;
-  list-style: none; }
-
-.tree .tree-element {
+/**
+ * @section Tree
+ *
+ * Display a list of element is a tree view that can be expanded and collapsed.  The main container must have the `tree` class and the tree data uses `ul`/`li` elements.
+ *
+ * Tree elements are by default collapsed.  Nodes that have children need to have the `tree` class and nodes that don't have children need to have the `leaf` class.
+ *
+ * ```html
+ * <div class="tree">
+ *   <ul>
+ *     <li class="tree">
+ *       <img class="svg-icon" data-src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/chevron-right.svg" />tree 2
+ *       <ul>
+ *         <li class="leaf">
+ *           <img class="svg-icon" data-src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/file.svg" />leaf 2-1
+ *         </li>
+ *         <li class="leaf no-icon">leaf 2-2</li>
+ *         <li class="tree">
+ *           <img class="svg-icon" data-src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/chevron-right.svg" />tree 2-2
+ *           <ul>
+ *             <li class="leaf no-icon">leaf 2-2-1</li>
+ *             <li class="leaf">
+ *               <img class="svg-icon" data-src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/aperture.svg" />leaf 2-2-2
+ *             </li>
+ *             <li class="leaf">
+ *               <img class="svg-icon" data-src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/camera-slr.svg" />leaf 2-2-3
+ *             </li>
+ *           </ul>
+ *         </li>
+ *         <li class="leaf no-icon">leaf 2-4</li>
+ *       </ul>
+ *     </li>
+ *   </ul>
+ * </div>
+ * ```
+ *
+ * In order to expanded a tree, add the `expanded` class to the element with the `tree` class.
+ *
+ * ```html
+ * <div class="tree">
+ *   <ul>
+ *     <li class="tree expanded">
+ *       <img class="svg-icon" data-src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/chevron-bottom.svg" />tree 2
+ *       <ul>
+ *         <li class="leaf">
+ *           <img class="svg-icon" data-src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/file.svg" />leaf 2-1
+ *         </li>
+ *         <li class="leaf no-icon">leaf 2-2</li>
+ *         <li class="tree expanded">
+ *           <img class="svg-icon" data-src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/chevron-bottom.svg" />tree 2-2
+ *           <ul>
+ *             <li class="leaf no-icon">leaf 2-2-1</li>
+ *             <li class="leaf">
+ *               <img class="svg-icon" data-src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/aperture.svg" />leaf 2-2-2
+ *             </li>
+ *             <li class="leaf">
+ *               <img class="svg-icon" data-src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/camera-slr.svg" />leaf 2-2-3
+ *             </li>
+ *           </ul>
+ *         </li>
+ *         <li class="leaf no-icon">leaf 2-4</li>
+ *       </ul>
+ *     </li>
+ *   </ul>
+ * </div>
+ * ```
+ */
+.tree li {
   cursor: pointer; }
-
-.tree .tree-element > .tree-label:before {
-  width: 13px;
-  font-size: 1rem;
-  content: "\e005"; }
-
-.tree .tree-element.tree-expanded > .tree-label:before {
-  width: 13px;
-  font-size: 1rem;
-  content: "\e006"; }
-
-.tree .tree-element .node {
-  padding-left: 1.3rem; }
-
-.tree .tree-element > ul.node {
-  display: none; }
-
-.tree .tree-element.tree-expanded > ul.node {
+.tree .leaf {
+  padding-left: 8px; }
+  .tree .leaf.no-icon {
+    padding-left: 22px; }
+.tree .tree.expanded > ul {
   display: block; }
+  .tree .tree.expanded > ul .tree {
+    padding-left: 8px; }
+    .tree .tree.expanded > ul .tree.no-icon {
+      padding-left: 22px; }
+.tree .tree.no-icon {
+  padding-left: 14px; }
+.tree .tree ul {
+  display: none; }
+.tree svg {
+  width: 11px;
+  height: 11px;
+  margin-right: 3px; }
 
+/**
+ * @section Messages
+ *
+ * Messages are elements to display a piece of information that stands out from most of the other content.
+ *
+ * ```html
+ * <div class="message">This is a generic message.</div>
+ * ```
+ */
 .message {
   display: inline-block;
   padding: 5px;
-  border: 1px solid #878787;
-  border-radius: 3px; }
-  .message .icon:before {
-    position: relative;
-    top: 1px;
-    padding-right: 5px; }
-  .message.success {
-    background-color: #e6f5e6;
-    color: #007f02;
+  border: 1px solid gray;
+  border-radius: 3px;
+  /**
+   * @section Messages
+   * #subsection Icon
+   *
+   * Messages element can also have an icon.
+   *
+   * ```html
+   * <div class="message">
+   *   <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/check.svg" />This is a generic message.
+   * </div>
+   * ```
+   */
+  /**
+   * @section Messages
+   * @subsection States
+   *
+   * There are a number of different states that a message can be in that determine the coloring on the message box.
+   *
+   * You can add the `safe` class to add a greenish color.
+   *
+   * ```html
+   * <div class="message safe">
+   *   <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/check.svg" />This is a generic message.
+   * </div>
+   * ```
+   *
+   * You can add the `notice` class to add a blueish color.
+   *
+   * ```html
+   * <div class="message notice">
+   *   <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/info.svg" />This is a generic message.
+   * </div>
+   * ```
+   *
+   * You can add the `caution` class to add a yellowish color.
+   *
+   * ```html
+   * <div class="message caution">
+   *   <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/question-mark.svg" />This is a generic message.
+   * </div>
+   * ```
+   *
+   * You can add the `danger` class to add a redish color.
+   *
+   * ```html
+   * <div class="message danger">
+   *   <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/x.svg" />This is a generic message.
+   * </div>
+   * ```
+   */ }
+  .message .icon {
+    vertical-align: middle;
+    margin-right: 5px;
+    width: 24px;
+    height: 24px;
+    padding: 4px;
+    border-radius: 12px; }
+  .message.safe {
+    background-color: #e5f4e5;
+    color: #007e01;
+    fill: #e5f4e5;
     border-color: #035200; }
-    .message.success .icon:before {
-      content: "\e00b"; }
+    .message.safe .icon {
+      background-color: #035200; }
   .message.notice {
-    background-color: #e6e6f5;
-    color: #0002ac;
-    border-color: #0b1a52; }
-    .message.notice .icon:before {
-      content: "\e00c"; }
-  .message.warning {
+    background-color: #e5e5f4;
+    color: #0002ab;
+    fill: #e5e5f4;
+    border-color: #091850; }
+    .message.notice .icon {
+      background-color: #091850; }
+  .message.caution {
     background-color: #f1f2ab;
     color: #cfcf00;
-    border-color: #7f7f00; }
-    .message.warning .icon:before {
-      content: "\e00a"; }
+    fill: #f1f2ab;
+    border-color: #7e7e00; }
+    .message.caution .icon {
+      background-color: #7e7e00; }
   .message.danger {
-    background-color: #f5e6e6;
-    color: #7f0400;
+    background-color: #db9895;
+    color: #7a0200;
+    fill: #db9895;
     border-color: #520300; }
-    .message.danger .icon:before {
-      content: "\e00d"; }
-  .message.error {
-    background-color: #f5e6e6;
-    color: #7f0400;
-    border-color: #520300; }
-    .message.error .icon:before {
-      content: "\e00d"; }
+    .message.danger .icon {
+      background-color: #520300; }
 
-.content-player {
-  display: inline-block;
-  position: relative;
-  margin: 15px;
-  border: 1px solid black; }
-  .content-player .content {
-    z-index: 99; }
-  .content-player video {
-    width: 100%;
-    height: 100%; }
-  .content-player .playlist {
-    transition: opacity .2s;
-    padding: 10px;
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 200px;
-    z-index: 100;
-    background-color: white;
-    opacity: .05;
-    overflow: auto; }
-    .content-player .playlist:hover {
-      opacity: .85; }
-    .content-player .playlist li {
-      cursor: pointer; }
-      .content-player .playlist li:not(:last-child) {
-        padding-bottom: 8px; }
-      .content-player .playlist li span {
-        padding-right: 4px; }
-    .content-player .playlist .is-active {
-      font-weight: bold; }
-  .content-player .controls {
-    position: relative;
-    bottom: 65px;
-    color: white;
-    width: 95%;
-    margin: 0 auto;
-    background-color: rgba(0, 0, 0, 0.26);
-    padding: 10px 14px;
-    border-radius: 10px; }
-    .content-player .controls button {
-      width: 5%; }
-    .content-player .controls .progress .current-loaded {
-      background-color: #aaaaaa; }
-      .content-player .controls .progress .current-loaded:hover:after {
-        content: 'test'; }
-    .content-player .controls .time {
-      display: inline-block;
-      width: 70px; }
-    .content-player .controls .volume span:before {
-      width: 16px; }
-    .content-player .controls .volume .progress-bar {
-      min-width: 15%; }
-      .content-player .controls .volume .progress-bar .indicator {
-        background-color: #e6e6e6; }
-    .content-player .controls .full-screen {
-      float: right; }
-    .content-player .controls .toggle-play.is-playing {
-      color: green; }
-
+/**
+ * @section Progress Bars
+ *
+ * Progress bars are used to indicate the system is doing something.
+ *
+ * ```html
+ * <div class="progress-bar">
+ *   <div class="indicator"></div>
+ * </div>
+ * ```
+ *
+ * You give the `indicator` and width percentage from `1%` to `100%`, to indicator the progress.
+ *
+ * ```html
+ * <div class="progress-bar">
+ *   <div class="indicator" style="width: 25%;"></div>
+ * </div>
+ * <div class="progress-bar">
+ *   <div class="indicator" style="width: 50%;"></div>
+ * </div>
+ * <div class="progress-bar">
+ *   <div class="indicator" style="width: 75%;"></div>
+ * </div>
+ * ```
+ */
 .progress-bar {
-  border: 1px solid #e6e6e6;
+  border: 1px solid #b4b4b4;
   position: relative;
   display: inline-block;
   min-width: 40%;
-  height: 8px;
+  height: 16px;
   overflow: hidden;
-  cursor: pointer; }
+  cursor: pointer;
+  border-radius: 8px;
+  /**
+   * @section Progress Bars
+   * @subsection States
+   *
+   * There are a number of different states that a progress bar can be in that determine the coloring on the progress bar.
+   *
+   * You can add the `safe` class to add a greenish color.
+   *
+   * ```html
+   * <div class="progress-bar safe">
+   *   <div class="indicator" style="width: 50%;"></div>
+   * </div>
+   * ```
+   *
+   * You can add the `notice` class to add a blueish color.
+   *
+   * ```html
+   * <div class="progress-bar notice">
+   *   <div class="indicator" style="width: 50%;"></div>
+   * </div>
+   * ```
+   *
+   * You can add the `caution` class to add a yellowish color.
+   *
+   * ```html
+   * <div class="progress-bar caution">
+   *   <div class="indicator" style="width: 50%;"></div>
+   * </div>
+   * ```
+   *
+   * You can add the `danger` class to add a redish color.
+   *
+   * ```html
+   * <div class="progress-bar danger">
+   *   <div class="indicator" style="width: 50%;"></div>
+   * </div>
+   * ```
+   */ }
   .progress-bar .indicator {
     position: absolute;
     display: block;
-    height: 8px;
+    height: 16px;
     background-color: #e6e6e6; }
+  .progress-bar.safe {
+    border-color: #035200; }
+    .progress-bar.safe .indicator {
+      background-color: #007e01; }
+  .progress-bar.notice {
+    border-color: #091850; }
+    .progress-bar.notice .indicator {
+      background-color: #0002ab; }
+  .progress-bar.caution {
+    border-color: #7e7e00; }
+    .progress-bar.caution .indicator {
+      background-color: #cfcf00; }
+  .progress-bar.danger {
+    border-color: #520300; }
+    .progress-bar.danger .indicator {
+      background-color: #7a0200; }
+
+/**
+ * @section Search Query
+ *
+ * One of the features of the extend text element is the search query feature that lets you build a search query when queries advance information.  This does
+ * provide some specific styling of it's own.  Note that the search query can only work with the textarea box and not the input text box.
+ */
+.parsing {
+  /**
+   * @section Search Query
+   * @subsection Input Container
+   *
+   * In order to property display the search query is different states, the input for the search query must be wrapped in an element with the `inputs` class.
+   *
+   * ```html
+   * <div class="extend-text parsing">
+   *   <div class="inputs">
+   *     <textarea class="display"></textarea>
+   *   </div>
+   * </div>
+   * ```
+   */
+  /**
+   * @section Search Query
+   * @subsection Tooltip
+   *
+   * The search query can also provide a validation tooltip to provide additional help/visual queue on the state of the search query
+   *
+   * ```html
+   * <div class="extend-text parsing">
+   *   <div class="inputs empty">
+   *     <textarea class="display" /></textarea>
+   *     <div class="tooltip help">
+   *       <span class="handle validation-icon"><img class="svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/question-mark.svg" /></span>
+   *       <div class="content" style="width: 202px;">State typing you search query</div>
+   *     </div>
+   *   </div>
+   * </div>
+   * ```
+   *
+   * ```html
+   * <div class="extend-text parsing">
+   *   <div class="inputs invalid">
+   *     <textarea class="display">firstName = 'John</textarea>
+   *     <div class="tooltip help">
+   *       <span class="handle validation-icon"><img class="svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/x.svg" /></span>
+   *       <div class="content" style="width: 350px;">This is a problem with the query near "= 'John"</div>
+   *     </div>
+   *   </div>
+   * </div>
+   * ```
+   *
+   * ```html
+   * <div class="extend-text parsing">
+   *   <div class="inputs valid">
+   *     <textarea class="display">firstName = 'John'</textarea>
+   *     <div class="tooltip help">
+   *       <span class="handle validation-icon"><img class="svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/check.svg" /></span>
+   *       <div class="content" style="width: 84px;">Query valid</div>
+   *     </div>
+   *   </div>
+   * </div>
+   * ```
+   */ }
+  .parsing .inputs {
+    height: 30px;
+    /**
+     * @section Search Query
+     * @subsection States
+     *
+     * A search query element can be in different states which are applied to the element with the `inputs` class.
+     *
+     * This first state is an empty state indicated by the `empty` class.
+     *
+     * ```html
+     * <div class="extend-text parsing">
+     *   <div class="inputs empty">
+     *     <textarea class="display" /></textarea>
+     *   </div>
+     * </div>
+     * ```
+     *
+     * The state is an invalid state indicated by the `invalid` class.
+     *
+     * ```html
+     * <div class="extend-text parsing">
+     *   <div class="inputs invalid">
+     *     <textarea class="display">firstName = 'John</textarea>
+     *   </div>
+     * </div>
+     * ```
+     *
+     * The last state is a valid state indicated by the `valid` class.
+     *
+     * ```html
+     * <div class="extend-text parsing">
+     *   <div class="inputs valid">
+     *     <textarea class="display">firstName = 'John'</textarea>
+     *   </div>
+     * </div>
+     * ```
+     */ }
+    .parsing .inputs.invalid textarea {
+      border-color: #b03a38;
+      background-color: #f9eeee; }
+    .parsing .inputs.invalid .validation-icon {
+      fill: #7a0200; }
+    .parsing .inputs.valid textarea {
+      border-color: #3eb038;
+      background-color: #eef9ee; }
+    .parsing .inputs.valid .validation-icon {
+      fill: #007e01; }
+    .parsing .inputs.empty .validation-icon {
+      fill: #414141; }
+  .parsing .input-container {
+    position: relative;
+    display: inline-block; }
+  .parsing textarea {
+    resize: none;
+    padding-right: 30px; }
+  .parsing .tooltip {
+    position: absolute;
+    top: 11px;
+    right: 5px; }
+    .parsing .tooltip .handle {
+      cursor: pointer; }
+    .parsing .tooltip .content {
+      text-align: center;
+      border: 1px solid gray;
+      border-radius: 5px; }

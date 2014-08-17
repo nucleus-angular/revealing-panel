@@ -169,6 +169,19 @@ angular.module('nag.revealingPanel')
                 }
               });
             }
+
+            scope.$watch('panelVisible', function(newValue, oldValue) {
+              if(newValue === true) {
+                //make sure the position class is applied
+                if(!element.hasClass(scope.options.position)) {
+                  element.addClass(scope.options.position);
+                }
+
+                element.addClass('is-active').addClass();
+              } else {
+                element.removeClass('is-active');
+              }
+            });
           }
         };
       }

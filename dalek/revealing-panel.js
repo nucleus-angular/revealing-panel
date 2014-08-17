@@ -90,7 +90,7 @@ module.exports = {
     .click('[data-ut="center"] .handle')
     .wait(300)
       .assert.visible('[data-ut="center"] .content', 'content is visible')
-      .assert.css('[data-ut="center"] .content', 'top', '476px', 'top is 476px')
+      .assert.css('[data-ut="center"] .content', 'top', '458px', 'top is 458px')
       .assert.css('[data-ut="center"] .content', 'right', 'auto', 'right is auto')
       .assert.css('[data-ut="center"] .content', 'bottom', 'auto', 'bottom is auto')
       .assert.css('[data-ut="center"] .content', 'left', '640px', 'left is 640px')
