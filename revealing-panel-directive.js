@@ -25,7 +25,7 @@ angular.module('nag.revealingPanel')
   function($compile, nagDefaults, nagHelper, $animate, $rootScope){
     return {
       restrict: 'EA',
-      templateUrl: nagHelper.templateUrl,
+      template: nagHelper.template,
       scope: {
         options: '=?nagRevealingPanel',
         model: '=?',
@@ -54,6 +54,7 @@ angular.module('nag.revealingPanel')
         }
 
         //this allow us to make sure we can prevent the content in panel from doing weird shift when being revealed/concealed
+        //TODO: research: need to look at this again when we re-implement animations
         element.find('.content').html($('<div class="inner-content"></div>').html(element.find('.content').html()));
 
         return {
