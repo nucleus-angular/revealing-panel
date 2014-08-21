@@ -31,15 +31,7 @@ angular.module('nag.revealingPanel')
         model: '=?',
         id: '@'
       },
-      controller: [
-        '$scope',
-        function($scope) {
-          //need to unbind the global events
-          $scope.$on('$destroy', function() {
-            $(document).unbind('keydown.' + $scope.id);
-          });
-        }
-      ],
+      controller: 'NagRevealingPanelDCtrl',
       compile: function(element, attributes, transclude) {
         if(!attributes.id) {
           throw new Error('HTML data-id attribute must be provides for the directive');
