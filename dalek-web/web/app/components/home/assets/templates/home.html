@@ -1,17 +1,98 @@
 <div class="home-page">
-  <div nag-revealing-panel="revealingPanelDefaultOptions" data-ut="defaults" data-id="defaults" data-template="/app/components/home/assets/templates/defaults.html"></div>
-  <div nag-revealing-panel="revealingPanelLeftOptions" data-ut="left" data-id="left" data-template="/app/components/home/assets/templates/left.html"></div>
-  <div nag-revealing-panel="revealingPanelRightOptions" data-ut="right" data-id="right" data-template="/app/components/home/assets/templates/right.html"></div>
-  <div nag-revealing-panel="revealingPanelTopOptions" data-ut="top" data-id="top" data-template="/app/components/home/assets/templates/top.html"></div>
-  <div nag-revealing-panel="revealingPanelBottomOptions" data-ut="bottom" data-id="bottom" data-template="/app/components/home/assets/templates/bottom.html"></div>
-  <div nag-revealing-panel="revealingPanelCenterOptions" data-ut="center" data-id="center" data-template="/app/components/home/assets/templates/center.html"></div>
-  <div nag-revealing-panel="revealingCloseOnEscapeOptions" data-ut="close-on-escape" data-id="close-on-escape" data-template="/app/components/home/assets/templates/close-on-escape.html"></div>
-  <div nag-revealing-panel="revealingDontCloseOnEscapeOptions" data-ut="dont-close-on-escape" data-id="dont-close-on-escape" data-template="/app/components/home/assets/templates/dont-close-on-overlay-click.html"></div>
-  <div nag-revealing-panel="revealingCloseOnOverlayClickOptions" data-ut="close-on-overlay-click" data-id="close-on-overlay-click" data-template="/app/components/home/assets/templates/close-on-overlay-click.html"></div>
-  <div nag-revealing-panel="revealingDontCloseOnOverlayClickOptions" data-ut="dont-close-on-overlay-click" data-id="dont-close-on-overlay-click" data-template="/app/components/home/assets/templates/dont-close-on-overlay-click.html"></div>
-  <div nag-revealing-panel="revealingHasOverlayOptions" data-ut="has-overlay" data-id="has-overlay" data-template="/app/components/home/assets/templates/has-overlay.html"></div>
-  <div nag-revealing-panel="revealingNoOverlayOptions" data-ut="no-overlay" data-id="no-overlay" data-template="/app/components/home/assets/templates/no-overlay.html"></div>
+  <div nag-revealing-panel data-ut="defaults" data-id="defaults">
+    <span class="handle">default handle</span>
+    <div class="content">
+      <div ng-click="hide()">close</div>
+      revealing panel content
+    </div>
+  </div>
+  <div nag-revealing-panel data-position="left" data-ut="left" data-id="left">
+    <span class="handle">left handle</span>
+    <div class="content">
+      <div ng-click="hide()">close</div>
+      revealing panel content
+    </div>
+  </div>
+  <div nag-revealing-panel data-position="right" data-ut="right" data-id="right">
+    <span class="handle">right handle</span>
+    <div class="content">
+      <div ng-click="hide()">close</div>
+      revealing panel content
+    </div>
+  </div>
+  <div nag-revealing-panel data-position="top" data-ut="top" data-id="top">
+    <span class="handle">top handle</span>
+    <div class="content">
+      <div ng-click="hide()">close</div>
+      revealing panel content
+    </div>
+  </div>
+  <div nag-revealing-panel data-position="bottom" data-ut="bottom" data-id="bottom">
+    <span class="handle">bottom handle</span>
+    <div class="content">
+      <div ng-click="hide()">close</div>
+      revealing panel content
+    </div>
+  </div>
+  <div nag-revealing-panel data-position="center" data-ut="center" data-id="center">
+    <span class="handle">center handle</span>
+    <div class="content">
+      <div ng-click="hide()">close</div>
+      revealing panel content
+    </div>
+  </div>
+  <div nag-revealing-panel data-close-on-escape="true" data-ut="close-on-escape" data-id="close-on-escape">
+    <span class="handle">close on escape handle</span>
+    <div class="content">
+      <div ng-click="hide()">close</div>
+      revealing panel content
+    </div>
+  </div>
+  <div nag-revealing-panel data-close-on-escape="false" data-ut="dont-close-on-escape" data-id="dont-close-on-escape">
+    <span class="handle">dont close on escape click handle</span>
+    <div class="content">
+      <div ng-click="hide()">close</div>
+      revealing panel content
+    </div>
+  </div>
+  <div nag-revealing-panel data-close-on-overlay-click="true" data-ut="close-on-overlay-click" data-id="close-on-overlay-click">
+    <span class="handle">close on overlay click handle</span>
+    <div class="content">
+      <div ng-click="hide()">close</div>
+      revealing panel content
+    </div>
+  </div>
+  <div nag-revealing-panel data-close-on-overlay-click="false" data-ut="dont-close-on-overlay-click" data-id="dont-close-on-overlay-click">
+    <span class="handle">dont close on overlay click handle</span>
+    <div class="content">
+      <div ng-click="hide()">close</div>
+      revealing panel content
+    </div>
+  </div>
+  <div nag-revealing-panel data-has-overlay="true" data-ut="has-overlay" data-id="has-overlay">
+    <span class="handle">has overlay handle</span>
+    <div class="content">
+      <div ng-click="hide()">close</div>
+      revealing panel content
+    </div>
+  </div>
+  <div nag-revealing-panel data-has-overlay="false" data-ut="no-overlay" data-id="no-overlay">
+    <span class="handle">no overlay handle</span>
+    <div class="content">
+      <div ng-click="hide()">close</div>
+      revealing panel content
+    </div>
+  </div>
   <!-- todo: this should have it own template and configuration object -->
-  <div nag-revealing-panel="revealingPanelLeftOptions" data-event="hover" data-ut="hover" data-id="hover" data-template="/app/components/home/assets/templates/left.html"></div>
-  <div nag-revealing-panel="revealingContentExternalTemplateOptions" data-ut="content-external-template" data-id="content-external-template" data-template="/app/components/home/assets/templates/content-external-template-base.html"></div>
+  <div nag-revealing-panel data-event="hover" data-position="left" data-ut="hover" data-id="hover">
+    <span class="handle">left handle</span>
+    <div class="content">
+      <div ng-click="hide()">close</div>
+      revealing panel content
+    </div>
+  </div>
+  <div nag-revealing-panel data-content-template-url="/app/components/home/assets/templates/content-external-template.html" data-ut="content-external-template" data-id="content-external-template">
+    <span class="handle">content external template</span>
+    <div class="content"></div>
+  </div>
 </div>

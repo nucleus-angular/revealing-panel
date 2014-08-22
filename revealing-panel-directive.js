@@ -26,11 +26,7 @@ angular.module('nag.revealingPanel')
     return {
       restrict: 'EA',
       template: nagHelper.template,
-      scope: {
-        options: '=?nagRevealingPanel',
-        model: '=?',
-        id: '@'
-      },
+      scope: true,
       controller: 'NagRevealingPanelDCtrl',
       compile: function(element, attributes, transclude) {
         if(!attributes.id) {
@@ -52,7 +48,8 @@ angular.module('nag.revealingPanel')
         return {
           pre: function(scope, element, attributes) {
             var overlayElement;
-            scope.options = nagDefaults.getOptions('revealingPanel', scope.options);
+            // scope.options = nagDefaults.getOptions('revealingPanel', scope.options);
+            scope.options = nagDefaults.getOptions('revealingPanel', attributes);
 
             //see if the content for the panel should be coming from a template file
             if(scope.options.contentTemplateUrl) {

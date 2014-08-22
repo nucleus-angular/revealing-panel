@@ -113,33 +113,760 @@
  */
 /**
  * @section Variables
- * @subsection Valid Colors
+ * @subsection Safe Colors
  *
- * These are colors used to indicator something is valid.
+ * These are colors used to indicator something is safe.
  *
- * @var $border-color-valid
- * @var $background-color-valid
- * @var $color-valid
+ * @var $border-color-safe
+ * @var $background-color-safe
+ * @var $color-safe
  */
 /**
  * @section Variables
- * @subsection Invalid Colors
+ * @subsection Danger Colors
  *
- * These are colors used to indicator something is invalid.
+ * These are colors used to indicator something is dangerous.
  *
- * @var $border-color-invalid
- * @var $background-color-invalid
- * @var $color-invalid
+ * @var $border-color-danger
+ * @var $background-color-danger
+ * @var $color-danger
+ */
+/**
+ * @section Variables
+ * @subsection Notice Colors
+ *
+ * These are colors used to indicator something is a notice.
+ *
+ * @var $border-color-notice
+ * @var $background-color-notice
+ * @var $color-notice
+ */
+/**
+ * @section Variables
+ * @subsection Caution Colors
+ *
+ * These are colors used to indicator something you should be cautious with.
+ *
+ * @var $border-color-caution
+ * @var $background-color-caution
+ * @var $color-caution
+ */
+/**
+ * @section Variables
+ * @subsection Button Drop Downs
+ *
+ * These are the variables that control the looked and feel of the button drop downs.
+ *
+ *
+ * @var $color-bdd
+ * @var $background-color-content-bdd
+ * @var $border-bdd
+ * @var $font-weight-bdd
+ * @var $border-radius-bdd
+ * @var $z-index-button-bdd
+ * @var $z-index-button-is-active-bdd
+ * @var $z-index-content-bdd
+ * @var $padding-content-bdd
+ */
+/**
+ * @section Variables
+ * @subsection Buttons
+ *
+ * These are the variables that control the look and feel of the buttons.
+ *
+ *
+ * @var $background-color-button
+ * @var $color-button
+ * @var $border-radius-button
+ * @var $font-weight-button
+ * @var $is-uppercased-button
+ * @var $font-size-small-button
+ * @var $padding-small-button
+ * @var $font-size-button
+ * @var $padding-button
+ * @var $font-size-large-button
+ * @var $padding-large-button
+ * @var $font-size-largest-button
+ * @var $padding-largest-button
+ * @var $opacity-disabled-button
+ */
+/**
+ * @section Variables
+ * @subsection Cards
+ *
+ * These are the variables that control the look and feel of the cards.
+ *
+ *
+ * @var $margin-card
+ * @var $border-radius-card
+ * @var $border-card
+ * @var $background-color-content-card
+ * @var $font-weight-header-card
+ * @var $padding-header-card
+ * @var $border-bottom-header-card
+ * @var $color-header-card
+ * @var $padding-content-card
+ * @var $border-bottom-header-card
+ * @var $background-color-header-card
+ * @var $top-header-actions-card
+ * @var $right-header-actions-card
+ * @var $width-header-actions-svg-card
+ * @var $height-header-actions-svg-card
+ * @var $margin-left-header-actions-svg-card
+ */
+/**
+ * @section Variables
+ * @subsection Extend Text
+ *
+ * These are the variable the control the look and feel of the extend text.
+ *
+ * @var $border-radius-et
+ * @var $z-index-et
+ * @var $top-new-indicator-et
+ * @var $right-new-indicator-et
+ */
+/**
+ * @section Variables
+ * @subsection Tagging
+ *
+ * These are the variable the control the look and feel of the tagging.
+ *
+ * @var $z-index-container-tagging
+ * @var $margin-tag-tagging
+ * @var $background-color-tag-tagging
+ * @var $border-tag-tagging
+ * @var $border-radius-tag-tagging
+ * @var $padding-tag-tagging
+ * @var $border-color-selected-tag-tagging
+ * @var $width-tag-remove-icon-tagging
+ * @var $height-tag-remove-icon-tagging
+ */
+/**
+ * @section Variables
+ * @subsection Search Query
+ *
+ * These are the variable the control the look and feel of the search query.
+ * @var $height-input-sq
+ * @var $color-icon-empty-sq
+ * @var $padding-textarea-sq
+ * @var $top-tooltip-sq
+ * @var $right-tooltip-sq
+ * @var $text-align-tooltip-content-sq
+ * @var $border-tooltip-content-sq
+ * @var $border-radius-tooltip-content-sq
  */
 /**
  * @section Variables
  * @subsection Forms
  *
- * These are variables used for from styles
+ * These are the variables the control the look and feel of form.
  *
+ * @var $text-align-compact-label
+ * @var $padding-compact-label
+ * @var $border-radius-input
  * @var $border-input
- * @var $box-shadow-input
- * @var $box-shadow-focus-input
+ * @var $padding-input
+ * @var $opacity-disabled-input
+ * @var $margin-label
+ * @var $box-shadow-focused-input
+ * @var $height-select
+ */
+/**
+ * @section Variables
+ * @subsection Input Element
+ *
+ * These are the elements that control the look and feel of the input element.
+ *
+ * @var $padding-right-input-text-ie
+ * @var $top-tooltip-icon-ie
+ * @var $right-tooltip-icon-ie
+ * @var $right-select-tooltip-icon-ie
+ * @var $top-checkbox-tooltip-icon-ie
+ * @var $right-checkbox-tooltip-icon-ie
+ * @var $top-radio-tooltip-icon-ie
+ * @var $right-radio-tooltip-icon-ie
+ * @var $top-checkbox-tooltip-icon-compact-ie
+ * @var $top-radio-tooltip-icon-compact-ie
+ * @var $box-shadow-invalid-ie
+ * @var $box-shadow-valid-ie
+ */
+/**
+ * @section Variables
+ * @subsection Messages
+ *
+ * These are the variables that control the look and feel of messages.
+ *
+ * @var $padding-message
+ * @var $border-message
+ * @var $border-radius
+ * @var $width-icon-message
+ * @var $height-icon-message
+ * @var $padding-icon-message
+ * @var $border-radius-icon-message
+ * @var $top-icon-message
+ * @var $left-icon-message
+ */
+/**
+ * @section Variables
+ * @subsection Notify
+ *
+ * These are the variables that control the look and feel for notifications.
+ *
+ * @var $z-index-notify
+ */
+/**
+ * @section Variables
+ * @subsection Progress Baar
+ *
+ * These are the variables the control the look and feel for progress bars.
+ *
+ * @var $border-pb
+ * @var $min-width-pb
+ * @var $height-pb
+ * @var $border-radius-pb
+ * @var $background-color-indicator-pb
+ */
+/**
+ * @section Variables
+ * @subsection Revealing Panel
+ *
+ * These are the variables that control the look and feel of the revealing panel.
+ *
+ * @var $border-radius-center-rp
+ * @var $border-rp
+ * @var $z-index-content-rp
+ * @var $background-color-content-rp
+ * @var $padding-content-rp
+ */
+/**
+ * @section Variables
+ * @subsection Site Loader
+ *
+ * These are the variables that control the look and feel of the site loader.
+ *
+ * @var $background-color-sl
+ * @var $z-index-sl
+ * @var $padding-text-sl
+ * @var $text-align-text-sl
+ */
+/**
+ * @section Variables
+ * @subsection Site Overlay
+ *
+ * These are the variables that control the look and feel of the site overlay.
+ *
+ * @var $background-color-so
+ * @var $opacity-so
+ * @var $z-index-so
+ */
+/**
+ * @section Variables
+ * @subsection SVG Icons
+ *
+ * These are the variables the control the look and feel of SVG icons.
+ *
+ * @var $width-si
+ * @var $height-si
+ */
+/**
+ * @section Variables
+ * @subsection Tabs
+ *
+ * These are the variables that control the look and feel for tabs.
+ *
+ * @var $margin-tabs
+ * @var $padding-tabs
+ * @var $padding-tab-tabs
+ * @var $border-tabs
+ * @var $background-color-tab-is-active-tabs
+ */
+/**
+ * @section Variables
+ * @subsection Tooltip
+ *
+ * These are the variables that control the look and feel for the tabs.
+ *
+ * @var $padding-content-tooltip
+ * @var $background-content-tooltip
+ * @var $border-content-tooltip
+ */
+/**
+ * @section Variables
+ * @subsection Tree
+ *
+ * These are the variables that control the look and feel for trees.
+ *
+ * @var $padding-tree
+ * @var $padding-no-icon-tree
+ * @var $width-icon-tree
+ * @var $height-icon-tree
+ * @var $margin-icon-tree
+ */
+/**
+ * @section Variables
+ * @subsection Headings
+ *
+ * These are the variables that control the look and feel of headings (h1 ... h6).
+ *
+ * @var $font-size-h1
+ * @var $margin-h1
+ * @var $font-size-h2
+ * @var $margin-h2
+ * @var $font-size-h3
+ * @var $margin-h3
+ * @var $font-size-h4
+ * @var $margin-h4
+ * @var $font-size-h5
+ * @var $margin-h5
+ * @var $font-size-h6
+ * @var $margin-h6
+ */
+/**
+ * @section Variables
+ * @subsection Auto Complete
+ *
+ * These are the variable the control the look and feel of the auto complete.
+ *
+ * @var $border-options-ac
+ * @var $background-color-options-ac
+ * @var $max-height-options-ac
+ * @var $padding-options-ac-option-et
+ * @var $background-color-option-is-focused-ac
+ */
+/**
+ * @section Variables
+ *
+ * There are a number of pre-defined global variables that you can use.
+ */
+/**
+ * @section Variables
+ * @subsection Colors
+ *
+ * These are the only color that should be used within the application.
+ */
+/**
+ * @var $color-rosewood
+ */
+/**
+ * @var $color-maroon
+ */
+/**
+ * @var $color-medium-carmine
+ * @var $color-medium-carmine-l50
+ * @var $color-medium-carmine-d30
+ */
+/**
+ * @var $color-dawn-pink
+ */
+/**
+ * @var $color-crusoe
+ */
+/**
+ * @var $color-japanese-laurel
+ */
+/**
+ * @var $color-apple
+ * @var $color-apple-l50
+ * @var $color-apple-d30
+ */
+/**
+ * @var $color-panache
+ */
+/**
+ * @var $color-downriver
+ */
+/**
+ * @var $color-dark-blue
+ */
+/**
+ * @var $color-san-marino
+ */
+/**
+ * @var $color-chetwode-blue
+ */
+/**
+ * @var $color-snuff
+ */
+/**
+ * @var $color-olive
+ */
+/**
+ * @var $color-rio-grande
+ */
+/**
+ * @var $color-yellow
+ */
+/**
+ * @var $color-portafino
+ */
+/**
+ * @var $color-black
+ */
+/**
+ * @var $color-tundora
+ */
+/**
+ * @var $color-gray
+ */
+/**
+ * @var $color-silver-chalice
+ */
+/**
+ * @var $color-silver
+ * @var $color-silver-d20
+ */
+/**
+ * @var $color-gallery
+ */
+/**
+ * @var $color-white
+ * @var $color-white-d15
+ */
+/**
+ * @section Variables
+ * @subsection Percentage
+ *
+ * General percentage values.
+ *
+ * @todo see if we can get rid of these
+ *
+ * @var $percentage-dark
+ * @var $percentage-darker
+ * @var $percentage-darkest
+ * @var $percentage-light
+ * @var $percentage-lighter
+ * @var $percentage-lightest
+ */
+/**
+ * @section Variables
+ * @subsection Font
+ *
+ * Variables that deal with fonts.
+ *
+ * @var $font-size
+ * @var $font-family
+ */
+/**
+ * @section Variables
+ * @subsection Safe Colors
+ *
+ * These are colors used to indicator something is safe.
+ *
+ * @var $border-color-safe
+ * @var $background-color-safe
+ * @var $color-safe
+ */
+/**
+ * @section Variables
+ * @subsection Danger Colors
+ *
+ * These are colors used to indicator something is dangerous.
+ *
+ * @var $border-color-danger
+ * @var $background-color-danger
+ * @var $color-danger
+ */
+/**
+ * @section Variables
+ * @subsection Notice Colors
+ *
+ * These are colors used to indicator something is a notice.
+ *
+ * @var $border-color-notice
+ * @var $background-color-notice
+ * @var $color-notice
+ */
+/**
+ * @section Variables
+ * @subsection Caution Colors
+ *
+ * These are colors used to indicator something you should be cautious with.
+ *
+ * @var $border-color-caution
+ * @var $background-color-caution
+ * @var $color-caution
+ */
+/**
+ * @section Variables
+ * @subsection Button Drop Downs
+ *
+ * These are the variables that control the looked and feel of the button drop downs.
+ *
+ *
+ * @var $color-bdd
+ * @var $background-color-content-bdd
+ * @var $border-bdd
+ * @var $font-weight-bdd
+ * @var $border-radius-bdd
+ * @var $z-index-button-bdd
+ * @var $z-index-button-is-active-bdd
+ * @var $z-index-content-bdd
+ * @var $padding-content-bdd
+ */
+/**
+ * @section Variables
+ * @subsection Buttons
+ *
+ * These are the variables that control the look and feel of the buttons.
+ *
+ *
+ * @var $background-color-button
+ * @var $color-button
+ * @var $border-radius-button
+ * @var $font-weight-button
+ * @var $is-uppercased-button
+ * @var $font-size-small-button
+ * @var $padding-small-button
+ * @var $font-size-button
+ * @var $padding-button
+ * @var $font-size-large-button
+ * @var $padding-large-button
+ * @var $font-size-largest-button
+ * @var $padding-largest-button
+ * @var $opacity-disabled-button
+ */
+/**
+ * @section Variables
+ * @subsection Cards
+ *
+ * These are the variables that control the look and feel of the cards.
+ *
+ *
+ * @var $margin-card
+ * @var $border-radius-card
+ * @var $border-card
+ * @var $background-color-content-card
+ * @var $font-weight-header-card
+ * @var $padding-header-card
+ * @var $border-bottom-header-card
+ * @var $color-header-card
+ * @var $padding-content-card
+ * @var $border-bottom-header-card
+ * @var $background-color-header-card
+ * @var $top-header-actions-card
+ * @var $right-header-actions-card
+ * @var $width-header-actions-svg-card
+ * @var $height-header-actions-svg-card
+ * @var $margin-left-header-actions-svg-card
+ */
+/**
+ * @section Variables
+ * @subsection Extend Text
+ *
+ * These are the variable the control the look and feel of the extend text.
+ *
+ * @var $border-radius-et
+ * @var $z-index-et
+ * @var $top-new-indicator-et
+ * @var $right-new-indicator-et
+ */
+/**
+ * @section Variables
+ * @subsection Tagging
+ *
+ * These are the variable the control the look and feel of the tagging.
+ *
+ * @var $z-index-container-tagging
+ * @var $margin-tag-tagging
+ * @var $background-color-tag-tagging
+ * @var $border-tag-tagging
+ * @var $border-radius-tag-tagging
+ * @var $padding-tag-tagging
+ * @var $border-color-selected-tag-tagging
+ * @var $width-tag-remove-icon-tagging
+ * @var $height-tag-remove-icon-tagging
+ */
+/**
+ * @section Variables
+ * @subsection Search Query
+ *
+ * These are the variable the control the look and feel of the search query.
+ * @var $height-input-sq
+ * @var $color-icon-empty-sq
+ * @var $padding-textarea-sq
+ * @var $top-tooltip-sq
+ * @var $right-tooltip-sq
+ * @var $text-align-tooltip-content-sq
+ * @var $border-tooltip-content-sq
+ * @var $border-radius-tooltip-content-sq
+ */
+/**
+ * @section Variables
+ * @subsection Forms
+ *
+ * These are the variables the control the look and feel of form.
+ *
+ * @var $text-align-compact-label
+ * @var $padding-compact-label
+ * @var $border-radius-input
+ * @var $border-input
+ * @var $padding-input
+ * @var $opacity-disabled-input
+ * @var $margin-label
+ * @var $box-shadow-focused-input
+ * @var $height-select
+ */
+/**
+ * @section Variables
+ * @subsection Input Element
+ *
+ * These are the elements that control the look and feel of the input element.
+ *
+ * @var $padding-right-input-text-ie
+ * @var $top-tooltip-icon-ie
+ * @var $right-tooltip-icon-ie
+ * @var $right-select-tooltip-icon-ie
+ * @var $top-checkbox-tooltip-icon-ie
+ * @var $right-checkbox-tooltip-icon-ie
+ * @var $top-radio-tooltip-icon-ie
+ * @var $right-radio-tooltip-icon-ie
+ * @var $top-checkbox-tooltip-icon-compact-ie
+ * @var $top-radio-tooltip-icon-compact-ie
+ * @var $box-shadow-invalid-ie
+ * @var $box-shadow-valid-ie
+ */
+/**
+ * @section Variables
+ * @subsection Messages
+ *
+ * These are the variables that control the look and feel of messages.
+ *
+ * @var $padding-message
+ * @var $border-message
+ * @var $border-radius
+ * @var $width-icon-message
+ * @var $height-icon-message
+ * @var $padding-icon-message
+ * @var $border-radius-icon-message
+ * @var $top-icon-message
+ * @var $left-icon-message
+ */
+/**
+ * @section Variables
+ * @subsection Notify
+ *
+ * These are the variables that control the look and feel for notifications.
+ *
+ * @var $z-index-notify
+ */
+/**
+ * @section Variables
+ * @subsection Progress Baar
+ *
+ * These are the variables the control the look and feel for progress bars.
+ *
+ * @var $border-pb
+ * @var $min-width-pb
+ * @var $height-pb
+ * @var $border-radius-pb
+ * @var $background-color-indicator-pb
+ */
+/**
+ * @section Variables
+ * @subsection Revealing Panel
+ *
+ * These are the variables that control the look and feel of the revealing panel.
+ *
+ * @var $border-radius-center-rp
+ * @var $border-rp
+ * @var $z-index-content-rp
+ * @var $background-color-content-rp
+ * @var $padding-content-rp
+ */
+/**
+ * @section Variables
+ * @subsection Site Loader
+ *
+ * These are the variables that control the look and feel of the site loader.
+ *
+ * @var $background-color-sl
+ * @var $z-index-sl
+ * @var $padding-text-sl
+ * @var $text-align-text-sl
+ */
+/**
+ * @section Variables
+ * @subsection Site Overlay
+ *
+ * These are the variables that control the look and feel of the site overlay.
+ *
+ * @var $background-color-so
+ * @var $opacity-so
+ * @var $z-index-so
+ */
+/**
+ * @section Variables
+ * @subsection SVG Icons
+ *
+ * These are the variables the control the look and feel of SVG icons.
+ *
+ * @var $width-si
+ * @var $height-si
+ */
+/**
+ * @section Variables
+ * @subsection Tabs
+ *
+ * These are the variables that control the look and feel for tabs.
+ *
+ * @var $margin-tabs
+ * @var $padding-tabs
+ * @var $padding-tab-tabs
+ * @var $border-tabs
+ * @var $background-color-tab-is-active-tabs
+ */
+/**
+ * @section Variables
+ * @subsection Tooltip
+ *
+ * These are the variables that control the look and feel for the tabs.
+ *
+ * @var $padding-content-tooltip
+ * @var $background-content-tooltip
+ * @var $border-content-tooltip
+ */
+/**
+ * @section Variables
+ * @subsection Tree
+ *
+ * These are the variables that control the look and feel for trees.
+ *
+ * @var $padding-tree
+ * @var $padding-no-icon-tree
+ * @var $width-icon-tree
+ * @var $height-icon-tree
+ * @var $margin-icon-tree
+ */
+/**
+ * @section Variables
+ * @subsection Headings
+ *
+ * These are the variables that control the look and feel of headings (h1 ... h6).
+ *
+ * @var $font-size-h1
+ * @var $margin-h1
+ * @var $font-size-h2
+ * @var $margin-h2
+ * @var $font-size-h3
+ * @var $margin-h3
+ * @var $font-size-h4
+ * @var $margin-h4
+ * @var $font-size-h5
+ * @var $margin-h5
+ * @var $font-size-h6
+ * @var $margin-h6
+ */
+/**
+ * @section Variables
+ * @subsection Auto Complete
+ *
+ * These are the variable the control the look and feel of the auto complete.
+ *
+ * @var $border-options-ac
+ * @var $background-color-options-ac
+ * @var $max-height-options-ac
+ * @var $padding-options-ac-option-et
+ * @var $background-color-option-is-focused-ac
  */
 * {
   -webkit-box-sizing: border-box;
@@ -530,7 +1257,7 @@ h3 {
   margin: 0 0 1rem 0; }
 
 h4 {
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   margin: 0 0 1rem 0; }
 
 h5 {
@@ -548,16 +1275,15 @@ a {
 body {
   color: #414141; }
 
-.success-text {
+.safe-text {
   color: #007e01; }
 
 .notice-text {
   color: #0002ab; }
 
-.warning-text {
-  color: #cfcf00; }
+.caution-text {
+  color: #7e7e00; }
 
-.error-text,
 .danger-text {
   color: #7a0200; }
 
@@ -633,17 +1359,74 @@ body {
     opacity: 0;
     display: none; } }
 /**
- * @section Cards
- * @subsection Card Arrow
+ * @section Utility
  *
- * You can use the `card-arrow()` mixin in order to add an arrow.  The `with-arrow` class should work however if you need custom coloring, then you need to
- * manually call the mixin yourself.
- *
- * @mixin card-arrow
- * @param $color-border The color of the border
- * @param $fill-color The color of the triangle
- * @param $triangle-position Where the triangle should point
+ * There are a number of classes that can be used to add certain effects to an element.  All utility classes and prepended with `u-`.
  */
+/**
+ * @section Utility
+ * @subsection Hiding
+ *
+ * In order to hide an element, just add the `u-hide` class.
+ *
+ * ```html
+ * <div>this should be shown</div>
+ * <div class="u-hide">this should not be shown</div>
+ * ```
+ */
+.u-hide {
+  display: none; }
+
+/**
+ * @section Utility
+ * @subsection Centering
+ *
+ * Sometimes you want to be able to center and element and there are 3 utility classes for this.
+ *
+ * The first class in `u-center` with will center the element both vertically and horizontally.
+ *
+ * ```html
+ * <div style="width: 100px; height: 100px; position: relative; background-color: green;">
+ *   <div class="u-center" style="width: 25px; height: 25px; background-color: red"></div>
+ * </div>
+ * ```
+ *
+ * The second class in `u-center-vertical` with will center the element vertically.
+ *
+ * ```html
+ * <div style="width: 100px; height: 100px; position: relative; background-color: green;">
+ *   <div class="u-center-vertical" style="width: 25px; height: 25px; background-color: red"></div>
+ * </div>
+ * ```
+ *
+ * The last class in `u-center-horizontal` with will center the element horizontally.
+ *
+ * ```html
+ * <div style="width: 100px; height: 100px; position: relative; background-color: green;">
+ *   <div class="u-center-horizontal" style="width: 25px; height: 25px; background-color: red"></div>
+ * </div>
+ * ```
+ */
+.u-center,
+.u-center-vertical,
+.u-center-horizontal {
+  margin: auto;
+  position: absolute; }
+
+.u-center {
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0; }
+
+.u-center-vertical {
+  top: 0;
+  bottom: 0; }
+
+.u-center-horizontal {
+  left: 0;
+  right: 0; }
+
 /**
  * @title Cards
  * @section Cards
@@ -664,82 +1447,14 @@ body {
   display: inline-block;
   margin: 15px 0;
   border-radius: 3px;
-  border: 1px solid gray;
-  background-color: #efefef;
-  /**
-   * @section Cards
-   * @subsection With Arrow
-   *
-   * You can add a arrow to the content box (for maybe a tooltip or something similar) by adding the class `with-arrow` to the container.
-   *
-   * ```html
-   * <div class="card with-arrow">
-   *   <header>Title</header>
-   *   <div class="content">
-   *     Some content for this card
-   *   </div>
-   * </div>
-   * ```
-   *
-   * If the card has not header, you must also provide the `no-header` class to make sure the triangle color is correct.
-   *
-   * ```html
-   * <div class="card with-arrow no-header">
-   *   <div class="content">
-   *     Some content for this card
-   *   </div>
-   * </div>
-   * ```
-   */ }
-  .card.with-arrow:before {
-    height: 0;
-    width: 0;
-    border-left: 0.7rem solid transparent;
-    border-right: 0.7rem solid transparent;
-    border-bottom: 0.7rem solid gray;
-    content: '';
-    display: block;
-    position: absolute;
-    top: -7px;
-    left: 17px; }
-  .card.with-arrow:after {
-    height: 0;
-    width: 0;
-    border-left: 0.7rem solid transparent;
-    border-right: 0.7rem solid transparent;
-    border-bottom: 0.7rem solid #efefef;
-    content: '';
-    display: block;
-    position: absolute;
-    top: -6px;
-    left: 17px; }
-  .card.with-arrow.no-header:before {
-    height: 0;
-    width: 0;
-    border-left: 0.7rem solid transparent;
-    border-right: 0.7rem solid transparent;
-    border-bottom: 0.7rem solid gray;
-    content: '';
-    display: block;
-    position: absolute;
-    top: -7px;
-    left: 17px; }
-  .card.with-arrow.no-header:after {
-    height: 0;
-    width: 0;
-    border-left: 0.7rem solid transparent;
-    border-right: 0.7rem solid transparent;
-    border-bottom: 0.7rem solid white;
-    content: '';
-    display: block;
-    position: absolute;
-    top: -6px;
-    left: 17px; }
+  border: 1px solid gray; }
   .card header {
-    border-radius: 3px;
+    border-radius: 3px 3px 0 0;
     color: #869edb;
     font-weight: 600;
     padding: 5px;
+    background-color: #efefef;
+    position: relative;
     /**
      * @section Cards
      * @subsection Header Border
@@ -759,11 +1474,22 @@ body {
      * @section Cards
      * @subsection Header Actions
      *
-     * You can provide action element to the header by adding the `action` class to the element in the header.
+     * You can provide actions element to the header by adding the `actions` class to the element in the header.
      *
      * ```html
      * <div class="card">
-     *   <header>Title<span class="action close">X</span></header>
+     *   <header>Title<span class="actions close"><img class="svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/x.svg" /></span></header>
+     *   <div class="content">
+     *     Some content for this card
+     *   </div>
+     * </div>
+     * ```
+     *
+     * You can even have multiple actions.
+     *
+     * ```html
+     * <div class="card">
+     *   <header>Title<span class="actions close"><img class="svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/question-mark.svg" /><img class="svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/x.svg" /></span></header>
      *   <div class="content">
      *     Some content for this card
      *   </div>
@@ -779,12 +1505,18 @@ body {
     .card header.border {
       border-bottom: 1px solid #414141;
       border-radius: 3px 3px 0 0; }
-    .card header > .action {
-      font-size: 1rem;
-      float: right;
+    .card header > .actions {
       cursor: pointer;
-      position: relative;
-      top: 2px; }
+      position: absolute;
+      top: 5px;
+      right: 5px; }
+      .card header > .actions svg {
+        fill: #869edb;
+        width: 11px;
+        height: 11px;
+        margin-left: 3px; }
+        .card header > .actions svglast-child {
+          margin-left: 0; }
   .card .content {
     border-radius: 3px;
     background-color: white;
@@ -824,6 +1556,7 @@ body {
  * ```
  */
 button {
+  font-size: 1.2rem;
   padding: 4px 12px;
   /**
    * @section Buttons
@@ -848,10 +1581,9 @@ button {
   border-radius: 3px;
   position: relative;
   border: none;
-  font-weight: bold;
-  text-transform: uppercase;
+  font-weight: 400;
   cursor: pointer;
-  font-size: 1.2rem;
+  text-transform: uppercase;
   /**
    * @section Buttons
    * @subsection Sizes
@@ -933,10 +1665,10 @@ button {
     background-color: #aaaaaa; }
   button.border {
     border: 1px solid #5e5e5e; }
-  button:hover:not([disabled]):not(.solid-color) {
-    box-shadow: inset 0 0 20px #5e5e5e; }
-  button:active:not([disabled]):not(.solid-color), button.is-active:not([disabled]):not(.solid-color) {
-    box-shadow: inset 0 0 30px #5e5e5e; }
+  button:hover:not([disabled]) {
+    background-color: #919191; }
+  button:active:not([disabled]), button.is-active:not([disabled]) {
+    background-color: #919191; }
   button:focus {
     outline: none; }
   button.small {
@@ -976,10 +1708,10 @@ button {
       background-color: #869edb; }
     button.primary.border {
       border: 1px solid #2e4c9a; }
-    button.primary:hover:not([disabled]):not(.solid-color) {
-      box-shadow: inset 0 0 20px #2e4c9a; }
-    button.primary:active:not([disabled]):not(.solid-color), button.primary.is-active:not([disabled]):not(.solid-color) {
-      box-shadow: inset 0 0 30px #2e4c9a; }
+    button.primary:hover:not([disabled]) {
+      background-color: #5f7ecf; }
+    button.primary:active:not([disabled]), button.primary.is-active:not([disabled]) {
+      background-color: #5f7ecf; }
   button.caution {
     /**
      * @section Buttons
@@ -1008,10 +1740,10 @@ button {
       background-color: #cfcf00; }
     button.caution.border {
       border: 1px solid #363600; }
-    button.caution:hover:not([disabled]):not(.solid-color) {
-      box-shadow: inset 0 0 20px #363600; }
-    button.caution:active:not([disabled]):not(.solid-color), button.caution.is-active:not([disabled]):not(.solid-color) {
-      box-shadow: inset 0 0 30px #363600; }
+    button.caution:hover:not([disabled]) {
+      background-color: #9c9c00; }
+    button.caution:active:not([disabled]), button.caution.is-active:not([disabled]) {
+      background-color: #9c9c00; }
   button.danger {
     /**
      * @section Buttons
@@ -1040,10 +1772,10 @@ button {
       background-color: #b03a38; }
     button.danger.border {
       border: 1px solid #3c1413; }
-    button.danger:hover:not([disabled]):not(.solid-color) {
-      box-shadow: inset 0 0 20px #3c1413; }
-    button.danger:active:not([disabled]):not(.solid-color), button.danger.is-active:not([disabled]):not(.solid-color) {
-      box-shadow: inset 0 0 30px #3c1413; }
+    button.danger:hover:not([disabled]) {
+      background-color: #892d2c; }
+    button.danger:active:not([disabled]), button.danger.is-active:not([disabled]) {
+      background-color: #892d2c; }
   button.safe {
     /**
      * @section Buttons
@@ -1072,10 +1804,10 @@ button {
       background-color: #3eb038; }
     button.safe.border {
       border: 1px solid #153c13; }
-    button.safe:hover:not([disabled]):not(.solid-color) {
-      box-shadow: inset 0 0 20px #153c13; }
-    button.safe:active:not([disabled]):not(.solid-color), button.safe.is-active:not([disabled]):not(.solid-color) {
-      box-shadow: inset 0 0 30px #153c13; }
+    button.safe:hover:not([disabled]) {
+      background-color: #30892c; }
+    button.safe:active:not([disabled]), button.safe.is-active:not([disabled]) {
+      background-color: #30892c; }
   button[disabled] {
     opacity: 0.5;
     cursor: not-allowed; }
@@ -1089,7 +1821,7 @@ button {
  *
  * ```html
  * <div class="button-drop-down">
- *   <button class="solid-color">test</button>
+ *   <button >test</button>
  *   <div class="content">content</div>
  * </div>
  * ```
@@ -1098,7 +1830,7 @@ button {
  *
  * ```html
  * <div class="button-drop-down is-active" style="margin-bottom: 30px;">
- *   <button class="solid-color">test</button>
+ *   <button >test</button>
  *   <div class="content" style="width: 200px;">content</div>
  * </div>
  * ```
@@ -1107,36 +1839,24 @@ button {
  *
  * ```html
  * <div class="button-drop-down is-active" style="margin-bottom: 30px;">
- *   <button class="solid-color small">test</button>
+ *   <button class="small">test</button>
  *   <div class="content" style="width: 200px;">content</div>
  * </div>
  * ```
  *
  * ```html
  * <div class="button-drop-down is-active" style="margin-bottom: 30px;">
- *   <button class="solid-color large">test</button>
+ *   <button class="large">test</button>
  *   <div class="content" style="width: 200px;">content</div>
  * </div>
  * ```
  *
  * ```html
  * <div class="button-drop-down is-active" style="margin-bottom: 30px;">
- *   <button class="solid-color largest">test</button>
+ *   <button class="largest">test</button>
  *   <div class="content" style="width: 200px;">content</div>
  * </div>
  * ```
- *
- * Note the some button classes will cause visual issue.
- *
- * ```html
- * <div class="button-drop-down border is-active" style="margin-bottom: 30px;">
- *   <button class="solid-color largest">test</button>
- *   <div class="content" style="width: 200px;">content</div>
- * </div>
- * ```
- *
- * Since buttons by default have a inset shadow to better indicate they are clickable items, when using it within the content of a button drop down, it is
- * recommended that you use `solid-color` class on the button.
  */
 .button-drop-down {
   -webkit-user-select: none;
@@ -1152,6 +1872,8 @@ button {
    * @section Button Drop Down
    * @subsection Not Positioned
    *
+   * @TODO: example
+   *
    * By default, the content of the button drop down is position absolute however if you don't want this (useful if you need something like fixed positioning),
    * you can add the `not-positioned` class to the container.
    */
@@ -1163,14 +1885,14 @@ button {
    *
    * ```html
    * <div class="button-drop-down border">
-   *   <button class="solid-color">test</button>
+   *   <button >test</button>
    *   <div class="content" style="width: 200px;">content</div>
    * </div>
    * ```
    *
    * ```html
    * <div class="button-drop-down border is-active" style="margin-bottom: 30px;">
-   *   <button class="solid-color">test</button>
+   *   <button >test</button>
    *   <div class="content" style="width: 200px;">content</div>
    * </div>
    * ```
@@ -1185,7 +1907,7 @@ button {
    * ```html
    * <div style="position: relative; height: 60px;">
    *   <div class="button-drop-down left is-active" style="margin-bottom: 30px;position: absolute; right: 0;">
-   *     <button class="solid-color">test</button>
+   *     <button >test</button>
    *     <div class="content" style="width: 200px;">content</div>
    *   </div>
    * </div>
@@ -1199,7 +1921,7 @@ button {
    *
    * ```html
    * <div class="button-drop-down square is-active" style="margin-bottom: 30px;">
-   *   <button class="solid-color">test</button>
+   *   <button >test</button>
    *   <div class="content" style="width: 200px;">content</div>
    * </div>
    * ```
@@ -1208,6 +1930,8 @@ button {
     border-bottom: none;
     border-radius: 3px 3px 0 0;
     z-index: 502; }
+  .button-drop-down.is-active button {
+    background-color: #777777; }
   .button-drop-down.is-active .content {
     display: inherit; }
   .button-drop-down button {
@@ -1216,7 +1940,7 @@ button {
     display: none;
     border-radius: 0 3px 3px 3px;
     padding: 5px;
-    background-color: #aaaaaa;
+    background-color: #777777;
     z-index: 501; }
   .button-drop-down:not(.not-positioned) > .content {
     position: absolute;
@@ -1270,6 +1994,8 @@ button {
  * @section Extend Text
  *
  * This component extends the capibilities of your standard text box/textarea elements.
+ *
+ * **NOTE: The auto complete options container looks a little off in FireFox but that is just a browser issue with the static css.  If you use javascript to position the box (like the Nucleus Angular Extend Text component does), it will look fine.**
  */
 .extend-text {
   position: relative;
@@ -1283,7 +2009,7 @@ button {
    * ```html
    * <div class="extend-text is-active" style="width: 500px;">
    *   <input class="display" type="text" />
-   *   <div class="tag-container" style="top: 8px; left: 4px;">
+   *   <div class="tag-container" style="top: 4px; left: 4px;">
    *     <ul class="tags">
    *       <li class="tag">
    *         <span data-value="tag-value">tag value</span>
@@ -1319,7 +2045,7 @@ button {
    * ```html
    * <div class="extend-text is-active auto-complete" style="width: 500px;">
    *   <input class="display" type="text" />
-   *   <div class="auto-complete-options" style="top: 33px;">
+   *   <div class="auto-complete-options" style="top: 25px;">
    *     <ul>
    *       <li data-value="auto complete option1">auto complete option1</li>
    *       <li data-value="auto complete option1">auto complete option1</li>
@@ -1357,13 +2083,9 @@ button {
   .extend-text .tag-container {
     position: absolute;
     z-index: 2; }
-    .extend-text .tag-container ul {
-      padding: 0;
-      margin: 0;
-      float: left; }
   .extend-text .tag {
     display: inline-block;
-    margin-right: 6px;
+    margin: 0 6px 0 0;
     float: left;
     position: relative;
     background-color: #b8d7eb;
@@ -1379,7 +2101,7 @@ button {
      * ```html
      * <div class="extend-text is-active" style="width: 500px;">
      *   <input class="display" type="text" />
-     *   <div class="tag-container" style="top: 8px; left: 4px;">
+     *   <div class="tag-container" style="top: 4px; left: 4px;">
      *     <ul class="tags">
      *       <li class="tag">
      *         <span data-value="tag-value">tag value</span>
@@ -1404,7 +2126,7 @@ button {
      * ```html
      * <div class="extend-text is-active" style="width: 500px;">
      *   <input class="display" type="text" />
-     *   <div class="tag-container" style="top: 8px; left: 4px;">
+     *   <div class="tag-container" style="top: 4px; left: 4px;">
      *     <ul class="tags">
      *       <li class="tag">
      *         <span data-value="tag-value">tag value</span>
@@ -1432,11 +2154,11 @@ button {
   .extend-text .display {
     z-index: 1;
     overflow: hidden;
-    height: inherit; }
+    height: inherit;
+    margin: 0; }
   .extend-text .auto-complete-options {
     position: absolute;
-    border: 2px solid #595959;
-    box-sizing: border-box;
+    border: 1px solid #595959;
     background-color: white;
     z-index: 1;
     border-top: none;
@@ -1444,6 +2166,7 @@ button {
     overflow: auto;
     width: 100%;
     border-radius: 0 0 5px 5px;
+    box-shadow: 0 0 4px #091850;
     /**
      * @section Extend Text
      * @subsection Auto Complete - Focused Item
@@ -1453,7 +2176,7 @@ button {
      * ```html
      * <div class="extend-text is-active auto-complete" style="width: 500px;">
      *   <input class="display" type="text" />
-     *   <div class="auto-complete-options" style="top: 33px;">
+     *   <div class="auto-complete-options" style="top: 25px;">
      *     <ul>
      *       <li data-value="auto complete option1">auto complete option1</li>
      *       <li class="is-focused" data-value="auto complete option1">auto complete option1</li>
@@ -1466,10 +2189,10 @@ button {
     .extend-text .auto-complete-options li {
       padding: 3px 6px; }
     .extend-text .auto-complete-options .is-focused {
-      background: #E1E9F6; }
+      background-color: #e1e9f6; }
   .extend-text .new-indicator {
     position: absolute;
-    top: 11px;
+    top: 6px;
     right: 8px; }
 
 /**
@@ -1481,7 +2204,7 @@ button {
  * ```html
  * <div class="extend-text is-active auto-complete" style="width: 500px;">
  *   <input class="display" type="text" />
- *   <div class="tag-container" style="top: 8px; left: 4px;">
+ *   <div class="tag-container" style="top: 4px; left: 4px;">
  *     <ul class="tags">
  *       <li class="tag">
  *         <span data-value="tag-value">tag value</span>
@@ -1497,7 +2220,7 @@ button {
  *       </li>
  *     </ul>
  *   </div>
- *   <div class="auto-complete-options" style="top: 33px;">
+ *   <div class="auto-complete-options" style="top: 25px;">
  *     <ul>
  *       <li data-value="auto complete option1">auto complete option1</li>
  *       <li class="is-focused" data-value="auto complete option1">auto complete option1</li>
@@ -1519,34 +2242,33 @@ button {
  * <div class="input-element valid">
  *   <div class="container">
  *     <div class="extend-text is-active auto-complete" style="width: 500px;">
- *        <input class="display" type="text" />
- *        <div class="tag-container" style="top: 8px; left: 4px;">
- *          <ul class="tags">
- *            <li class="tag">
- *              <span data-value="tag-value">tag value</span>
- *              <img class="remove svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/x.svg" />
- *            </li>
- *            <li class="tag">
- *              <span data-value="tag-value2">tag value2</span>
- *              <img class="remove svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/x.svg" />
- *            </li>
- *            <li class="tag">
- *              <span data-value="tag-value3">tag value3</span>
- *              <img class="remove svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/x.svg" />
- *            </li>
- *          </ul>
- *        </div>
- *        <div class="auto-complete-options" style="top: 33px;">
- *          <ul>
- *            <li data-value="auto complete option1">auto complete option1</li>
- *            <li class="is-focused" data-value="auto complete option1">auto complete option1</li>
- *            <li data-value="auto complete option1">auto complete option1</li>
- *          </ul>
- *        </div>
+ *       <input class="display" type="text" />
+ *       <div class="tag-container" style="top: 4px; left: 4px;">
+ *         <ul class="tags">
+ *           <li class="tag">
+ *             <span data-value="tag-value">tag value</span>
+ *             <img class="remove svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/x.svg" />
+ *           </li>
+ *           <li class="tag">
+ *             <span data-value="tag-value2">tag value2</span>
+ *             <img class="remove svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/x.svg" />
+ *           </li>
+ *           <li class="tag">
+ *             <span data-value="tag-value3">tag value3</span>
+ *             <img class="remove svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/x.svg" />
+ *           </li>
+ *         </ul>
+ *       </div>
+ *       <div class="auto-complete-options" style="top: 25px;">
+ *         <ul>
+ *           <li data-value="auto complete option1">auto complete option1</li>
+ *           <li class="is-focused" data-value="auto complete option1">auto complete option1</li>
+ *           <li data-value="auto complete option1">auto complete option1</li>
+ *         </ul>
+ *       </div>
  *     </div>
  *   </div>
  *   <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/check.svg" />
- *   <div class="input-message inline">Valid</div>
  * </div>
  * ```
  *
@@ -1556,42 +2278,48 @@ button {
  * <div class="input-element invalid">
  *   <div class="container">
  *     <div class="extend-text is-active auto-complete" style="width: 500px;">
- *        <input class="display" type="text" />
- *        <div class="tag-container" style="top: 8px; left: 4px;">
- *          <ul class="tags">
- *            <li class="tag">
- *              <span data-value="tag-value">tag value</span>
- *              <img class="remove svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/x.svg" />
- *            </li>
- *            <li class="tag">
- *              <span data-value="tag-value2">tag value2</span>
- *              <img class="remove svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/x.svg" />
- *            </li>
- *            <li class="tag">
- *              <span data-value="tag-value3">tag value3</span>
- *              <img class="remove svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/x.svg" />
- *            </li>
- *          </ul>
- *        </div>
- *        <div class="auto-complete-options" style="top: 33px;">
- *          <ul>
- *            <li data-value="auto complete option1">auto complete option1</li>
- *            <li class="is-focused" data-value="auto complete option1">auto complete option1</li>
- *            <li data-value="auto complete option1">auto complete option1</li>
- *          </ul>
- *        </div>
+ *       <input class="display" type="text" />
+ *       <div class="tag-container" style="top: 4px; left: 4px;">
+ *         <ul class="tags">
+ *           <li class="tag">
+ *             <span data-value="tag-value">tag value</span>
+ *             <img class="remove svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/x.svg" />
+ *           </li>
+ *           <li class="tag">
+ *             <span data-value="tag-value2">tag value2</span>
+ *             <img class="remove svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/x.svg" />
+ *           </li>
+ *           <li class="tag">
+ *             <span data-value="tag-value3">tag value3</span>
+ *             <img class="remove svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/x.svg" />
+ *           </li>
+ *         </ul>
+ *       </div>
+ *       <div class="auto-complete-options" style="top: 25px;">
+ *        <ul>
+ *           <li data-value="auto complete option1">auto complete option1</li>
+ *           <li class="is-focused" data-value="auto complete option1">auto complete option1</li>
+ *          <li data-value="auto complete option1">auto complete option1</li>
+ *         </ul>
+ *       </div>
  *     </div>
  *   </div>
- *   <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/x.svg" />
- *   <div class="input-message inline">Invalid</div>
+ *   <div class="tooltip">
+ *     <div class="handle">
+ *       <img class="svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/x.svg" />
+ *     </div>
+ *     <div class="content">Invalid</div>
+ *   </div>
  * </div>
  * ```
  */
 .invalid .extend-text .auto-complete-options {
-  border-color: #b03a38; }
+  border-color: #b03a38;
+  box-shadow: 0 0 4px #b03a38; }
 
 .valid .extend-text .auto-complete-options {
-  border-color: #3eb038; }
+  border-color: #3eb038;
+  box-shadow: 0 0 4px #3eb038; }
 
 /**
  * @section Forms
@@ -1622,8 +2350,8 @@ button {
  *   <div>
  *   <div>
  *     <label>Is Admin</label>
- *     <label for="is-admin-yes" /><input id="is-admin-yes" name="isAdmin" type="radio"> Yes</label>
- *     <label for="is-admin-no"><input id="is-admin-no" name="isAdmin" type="radio" /> No</label>
+ *     <input id="is-admin-yes" name="isAdmin" type="radio"> <label for="is-admin-yes" />Yes</label>
+ *     <input id="is-admin-no" name="isAdmin" type="radio" /> <label for="is-admin-no">No</label>
  *   </div>
  * </form>
  * ```
@@ -1646,7 +2374,7 @@ form {
    *     <input id="last-name" type="text" />
    *   </div>
    *   <div>
-   *     <label for="is-active"><input id="is-active" type="checkbox" /> Is Active</label>
+   *     <input id="is-active" type="checkbox" /> <label for="is-active">Is Active</label>
    *   </div>
    *   <div>
    *     <label for="country">Select Country</label>
@@ -1657,8 +2385,8 @@ form {
    *   <div>
    *   <div>
    *     <label>Is Admin</label>
-   *     <label for="is-admin-yes" /><input id="is-admin-yes" name="isAdmin" type="radio"> Yes</label>
-   *     <label for="is-admin-no"><input id="is-admin-no" name="isAdmin" type="radio" /> No</label>
+   *     <input id="is-admin-yes" name="isAdmin" type="radio"> <label for="is-admin-yes" />Yes</label>
+   *     <input id="is-admin-no" name="isAdmin" type="radio" /> <label for="is-admin-no">No</label>
    *   </div>
    * </form>
    * ```
@@ -1667,11 +2395,14 @@ form {
   form.compact .label {
     display: inline-block;
     text-align: right;
-    padding-right: 10px; }
+    padding-right: 0 10px 0 0; }
+  form .input-text {
+    display: inline-block; }
 
 label,
 .label {
-  display: block; }
+  display: block;
+  margin: 0 0 3px 0; }
 
 input ~ label {
   display: inline-block; }
@@ -1680,22 +2411,25 @@ input:not([type]),
 input[type="text"],
 textarea {
   border-radius: 5px;
-  border: 2px solid #595959;
-  padding: 2px;
-  margin: 5px 0;
-  outline: none;
-  box-shadow: inset 0px 0px 15px #efefef; }
+  border: 1px solid #595959;
+  padding: 4px;
+  outline: none; }
   input:not([type]):focus,
   input[type="text"]:focus,
   textarea:focus {
-    box-shadow: inset 0px 0px 15px #a7a7a7; }
-
-input[type="radio"],
-input[type="checkbox"] {
-  margin: 5px; }
+    border-color: #091850;
+    box-shadow: 0 0 4px #091850; }
 
 input[disabled] {
-  opacity: .7; }
+  opacity: 0.7; }
+
+select {
+  background: transparent;
+  border: 0;
+  border-radius: 5px;
+  height: 25px;
+  outline: none;
+  border: 1px solid #595959; }
 
 /**
  * @section Input Element
@@ -1703,54 +2437,119 @@ input[disabled] {
  * There is a special structure that can be used by added the `input-element` class to a containing element to support custom data validation styling.
  *
  * ```html
+ * <form>
+ *   <div>
+ *     <label for="first-name">First Name</label>
+ *     <div class="input-element valid">
+ *       <input id="first-name" type="text" />
+ *       <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/check.svg" />
+ *     </div>
+ *   </div>
+ *   <div>
+ *     <label for="last-name">Last Name</label>
+ *     <div class="input-element valid">
+ *       <input id="last-name" type="text" />
+ *       <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/check.svg" />
+ *     </div>
+ *   </div>
+ *   <div>
+ *     <div class="input-element invalid">
+ *       <input id="is-active" type="checkbox" /> <label for="is-active">Is Active</label>
+ *       <div class="tooltip">
+ *         <div class="handle"><img class="svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/x.svg" /></div>
+ *         <div class="content">Error message</div>
+ *       </div>
+ *     </div>
+ *   </div>
+ *   <div>
+ *     <label for="country">Select Country</label>
+ *     <div class="input-element invalid" data-input-type="select">
+ *       <select id="country" style="width: 100px;">
+ *         <option>USA</option>
+ *         <option>Other</option>
+ *       </select>
+ *       <div class="tooltip">
+ *         <div class="handle"><img class="svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/x.svg" /></div>
+ *         <div class="content">Error message</div>
+ *       </div>
+ *     </div>
+ *   <div>
+ *   <div>
+ *     <label for="bio">Bio</label>
+ *     <div class="input-element invalid">
+ *       <textarea id="bio">Bio</textarea>
+ *       <div class="tooltip">
+ *         <div class="handle"><img class="svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/x.svg" /></div>
+ *         <div class="content">Error message</div>
+ *       </div>
+ *     </div>
+ *   <div>
+ *   <div>
+ *     <label>Is Admin</label>
+ *     <div class="input-element valid">
+ *       <input id="is-admin-yes" name="isAdmin" type="radio"> <label for="is-admin-yes" />Yes</label>
+ *       <input id="is-admin-no" name="isAdmin" type="radio" /> <label for="is-admin-no">No</label>
+ *       <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/check.svg" />
+ *     </div>
+ *   </div>
+ * </form>
+ * ```
+ *
+ * Compact form.
+ *
+ * ```html
  * <form class="compact">
  *   <div>
+ *     <label for="first-name">First Name</label>
  *     <div class="input-element valid">
- *       <div class="container">
- *         <label for="first-name">First Name</label>
- *         <input id="first-name" type="text" />
- *       </div>
+ *       <input id="first-name" type="text" />
  *       <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/check.svg" />
- *       <div class="input-message inline">Valid</div>
  *     </div>
  *   </div>
  *   <div>
+ *     <label for="last-name">Last Name</label>
  *     <div class="input-element valid">
- *       <div class="container">
- *         <label for="last-name">Last Name</label>
- *         <input id="last-name" type="text" />
- *       </div>
+ *       <input id="last-name" type="text" />
  *       <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/check.svg" />
- *       <div class="input-message inline">Valid</div>
  *     </div>
  *   </div>
  *   <div>
  *     <div class="input-element invalid">
- *       <div class="container">
- *         <label for="is-active"><input id="is-active" type="checkbox" /> Is Active</label>
+ *       <input id="is-active" type="checkbox" /> <label for="is-active">Is Active</label>
+ *       <div class="tooltip">
+ *         <div class="handle"><img class="svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/x.svg" /></div>
+ *         <div class="content">Error message</div>
  *       </div>
- *       <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/x.svg" />
  *     </div>
  *   </div>
  *   <div>
- *     <div class="input-element invalid">
- *       <div class="container">
- *         <label for="country">Select Country</label>
- *         <select id="country">
- *           <option>USA</option>
- *           <option>Other</option>
- *         </select>
+ *     <label for="country">Select Country</label>
+ *     <div class="input-element invalid" data-input-type="select">
+ *       <select id="country" style="width: 100px;">
+ *         <option>USA</option>
+ *         <option>Other</option>
+ *       </select>
+ *       <div class="tooltip">
+ *         <div class="handle"><img class="svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/x.svg" /></div>
+ *         <div class="content">Error message</div>
  *       </div>
- *       <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/x.svg" />
  *     </div>
  *   <div>
  *   <div>
- *     <div class="input-element valid">
- *       <div class="container">
- *         <label>Is Admin</label>
- *         <label for="is-admin-yes" /><input id="is-admin-yes" name="isAdmin" type="radio"> Yes</label>
- *         <label for="is-admin-no"><input id="is-admin-no" name="isAdmin" type="radio" /> No</label>
+ *     <label for="bio">Bio</label>
+ *     <div class="input-element invalid">
+ *       <textarea id="bio">Bio</textarea>
+ *       <div class="tooltip">
+ *         <div class="handle"><img class="svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/x.svg" /></div>
+ *         <div class="content">Error message</div>
  *       </div>
+ *     </div>
+ *   <div>
+ *   <div>
+ *     <label>Is Admin</label>
+ *     <div class="input-element valid">
+ *       <input id="is-admin-yes" name="isAdmin" type="radio"> <label for="is-admin-yes" />Yes</label>
+ *       <input id="is-admin-no" name="isAdmin" type="radio" /> <label for="is-admin-no">No</label>
  *       <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/check.svg" />
  *     </div>
  *   </div>
@@ -1758,6 +2557,7 @@ input[disabled] {
  * ```
  */
 .input-element {
+  display: inline-block;
   position: relative;
   /**
    * @section Input Element
@@ -1767,19 +2567,15 @@ input[disabled] {
    * container element.
    *
    * ```html
+   * <label>Label:</label>
    * <div class="input-element invalid plain">
+   *   <input type="text" />
    *   <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/x.svg" />
-   *   <div class="container">
-   *     <input type="text" class="ng-invalid" />
-   *   </div>
-   *   <div class="input-message">Invalid</div>
    * </div>
+   * <label>Label:</label>
    * <div class="input-element valid plain">
-   *   <div class="container">
-   *     <input type="text" class="ng-valid" />
-   *   </div>
+   *   <input type="text" />
    *   <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/check.svg" />
-   *   <div class="input-message">Valid</div>
    * </div>
    * ```
    */
@@ -1790,40 +2586,70 @@ input[disabled] {
    * You you provide an icon for the input element that is SVG, you just need to add the `icon` class to the element.
    *
    * ```html
+   * <label>Label:</label>
    * <div class="input-element valid">
-   *   <div class="container">
-   *     <input type="text" class="ng-valid" />
-   *   </div>
+   *   <input type="text" />
    *   <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/check.svg" />
    * </div>
    * ```
    */
   /**
    * @section Input Element
-   * @subsection Message
+   * @subsection Tooltip
    *
-   * You you provide message element (useful for showing success/error message) by adding the `message` class to the element.
+   * You you provide tooltip to for example, display an error message if the validation failed.
    *
    * ```html
-   * <div class="input-element valid">
-   *   <div class="container">
-   *     <input type="text" class="ng-valid" />
+   * <label>Label:</label>
+   * <div class="input-element invalid">
+   *   <input type="text" />
+   *   <div class="tooltip">
+   *     <div class="handle"><img class="svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/x.svg" /></div>
+   *     <div class="content">Error message</div>
    *   </div>
-   *   <div class="input-message">Valid</div>
    * </div>
    * ```
+   */
+  /**
+   * @section Input Element
+   * @subsection Messages
    *
-   * By defualt it is displayed `block` but you can add the `inline` class to the message element to have it displayed `inline`.
+   * You can display messages within an input element if you don't want to display them as a tooltip
    *
    * ```html
-   * <div class="input-element valid">
-   *   <div class="container">
-   *     <input type="text" class="ng-valid" />
+   * <label>Label:</label>
+   * <div class="input-element invalid">
+   *   <input type="text" />
+   *   <div class="message danger">
+   *     <div>This field is required</div>
+   *     <div>this field is too short</div>
    *   </div>
-   *   <div class="input-message inline">Valid</div>
    * </div>
    * ```
    */ }
+  .input-element input:not([type]),
+  .input-element input[type="text"],
+  .input-element textarea {
+    padding-right: 25px; }
+  .input-element .tooltip,
+  .input-element .icon {
+    position: absolute;
+    top: 4px;
+    right: 5px; }
+  .input-element select ~ .tooltip,
+  .input-element select ~ .icon {
+    right: 22px; }
+  .input-element input[type="checkbox"] ~ .tooltip,
+  .input-element input[type="checkbox"] ~ .icon {
+    top: 0px;
+    right: -21px; }
+  .input-element input[type="radio"] ~ .tooltip,
+  .input-element input[type="radio"] ~ .icon {
+    top: -2px;
+    right: -21px; }
+  .input-element .message {
+    display: block;
+    margin-top: 10px; }
   .input-element:not(.plain) {
     /**
      * @section Input Element
@@ -1832,12 +2658,10 @@ input[disabled] {
      * If an input element is invalid, you need to add the `invalid` class on the container.
      *
      * ```html
+     * <label>Label:</label>
      * <div class="input-element invalid">
+     *   <input type="text" />
      *   <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/x.svg" />
-     *   <div class="container">
-     *     <input type="text" class="ng-invalid" />
-     *   </div>
-     *   <div class="input-message">Invalid</div>
      * </div>
      * ```
      */
@@ -1848,48 +2672,48 @@ input[disabled] {
      * If an input element is valid, you need to add the `valid` class on the container.
      *
      * ```html
+     * <label>Label:</label>
      * <div class="input-element valid">
-     *   <div class="container">
-     *     <input type="text" class="ng-valid" />
-     *   </div>
+     *   <input type="text" />
      *   <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/check.svg" />
-     *   <div class="input-message">Valid</div>
      * </div>
      * ```
      */ }
     .input-element:not(.plain).invalid input,
-    .input-element:not(.plain).invalid textarea {
+    .input-element:not(.plain).invalid textarea,
+    .input-element:not(.plain).invalid select {
       border-color: #b03a38;
-      background-color: #f9eeee;
-      /*&:focus {
-        border-color: $color-medium-carmine-d30;
-      }*/ }
+      background-color: #f9eeee; }
+      .input-element:not(.plain).invalid input:focus,
+      .input-element:not(.plain).invalid textarea:focus,
+      .input-element:not(.plain).invalid select:focus {
+        box-shadow: 0 0 4px #b03a38; }
     .input-element:not(.plain).valid input,
-    .input-element:not(.plain).valid textarea {
+    .input-element:not(.plain).valid textarea,
+    .input-element:not(.plain).valid select {
       border-color: #3eb038;
-      background-color: #eef9ee;
-      /*&:focus {
-        border-color: $color-apple-d30;
-      }*/ }
-  .input-element.invalid .icon {
+      background-color: #eef9ee; }
+      .input-element:not(.plain).valid input:focus,
+      .input-element:not(.plain).valid textarea:focus,
+      .input-element:not(.plain).valid select:focus {
+        box-shadow: 0 0 4px #3eb038; }
+  .input-element.invalid .icon,
+  .input-element.invalid .tooltip .handle {
     fill: #7a0200; }
-  .input-element.invalid .input-message {
+  .input-element.invalid .tooltip .content {
     color: #7a0200; }
-  .input-element.valid .icon {
+  .input-element.valid .icon,
+  .input-element.valid .tooltip .handle {
     fill: #007e01; }
-  .input-element.valid .input-message {
+  .input-element.valid .tooltip .content {
     color: #007e01; }
-  .input-element > .container {
-    display: inline-block;
-    position: relative; }
-    .input-element > .container:after {
-      content: "";
-      display: table;
-      clear: both; }
-  .input-element .icon {
-    vertical-align: middle; }
-  .input-element .input-message.inline {
-    display: inline; }
+
+form.compact .input-element input[type="checkbox"] ~ .tooltip,
+form.compact .input-element input[type="checkbox"] ~ .icon {
+  top: 0px; }
+form.compact .input-element input[type="radio"] ~ .tooltip,
+form.compact .input-element input[type="radio"] ~ .icon {
+  top: -2px; }
 
 /**
  * @section Notify
@@ -1899,7 +2723,8 @@ input[disabled] {
  * ```html
  * <a id="default" class="show-notify" href>click me to show default notify (auto removed in 2 seconds)</a>
  * <div class="notify message notice" data-id="default">
- *   <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/info.svg" />This is a notification message.
+ *   <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/info.svg" />
+ *   <div class="content">This is a notification message.</div>
  * </div>
  * ```
  *
@@ -1908,7 +2733,8 @@ input[disabled] {
  * ```html
  * <a id="positioned" class="show-notify" href>click me to show positioned notify (auto removed in 2 seconds)</a>
  * <div class="notify message danger" data-id="positioned" style="top: 300px; left: 150px; right: auto;">
- *   <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/x.svg" />This is a positioned notification message.
+ *   <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/x.svg" />
+ *   <div class="content">This is a positioned notification message.</div>
  * </div>
  * ```
  *
@@ -1933,7 +2759,7 @@ input[disabled] {
   z-index: 9999;
   display: inline-block; }
   .notify.absolute {
-    position: fixed; }
+    position: absolute; }
 
 /**
  * @section Site Loader
@@ -1980,8 +2806,8 @@ input[disabled] {
   .site-loader.is-active {
     display: block; }
   .site-loader .text {
-    padding-top: 50px;
-    z-index: 1001;
+    padding: 50px 0 0 0;
+    z-index: 10001;
     text-align: center; }
 
 /**
@@ -2010,14 +2836,13 @@ input[disabled] {
  * </script>
  */
 .non-blocking-loader.message {
-  top: 0;
+  top: 5px;
   right: 50%;
-  margin-right: -150px;
+  margin: 0 -150px 0 0;
   width: 300px;
   text-align: center;
-  border-top: none;
   padding: 0.25em 0.5em;
-  border-radius: 0 0 3px 3px;
+  border-radius: 3px;
   z-index: 10000; }
 
 /**
@@ -2093,11 +2918,11 @@ input[disabled] {
   .revealing-panel.center > .content {
     top: 50%;
     left: 50%;
+    border-radius: 5px;
+    display: none;
+    border: 1px solid black;
     height: 500px;
     width: 500px;
-    display: none;
-    opacity: 1;
-    border: 1px solid black;
     margin: calc(-500px / 2) 0 0 calc(-500px / 2);
     /*&.reveal,
     &.reveal-add,
@@ -2137,7 +2962,8 @@ input[disabled] {
     z-index: 11000;
     background-color: white;
     overflow: hidden;
-    display: none; }
+    display: none;
+    padding: 8px; }
   .revealing-panel.is-active > .content {
     display: block; }
 
@@ -2301,7 +3127,9 @@ input[disabled] {
     padding: 5px;
     background: white;
     border: 1px solid black;
-    display: none; }
+    border-radius: 3px;
+    display: none;
+    z-index: 1; }
 
 /**
  * @section Tree
@@ -2373,23 +3201,23 @@ input[disabled] {
 .tree li {
   cursor: pointer; }
 .tree .leaf {
-  padding-left: 8px; }
+  padding: 0 0 0 8px; }
   .tree .leaf.no-icon {
-    padding-left: 22px; }
+    padding: 0 0 0 22px; }
 .tree .tree.expanded > ul {
   display: block; }
   .tree .tree.expanded > ul .tree {
-    padding-left: 8px; }
+    padding: 0 0 0 8px; }
     .tree .tree.expanded > ul .tree.no-icon {
-      padding-left: 22px; }
+      padding: 0 0 0 22px; }
 .tree .tree.no-icon {
-  padding-left: 14px; }
+  padding: 0 0 0 8px; }
 .tree .tree ul {
   display: none; }
 .tree svg {
   width: 11px;
   height: 11px;
-  margin-right: 3px; }
+  margin: 0 3px 0 0; }
 
 /**
  * @section Messages
@@ -2407,13 +3235,16 @@ input[disabled] {
   border-radius: 3px;
   /**
    * @section Messages
-   * #subsection Icon
+   * @subsection Icon
    *
    * Messages element can also have an icon.
    *
+   * If you are using an icon, then you must wrap you message content in an element with the `content` class.
+   *
    * ```html
    * <div class="message">
-   *   <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/check.svg" />This is a generic message.
+   *   <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/check.svg" />
+   *   <div class="content">This is a generic message.</div>
    * </div>
    * ```
    */
@@ -2427,7 +3258,8 @@ input[disabled] {
    *
    * ```html
    * <div class="message safe">
-   *   <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/check.svg" />This is a generic message.
+   *   <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/check.svg" />
+   *   <div class="content">This is a generic message.</div>
    * </div>
    * ```
    *
@@ -2435,7 +3267,8 @@ input[disabled] {
    *
    * ```html
    * <div class="message notice">
-   *   <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/info.svg" />This is a generic message.
+   *   <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/info.svg" />
+   *   <div class="content">This is a generic message.</div>
    * </div>
    * ```
    *
@@ -2443,7 +3276,8 @@ input[disabled] {
    *
    * ```html
    * <div class="message caution">
-   *   <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/question-mark.svg" />This is a generic message.
+   *   <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/question-mark.svg" />
+   *   <div class="content">This is a generic message.</div>
    * </div>
    * ```
    *
@@ -2451,24 +3285,30 @@ input[disabled] {
    *
    * ```html
    * <div class="message danger">
-   *   <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/x.svg" />This is a generic message.
+   *   <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/x.svg" />
+   *   <div class="content">This is a generic message.</div>
    * </div>
    * ```
    */ }
+  .message:not(.notify) {
+    position: relative; }
   .message .icon {
-    vertical-align: middle;
-    margin-right: 5px;
-    width: 24px;
-    height: 24px;
-    padding: 4px;
-    border-radius: 12px; }
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 21px;
+    height: 21px;
+    padding: 3px;
+    border-radius: 10.5px; }
+  .message .content {
+    margin-left: 21px; }
   .message.safe {
-    background-color: #e5f4e5;
+    background-color: #eef9ee;
     color: #007e01;
-    fill: #e5f4e5;
-    border-color: #035200; }
+    fill: #eef9ee;
+    border-color: #3eb038; }
     .message.safe .icon {
-      background-color: #035200; }
+      background-color: #3eb038; }
   .message.notice {
     background-color: #e5e5f4;
     color: #0002ab;
@@ -2478,18 +3318,18 @@ input[disabled] {
       background-color: #091850; }
   .message.caution {
     background-color: #f1f2ab;
-    color: #cfcf00;
+    color: #7e7e00;
     fill: #f1f2ab;
     border-color: #7e7e00; }
     .message.caution .icon {
       background-color: #7e7e00; }
   .message.danger {
-    background-color: #db9895;
+    background-color: #f9eeee;
     color: #7a0200;
-    fill: #db9895;
-    border-color: #520300; }
+    fill: #f9eeee;
+    border-color: #b03a38; }
     .message.danger .icon {
-      background-color: #520300; }
+      background-color: #b03a38; }
 
 /**
  * @section Progress Bars
@@ -2569,21 +3409,21 @@ input[disabled] {
     height: 16px;
     background-color: #e6e6e6; }
   .progress-bar.safe {
-    border-color: #035200; }
+    border-color: #3eb038; }
     .progress-bar.safe .indicator {
-      background-color: #007e01; }
+      background-color: #eef9ee; }
   .progress-bar.notice {
     border-color: #091850; }
     .progress-bar.notice .indicator {
-      background-color: #0002ab; }
+      background-color: #e5e5f4; }
   .progress-bar.caution {
     border-color: #7e7e00; }
     .progress-bar.caution .indicator {
-      background-color: #cfcf00; }
+      background-color: #f1f2ab; }
   .progress-bar.danger {
-    border-color: #520300; }
+    border-color: #b03a38; }
     .progress-bar.danger .indicator {
-      background-color: #7a0200; }
+      background-color: #f9eeee; }
 
 /**
  * @section Search Query
@@ -2608,18 +3448,15 @@ input[disabled] {
    */
   /**
    * @section Search Query
-   * @subsection Tooltip
+   * @subsection Tooltip/Icon
    *
-   * The search query can also provide a validation tooltip to provide additional help/visual queue on the state of the search query
+   * The search query can also provide a validation tooltip/icon to provide additional help/visual queue on the state of the search query
    *
    * ```html
    * <div class="extend-text parsing">
    *   <div class="inputs empty">
    *     <textarea class="display" /></textarea>
-   *     <div class="tooltip help">
-   *       <span class="handle validation-icon"><img class="svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/question-mark.svg" /></span>
-   *       <div class="content" style="width: 202px;">State typing you search query</div>
-   *     </div>
+   *     <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/question-mark.svg" />
    *   </div>
    * </div>
    * ```
@@ -2628,8 +3465,8 @@ input[disabled] {
    * <div class="extend-text parsing">
    *   <div class="inputs invalid">
    *     <textarea class="display">firstName = 'John</textarea>
-   *     <div class="tooltip help">
-   *       <span class="handle validation-icon"><img class="svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/x.svg" /></span>
+   *     <div class="tooltip">
+   *       <span class="handle"><img class="svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/x.svg" /></span>
    *       <div class="content" style="width: 350px;">This is a problem with the query near "= 'John"</div>
    *     </div>
    *   </div>
@@ -2640,16 +3477,13 @@ input[disabled] {
    * <div class="extend-text parsing">
    *   <div class="inputs valid">
    *     <textarea class="display">firstName = 'John'</textarea>
-   *     <div class="tooltip help">
-   *       <span class="handle validation-icon"><img class="svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/check.svg" /></span>
-   *       <div class="content" style="width: 84px;">Query valid</div>
-   *     </div>
+   *     <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/check.svg" />
    *   </div>
    * </div>
    * ```
    */ }
   .parsing .inputs {
-    height: 30px;
+    height: 25px;
     /**
      * @section Search Query
      * @subsection States
@@ -2689,14 +3523,14 @@ input[disabled] {
     .parsing .inputs.invalid textarea {
       border-color: #b03a38;
       background-color: #f9eeee; }
-    .parsing .inputs.invalid .validation-icon {
+    .parsing .inputs.invalid .svg-icon {
       fill: #7a0200; }
     .parsing .inputs.valid textarea {
       border-color: #3eb038;
       background-color: #eef9ee; }
-    .parsing .inputs.valid .validation-icon {
+    .parsing .inputs.valid .svg-icon {
       fill: #007e01; }
-    .parsing .inputs.empty .validation-icon {
+    .parsing .inputs.empty .svg-icon {
       fill: #414141; }
   .parsing .input-container {
     position: relative;
@@ -2706,7 +3540,7 @@ input[disabled] {
     padding-right: 30px; }
   .parsing .tooltip {
     position: absolute;
-    top: 11px;
+    top: 4px;
     right: 5px; }
     .parsing .tooltip .handle {
       cursor: pointer; }
@@ -2714,3 +3548,7 @@ input[disabled] {
       text-align: center;
       border: 1px solid gray;
       border-radius: 5px; }
+  .parsing .icon {
+    position: absolute;
+    top: 4px;
+    right: 5px; }
