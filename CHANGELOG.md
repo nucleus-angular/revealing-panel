@@ -4,6 +4,7 @@ Each change log are assumed to be accompanied by associated unit test and docume
 
 ## master
 
+- added .editorconfig file
 - convert from isolate scope to child scope
 - updated so now base template can be loaded from file or can be placed inline
 
