@@ -2,6 +2,10 @@
 
 Each change log are assumed to be accompanied by associated unit test and documentation updates.
 
+## master
+
+- change $apply() to $evalAsync()
+
 ## 0.6.0
 
 - added .editorconfig file

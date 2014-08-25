@@ -151,7 +151,7 @@ angular.module('nag.revealingPanel')
             if(scope.options.closeOnEscape === true) {
               $(document).bind('keydown.' + scope.id, function(event) {
                 if(scope.panelVisible === true) {
-                  scope.$apply(function() {
+                  scope.$evalAsync(function() {
                     if(event.which === 27) {
                       scope.hide();
                     }
