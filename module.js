@@ -33,7 +33,6 @@ angular.module('nag.revealingPanel', [
 
     $(window).bind('resize.revealingPanel', function() {
       var newMaxHeight = Math.max(document.documentElement.clientHeight, window.innerHeight || 0) - (spacing * 2);
-      console.log(initialMaxHeight);
       document.styleSheets[styleSheetIndex].rules[ruleIndex].style.maxHeight = newMaxHeight + 'px';
     });
   }
