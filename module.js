@@ -9,6 +9,35 @@ angular.module('nag.revealingPanel', [
   'ngAnimate',
   'nag.core'
 ])
+.config([
+  '$injector',
+  function($injector) {
+    var spacing = '50';
+    var styleSheetIndex;
+    var ruleIndex;
+
+    //cache indexes so we don't have to search on the resize event
+    _.forEach(document.styleSheets, function(styleSheet, sIndex) {
+      if(!styleSheetIndex && styleSheetIndex !== 0) {
+        _.forEach(styleSheet.rules, function(rule, rIndex) {
+          if(!ruleIndex && ruleIndex !== 0 && rule.selectorText === '.revealing-panel.center > .content') {
+            styleSheetIndex = sIndex;
+            ruleIndex = rIndex;
+          }
+        });
+      }
+    });
+
+    var initialMaxHeight = Math.max(document.documentElement.clientHeight, window.innerHeight || 0) - (spacing * 2);
+    document.styleSheets[styleSheetIndex].rules[ruleIndex].style.maxHeight = initialMaxHeight + 'px';
+
+    $(window).bind('resize.revealingPanel', function() {
+      var newMaxHeight = Math.max(document.documentElement.clientHeight, window.innerHeight || 0) - (spacing * 2);
+      console.log(initialMaxHeight);
+      document.styleSheets[styleSheetIndex].rules[ruleIndex].style.maxHeight = newMaxHeight + 'px';
+    });
+  }
+])
 .run([
   'nagDefaults',
   function(nagDefaults) {
@@ -32,7 +61,8 @@ angular.module('nag.revealingPanel', [
       closeOnEscape: true,
       hasOverlay: true,
       closeOnOverlayClick: false,
-      contentTemplateUrl: null
+      contentTemplateUrl: null,
+      event: 'click'
     });
   }
-]);;
+]);

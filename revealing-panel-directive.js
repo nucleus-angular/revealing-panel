@@ -33,14 +33,6 @@ angular.module('nag.revealingPanel')
           throw new Error('HTML data-id attribute must be provides for the directive');
         }
 
-        //for whatever reason dynamically adding angular attributes can't be done in the pre of the return object
-        if(attributes.event === 'hover') {
-          element.find('.handle').attr('ng-mouseenter', 'mouseEnter($event)');
-          element.find('.content').attr('ng-mouseleave', 'mouseLeave($event)');
-        } else {
-          element.find('.handle').attr('ng-click', 'toggle()');
-        }
-
         //this allow us to make sure we can prevent the content in panel from doing weird shift when being revealed/concealed
         //TODO: research: need to look at this again when we re-implement animations
         element.find('.content').html($('<div class="inner-content"></div>').html(element.find('.content').html()));
@@ -103,10 +95,6 @@ angular.module('nag.revealingPanel')
               $animate.removeClass(contentElement, 'reveal');
 
               scope.panelVisible = false;
-
-              if(_(scope.options.hideCallback).isFunction()) {
-                scope.options.hideCallback();
-              }
             };
 
             /**
@@ -121,10 +109,6 @@ angular.module('nag.revealingPanel')
                 $rootScope.$broadcast('NagRevealingPanel[' + scope.id.replace(/(\-[a-z])/g, function($1){return $1.toUpperCase().replace('-','');}) +']/animationComplete');
               });
 
-              if(_(scope.options.showCallback).isFunction()) {
-                scope.options.showCallback();
-              }
-
               scope.panelVisible = true;
             };
 
@@ -136,16 +120,6 @@ angular.module('nag.revealingPanel')
              */
             scope.toggle = function() {
               (scope.panelVisible === true) ? scope.hide() : scope.show();
-            };
-
-            scope.mouseEnter = function($event) {
-              $event.stopPropagation();
-              scope.toggle();
-            };
-
-            scope.mouseLeave = function($event) {
-              $event.stopPropagation();
-              scope.toggle();
             };
 
             if(scope.options.closeOnEscape === true) {

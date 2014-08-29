@@ -1,98 +1,116 @@
+<style type="text/css">
+  .revealing-panel {
+    width: 400px;
+  }
+</style>
 <div class="home-page">
   <div nag-revealing-panel data-ut="defaults" data-id="defaults">
-    <span class="handle">default handle</span>
-    <div class="content">
+    <span nag-revealing-panel-handle>default handle</span>
+    <div class="content" style="width: 500px;">
       <div ng-click="hide()">close</div>
       revealing panel content
     </div>
   </div>
   <div nag-revealing-panel data-position="left" data-ut="left" data-id="left">
-    <span class="handle">left handle</span>
-    <div class="content">
+    <span nag-revealing-panel-handle>left handle</span>
+    <div class="content" style="width: 500px;">
       <div ng-click="hide()">close</div>
       revealing panel content
     </div>
   </div>
   <div nag-revealing-panel data-position="right" data-ut="right" data-id="right">
-    <span class="handle">right handle</span>
-    <div class="content">
+    <span nag-revealing-panel-handle>right handle</span>
+    <div class="content" style="width: 500px;">
       <div ng-click="hide()">close</div>
       revealing panel content
     </div>
   </div>
   <div nag-revealing-panel data-position="top" data-ut="top" data-id="top">
-    <span class="handle">top handle</span>
-    <div class="content">
+    <span nag-revealing-panel-handle>top handle</span>
+    <div class="content" style="height: 500px;">
       <div ng-click="hide()">close</div>
       revealing panel content
     </div>
   </div>
   <div nag-revealing-panel data-position="bottom" data-ut="bottom" data-id="bottom">
-    <span class="handle">bottom handle</span>
-    <div class="content">
+    <span nag-revealing-panel-handle>bottom handle</span>
+    <div class="content" style="height: 500px;">
       <div ng-click="hide()">close</div>
       revealing panel content
     </div>
   </div>
   <div nag-revealing-panel data-position="center" data-ut="center" data-id="center">
-    <span class="handle">center handle</span>
-    <div class="content">
+    <span nag-revealing-panel-handle>center handle</span>
+    <div class="content" style="width: 500px;">
       <div ng-click="hide()">close</div>
-      revealing panel content
+      revealing panel content, this one scrolls
+      <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+      <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+      <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+      <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+      <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+      <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+      BOTTOM!!!
     </div>
   </div>
   <div nag-revealing-panel data-close-on-escape="true" data-ut="close-on-escape" data-id="close-on-escape">
-    <span class="handle">close on escape handle</span>
-    <div class="content">
+    <span nag-revealing-panel-handle>close on escape handle</span>
+    <div class="content" style="width: 500px;">
       <div ng-click="hide()">close</div>
       revealing panel content
     </div>
   </div>
   <div nag-revealing-panel data-close-on-escape="false" data-ut="dont-close-on-escape" data-id="dont-close-on-escape">
-    <span class="handle">dont close on escape click handle</span>
-    <div class="content">
+    <span nag-revealing-panel-handle>dont close on escape click handle</span>
+    <div class="content" style="width: 500px;">
       <div ng-click="hide()">close</div>
       revealing panel content
     </div>
   </div>
   <div nag-revealing-panel data-close-on-overlay-click="true" data-ut="close-on-overlay-click" data-id="close-on-overlay-click">
-    <span class="handle">close on overlay click handle</span>
-    <div class="content">
+    <span nag-revealing-panel-handle>close on overlay click handle</span>
+    <div class="content" style="width: 500px;">
       <div ng-click="hide()">close</div>
       revealing panel content
     </div>
   </div>
   <div nag-revealing-panel data-close-on-overlay-click="false" data-ut="dont-close-on-overlay-click" data-id="dont-close-on-overlay-click">
-    <span class="handle">dont close on overlay click handle</span>
-    <div class="content">
+    <span nag-revealing-panel-handle>dont close on overlay click handle</span>
+    <div class="content" style="width: 500px;">
       <div ng-click="hide()">close</div>
       revealing panel content
     </div>
   </div>
   <div nag-revealing-panel data-has-overlay="true" data-ut="has-overlay" data-id="has-overlay">
-    <span class="handle">has overlay handle</span>
-    <div class="content">
+    <span nag-revealing-panel-handle>has overlay handle</span>
+    <div class="content" style="width: 500px;">
       <div ng-click="hide()">close</div>
       revealing panel content
     </div>
   </div>
   <div nag-revealing-panel data-has-overlay="false" data-ut="no-overlay" data-id="no-overlay">
-    <span class="handle">no overlay handle</span>
-    <div class="content">
+    <span nag-revealing-panel-handle>no overlay handle</span>
+    <div class="content" style="width: 500px;">
       <div ng-click="hide()">close</div>
       revealing panel content
     </div>
   </div>
-  <!-- todo: this should have it own template and configuration object -->
   <div nag-revealing-panel data-event="hover" data-position="left" data-ut="hover" data-id="hover">
-    <span class="handle">left handle</span>
-    <div class="content">
+    <span nag-revealing-panel-handle>left handle</span>
+    <div class="content" style="width: 500px;">
       <div ng-click="hide()">close</div>
       revealing panel content
     </div>
   </div>
   <div nag-revealing-panel data-content-template-url="/app/components/home/assets/templates/content-external-template.html" data-ut="content-external-template" data-id="content-external-template">
-    <span class="handle">content external template</span>
-    <div class="content"></div>
+    <span nag-revealing-panel-handle>content external template</span>
+    <div class="content" style="width: 500px;"></div>
   </div>
+  <div nag-revealing-panel-handle="detached" data-ut="detached-handle-before">detached revealing panel handle before panel</div>
+  <div nag-revealing-panel data-id="detached" data-position="center">
+    <div class="content" style="width: 500px;">
+      Detached revealing panel content
+    </div>
+  </div>
+  <div nag-revealing-panel-handle="detached" data-ut="detached-handle-after">detached revealing panel handle after panel</div>
 </div>

@@ -4,7 +4,12 @@ Each change log are assumed to be accompanied by associated unit test and docume
 
 ## master
 
-- change $apply() to $evalAsync()
+- added event to window on resize to updated the max height accordingly for centered positioned panels
+- added config to set initial max height for centered positioned panels
+- removed callback support as they are no longer supported
+- removed hover event support
+- moved revealing panel handle to it's own directive (#2)
+- changed $apply() to $evalAsync()
 
 ## 0.6.0
 

@@ -50,7 +50,7 @@
  * @var $color-chetwode-blue
  */
 /**
- * @var $color-snuff
+ * @var $color-white-lilac
  */
 /**
  * @var $color-olive
@@ -163,9 +163,6 @@
  * @var $border-bdd
  * @var $font-weight-bdd
  * @var $border-radius-bdd
- * @var $z-index-button-bdd
- * @var $z-index-button-is-active-bdd
- * @var $z-index-content-bdd
  * @var $padding-content-bdd
  */
 /**
@@ -175,8 +172,8 @@
  * These are the variables that control the look and feel of the buttons.
  *
  *
- * @var $background-color-button
- * @var $color-button
+ * @var $background-color-button-default
+ * @var $color-button-default
  * @var $border-radius-button
  * @var $font-weight-button
  * @var $is-uppercased-button
@@ -189,6 +186,14 @@
  * @var $font-size-largest-button
  * @var $padding-largest-button
  * @var $opacity-disabled-button
+ * @var $background-color-primary-button
+ * @var $background-color-caution-button
+ * @var $background-color-danger-button
+ * @var $background-color-safe-button
+ * @var $color-primary-button
+ * @var $color-caution-button
+ * @var $color-danger-button
+ * @var $color-safe-button
  */
 /**
  * @section Variables
@@ -210,9 +215,9 @@
  * @var $background-color-header-card
  * @var $top-header-actions-card
  * @var $right-header-actions-card
- * @var $width-header-actions-svg-card
- * @var $height-header-actions-svg-card
- * @var $margin-left-header-actions-svg-card
+ * @var $width-header-actions-icon-card
+ * @var $height-header-actions-icon-card
+ * @var $margin-left-header-actions-icon-card
  */
 /**
  * @section Variables
@@ -221,7 +226,6 @@
  * These are the variable the control the look and feel of the extend text.
  *
  * @var $border-radius-et
- * @var $z-index-et
  * @var $top-new-indicator-et
  * @var $right-new-indicator-et
  */
@@ -231,7 +235,6 @@
  *
  * These are the variable the control the look and feel of the tagging.
  *
- * @var $z-index-container-tagging
  * @var $margin-tag-tagging
  * @var $background-color-tag-tagging
  * @var $border-tag-tagging
@@ -270,6 +273,8 @@
  * @var $margin-label
  * @var $box-shadow-focused-input
  * @var $height-select
+ * @var $background-color-input
+ * @var $width-text-input
  */
 /**
  * @section Variables
@@ -277,18 +282,13 @@
  *
  * These are the elements that control the look and feel of the input element.
  *
- * @var $padding-right-input-text-ie
- * @var $top-tooltip-icon-ie
- * @var $right-tooltip-icon-ie
- * @var $right-select-tooltip-icon-ie
- * @var $top-checkbox-tooltip-icon-ie
- * @var $right-checkbox-tooltip-icon-ie
- * @var $top-radio-tooltip-icon-ie
- * @var $right-radio-tooltip-icon-ie
- * @var $top-checkbox-tooltip-icon-compact-ie
- * @var $top-radio-tooltip-icon-compact-ie
  * @var $box-shadow-invalid-ie
  * @var $box-shadow-valid-ie
+ * @var $padding-ie
+ * @var $position-label-validator-ie
+ * @var $top-label-validitor-ie
+ * @var $margin-label-validator-ie
+ * @var $margin-message-ie
  */
 /**
  * @section Variables
@@ -298,21 +298,12 @@
  *
  * @var $padding-message
  * @var $border-message
+ * @var $border-left-width-message
  * @var $border-radius
- * @var $width-icon-message
- * @var $height-icon-message
- * @var $padding-icon-message
- * @var $border-radius-icon-message
- * @var $top-icon-message
+ * @var $size-icon-message
+ * @var $bottom-icon-message
  * @var $left-icon-message
- */
-/**
- * @section Variables
- * @subsection Notify
- *
- * These are the variables that control the look and feel for notifications.
- *
- * @var $z-index-notify
+ * @var $font-size-header-message
  */
 /**
  * @section Variables
@@ -334,9 +325,10 @@
  *
  * @var $border-radius-center-rp
  * @var $border-rp
- * @var $z-index-content-rp
  * @var $background-color-content-rp
  * @var $padding-content-rp
+ * @var $top-content-center-rp
+ * @var $max-height-content-center-rp
  */
 /**
  * @section Variables
@@ -345,9 +337,15 @@
  * These are the variables that control the look and feel of the site loader.
  *
  * @var $background-color-sl
- * @var $z-index-sl
  * @var $padding-text-sl
  * @var $text-align-text-sl
+ * @var $border-radius-non-blocking-sl
+ * @var $padding-non-blocking-sl
+ * @var $top-non-blocking-sl
+ * @var $right-non-blocking-sl
+ * @var $width-non-blocking-sl
+ * @var $margin-non-blocking-sl
+ * @var $text-align-non-blocking-sl
  */
 /**
  * @section Variables
@@ -357,7 +355,6 @@
  *
  * @var $background-color-so
  * @var $opacity-so
- * @var $z-index-so
  */
 /**
  * @section Variables
@@ -435,438 +432,75 @@
  */
 /**
  * @section Variables
+ * @subsection Notity
  *
- * There are a number of pre-defined global variables that you can use.
+ * These are the variable that control the look and feel of the notify.
+ *
+ * @var $top-default-notify
+ * @var $right-default-notify
  */
 /**
  * @section Variables
- * @subsection Colors
+ * @subsection Z-Indexes
  *
- * These are the only color that should be used within the application.
- */
-/**
- * @var $color-rosewood
- */
-/**
- * @var $color-maroon
- */
-/**
- * @var $color-medium-carmine
- * @var $color-medium-carmine-l50
- * @var $color-medium-carmine-d30
- */
-/**
- * @var $color-dawn-pink
- */
-/**
- * @var $color-crusoe
- */
-/**
- * @var $color-japanese-laurel
- */
-/**
- * @var $color-apple
- * @var $color-apple-l50
- * @var $color-apple-d30
- */
-/**
- * @var $color-panache
- */
-/**
- * @var $color-downriver
- */
-/**
- * @var $color-dark-blue
- */
-/**
- * @var $color-san-marino
- */
-/**
- * @var $color-chetwode-blue
- */
-/**
- * @var $color-snuff
- */
-/**
- * @var $color-olive
- */
-/**
- * @var $color-rio-grande
- */
-/**
- * @var $color-yellow
- */
-/**
- * @var $color-portafino
- */
-/**
- * @var $color-black
- */
-/**
- * @var $color-tundora
- */
-/**
- * @var $color-gray
- */
-/**
- * @var $color-silver-chalice
- */
-/**
- * @var $color-silver
- * @var $color-silver-d20
- */
-/**
- * @var $color-gallery
- */
-/**
- * @var $color-white
- * @var $color-white-d15
- */
-/**
- * @section Variables
- * @subsection Percentage
- *
- * General percentage values.
- *
- * @todo see if we can get rid of these
- *
- * @var $percentage-dark
- * @var $percentage-darker
- * @var $percentage-darkest
- * @var $percentage-light
- * @var $percentage-lighter
- * @var $percentage-lightest
- */
-/**
- * @section Variables
- * @subsection Font
- *
- * Variables that deal with fonts.
- *
- * @var $font-size
- * @var $font-family
- */
-/**
- * @section Variables
- * @subsection Safe Colors
- *
- * These are colors used to indicator something is safe.
- *
- * @var $border-color-safe
- * @var $background-color-safe
- * @var $color-safe
- */
-/**
- * @section Variables
- * @subsection Danger Colors
- *
- * These are colors used to indicator something is dangerous.
- *
- * @var $border-color-danger
- * @var $background-color-danger
- * @var $color-danger
- */
-/**
- * @section Variables
- * @subsection Notice Colors
- *
- * These are colors used to indicator something is a notice.
- *
- * @var $border-color-notice
- * @var $background-color-notice
- * @var $color-notice
- */
-/**
- * @section Variables
- * @subsection Caution Colors
- *
- * These are colors used to indicator something you should be cautious with.
- *
- * @var $border-color-caution
- * @var $background-color-caution
- * @var $color-caution
- */
-/**
- * @section Variables
- * @subsection Button Drop Downs
- *
- * These are the variables that control the looked and feel of the button drop downs.
- *
- *
- * @var $color-bdd
- * @var $background-color-content-bdd
- * @var $border-bdd
- * @var $font-weight-bdd
- * @var $border-radius-bdd
+ * @var $z-index-content-tooltip
+ * @var $z-index-et
+ * @var $z-index-container-tagging
  * @var $z-index-button-bdd
  * @var $z-index-button-is-active-bdd
  * @var $z-index-content-bdd
- * @var $padding-content-bdd
- */
-/**
- * @section Variables
- * @subsection Buttons
- *
- * These are the variables that control the look and feel of the buttons.
- *
- *
- * @var $background-color-button
- * @var $color-button
- * @var $border-radius-button
- * @var $font-weight-button
- * @var $is-uppercased-button
- * @var $font-size-small-button
- * @var $padding-small-button
- * @var $font-size-button
- * @var $padding-button
- * @var $font-size-large-button
- * @var $padding-large-button
- * @var $font-size-largest-button
- * @var $padding-largest-button
- * @var $opacity-disabled-button
- */
-/**
- * @section Variables
- * @subsection Cards
- *
- * These are the variables that control the look and feel of the cards.
- *
- *
- * @var $margin-card
- * @var $border-radius-card
- * @var $border-card
- * @var $background-color-content-card
- * @var $font-weight-header-card
- * @var $padding-header-card
- * @var $border-bottom-header-card
- * @var $color-header-card
- * @var $padding-content-card
- * @var $border-bottom-header-card
- * @var $background-color-header-card
- * @var $top-header-actions-card
- * @var $right-header-actions-card
- * @var $width-header-actions-svg-card
- * @var $height-header-actions-svg-card
- * @var $margin-left-header-actions-svg-card
- */
-/**
- * @section Variables
- * @subsection Extend Text
- *
- * These are the variable the control the look and feel of the extend text.
- *
- * @var $border-radius-et
- * @var $z-index-et
- * @var $top-new-indicator-et
- * @var $right-new-indicator-et
- */
-/**
- * @section Variables
- * @subsection Tagging
- *
- * These are the variable the control the look and feel of the tagging.
- *
- * @var $z-index-container-tagging
- * @var $margin-tag-tagging
- * @var $background-color-tag-tagging
- * @var $border-tag-tagging
- * @var $border-radius-tag-tagging
- * @var $padding-tag-tagging
- * @var $border-color-selected-tag-tagging
- * @var $width-tag-remove-icon-tagging
- * @var $height-tag-remove-icon-tagging
- */
-/**
- * @section Variables
- * @subsection Search Query
- *
- * These are the variable the control the look and feel of the search query.
- * @var $height-input-sq
- * @var $color-icon-empty-sq
- * @var $padding-textarea-sq
- * @var $top-tooltip-sq
- * @var $right-tooltip-sq
- * @var $text-align-tooltip-content-sq
- * @var $border-tooltip-content-sq
- * @var $border-radius-tooltip-content-sq
- */
-/**
- * @section Variables
- * @subsection Forms
- *
- * These are the variables the control the look and feel of form.
- *
- * @var $text-align-compact-label
- * @var $padding-compact-label
- * @var $border-radius-input
- * @var $border-input
- * @var $padding-input
- * @var $opacity-disabled-input
- * @var $margin-label
- * @var $box-shadow-focused-input
- * @var $height-select
- */
-/**
- * @section Variables
- * @subsection Input Element
- *
- * These are the elements that control the look and feel of the input element.
- *
- * @var $padding-right-input-text-ie
- * @var $top-tooltip-icon-ie
- * @var $right-tooltip-icon-ie
- * @var $right-select-tooltip-icon-ie
- * @var $top-checkbox-tooltip-icon-ie
- * @var $right-checkbox-tooltip-icon-ie
- * @var $top-radio-tooltip-icon-ie
- * @var $right-radio-tooltip-icon-ie
- * @var $top-checkbox-tooltip-icon-compact-ie
- * @var $top-radio-tooltip-icon-compact-ie
- * @var $box-shadow-invalid-ie
- * @var $box-shadow-valid-ie
- */
-/**
- * @section Variables
- * @subsection Messages
- *
- * These are the variables that control the look and feel of messages.
- *
- * @var $padding-message
- * @var $border-message
- * @var $border-radius
- * @var $width-icon-message
- * @var $height-icon-message
- * @var $padding-icon-message
- * @var $border-radius-icon-message
- * @var $top-icon-message
- * @var $left-icon-message
- */
-/**
- * @section Variables
- * @subsection Notify
- *
- * These are the variables that control the look and feel for notifications.
- *
- * @var $z-index-notify
- */
-/**
- * @section Variables
- * @subsection Progress Baar
- *
- * These are the variables the control the look and feel for progress bars.
- *
- * @var $border-pb
- * @var $min-width-pb
- * @var $height-pb
- * @var $border-radius-pb
- * @var $background-color-indicator-pb
- */
-/**
- * @section Variables
- * @subsection Revealing Panel
- *
- * These are the variables that control the look and feel of the revealing panel.
- *
- * @var $border-radius-center-rp
- * @var $border-rp
- * @var $z-index-content-rp
- * @var $background-color-content-rp
- * @var $padding-content-rp
- */
-/**
- * @section Variables
- * @subsection Site Loader
- *
- * These are the variables that control the look and feel of the site loader.
- *
- * @var $background-color-sl
- * @var $z-index-sl
- * @var $padding-text-sl
- * @var $text-align-text-sl
- */
-/**
- * @section Variables
- * @subsection Site Overlay
- *
- * These are the variables that control the look and feel of the site overlay.
- *
- * @var $background-color-so
- * @var $opacity-so
  * @var $z-index-so
+ * @var $z-index-notify
+ * @var $z-index-non-blocking-sl
+ * @var $z-index-sl
+ * @var $z-index-content-rp
+ *
+ * In order to better see how element stack, these are all the z-index values grouped in on location (instead of grouped with each component).
  */
 /**
  * @section Variables
- * @subsection SVG Icons
+ * @subsection Tables
  *
- * These are the variables the control the look and feel of SVG icons.
+ * These are the variables that control the look and feel of tables.
  *
- * @var $width-si
- * @var $height-si
+ * @var $margin-table
+ * @var $background-color-head-table
+ * @var $background-color-row-even-table
+ * @var $color-head-table
+ * @var $padding-cell-table
+ * @var $border-cell-table
  */
 /**
  * @section Variables
- * @subsection Tabs
+ * @subsection Loading Indicator
  *
- * These are the variables that control the look and feel for tabs.
+ * These are the variables that control the look and feel of the loading indicator.
  *
- * @var $margin-tabs
- * @var $padding-tabs
- * @var $padding-tab-tabs
- * @var $border-tabs
- * @var $background-color-tab-is-active-tabs
+ * @var $number-of-indicators
+ * @var $size-indicator-loading
+ * @var $margin-indicator-loading
+ * @var $height-loading
+ * @var $width-loading
+ * @var $opacity-indicator-low-loading
+ * @var $opacity-indicator-high-loading
+ * @var $background-color-loading
+ * @var $border-loading
+ * @var $animation-time-indicator
  */
 /**
  * @section Variables
- * @subsection Tooltip
+ * @subsection Feature Indicator
  *
- * These are the variables that control the look and feel for the tabs.
+ * These are the variables that control the look and feel for the feature indicator.
  *
- * @var $padding-content-tooltip
- * @var $background-content-tooltip
- * @var $border-content-tooltip
- */
-/**
- * @section Variables
- * @subsection Tree
- *
- * These are the variables that control the look and feel for trees.
- *
- * @var $padding-tree
- * @var $padding-no-icon-tree
- * @var $width-icon-tree
- * @var $height-icon-tree
- * @var $margin-icon-tree
- */
-/**
- * @section Variables
- * @subsection Headings
- *
- * These are the variables that control the look and feel of headings (h1 ... h6).
- *
- * @var $font-size-h1
- * @var $margin-h1
- * @var $font-size-h2
- * @var $margin-h2
- * @var $font-size-h3
- * @var $margin-h3
- * @var $font-size-h4
- * @var $margin-h4
- * @var $font-size-h5
- * @var $margin-h5
- * @var $font-size-h6
- * @var $margin-h6
- */
-/**
- * @section Variables
- * @subsection Auto Complete
- *
- * These are the variable the control the look and feel of the auto complete.
- *
- * @var $border-options-ac
- * @var $background-color-options-ac
- * @var $max-height-options-ac
- * @var $padding-options-ac-option-et
- * @var $background-color-option-is-focused-ac
+ * @var $size-start-fi This value must equal at least (`$border-size-fi` * 3) + (`$border-content-margin-fi` * 2) otherwise inner shadow will not work properly
+ * @var $size-end-fi
+ * @var $opacity-start-fi
+ * @var $opacity-end-fi
+ * @var $background-color-fi
+ * @var $duration-fade-animation-fi
+ * @var $border-size-fi
+ * @var $border-content-margin-fi
  */
 * {
   -webkit-box-sizing: border-box;
@@ -1126,13 +760,6 @@ input[type="submit"] {
   /* 3 */ }
 
 /**
- * Re-set default cursor for disabled elements.
- */
-button[disabled],
-html input[disabled] {
-  cursor: default; }
-
-/**
  * Remove inner padding and border in Firefox 4+.
  */
 button::-moz-focus-inner,
@@ -1269,23 +896,23 @@ h6 {
   margin: 0 0 1rem 0; }
 
 a {
-  color: #0002ab;
+  color: #0002a8;
   text-decoration: none; }
 
 body {
-  color: #414141; }
+  color: #404040; }
 
 .safe-text {
-  color: #007e01; }
+  color: #007a01; }
 
 .notice-text {
-  color: #0002ab; }
+  color: #0002a8; }
 
 .caution-text {
-  color: #7e7e00; }
+  color: #df8029; }
 
 .danger-text {
-  color: #7a0200; }
+  color: #750200; }
 
 /**
  * @section Animations
@@ -1295,66 +922,47 @@ body {
 /**
  * @section Animations
  * subsection Fade In
- * @animation fadeIn
+ * @animation fade-in
  *
  * Provides a smooth animation of the element's `opacity` from `0` to `1`.
  */
-@-webkit-keyframes fadeIn {
+@-webkit-keyframes fade-in {
   0% {
     opacity: 0; }
-
   100% {
     opacity: 1; } }
-@-moz-keyframes fadeIn {
+@-moz-keyframes fade-in {
   0% {
     opacity: 0; }
-
   100% {
     opacity: 1; } }
-@-o-keyframes fadeIn {
+@keyframes fade-in {
   0% {
     opacity: 0; }
-
-  100% {
-    opacity: 1; } }
-@keyframes fadeIn {
-  0% {
-    opacity: 0; }
-
   100% {
     opacity: 1; } }
 /**
  * @section Animations
  * @subsection Fade Out
- * @animation fadeOut
+ * @animation fade-out
  *
  * Provides a smooth animation of the element's `opacity` from `1` to `0` and also adds `display: none` at the end of the animation.
  */
-@-webkit-keyframes fadeOut {
+@-webkit-keyframes fade-out {
   0% {
     opacity: 1; }
-
   100% {
     opacity: 0;
     display: none; } }
-@-moz-keyframes fadeOut {
+@-moz-keyframes fade-out {
   0% {
     opacity: 1; }
-
   100% {
     opacity: 0;
     display: none; } }
-@-o-keyframes fadeOut {
+@keyframes fade-out {
   0% {
     opacity: 1; }
-
-  100% {
-    opacity: 0;
-    display: none; } }
-@keyframes fadeOut {
-  0% {
-    opacity: 1; }
-
   100% {
     opacity: 0;
     display: none; } }
@@ -1375,7 +983,7 @@ body {
  * ```
  */
 .u-hide {
-  display: none; }
+  display: none !important; }
 
 /**
  * @section Utility
@@ -1410,22 +1018,22 @@ body {
 .u-center,
 .u-center-vertical,
 .u-center-horizontal {
-  margin: auto;
-  position: absolute; }
+  margin: auto !important;
+  position: absolute !important; }
 
 .u-center {
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0; }
+  top: 0 !important;
+  left: 0 !important;
+  bottom: 0 !important;
+  right: 0 !important; }
 
 .u-center-vertical {
-  top: 0;
-  bottom: 0; }
+  top: 0 !important;
+  bottom: 0 !important; }
 
 .u-center-horizontal {
-  left: 0;
-  right: 0; }
+  left: 0 !important;
+  right: 0 !important; }
 
 /**
  * @title Cards
@@ -1450,10 +1058,10 @@ body {
   border: 1px solid gray; }
   .card header {
     border-radius: 3px 3px 0 0;
-    color: #869edb;
+    color: #859ddb;
     font-weight: 600;
     padding: 5px;
-    background-color: #efefef;
+    background-color: #ededed;
     position: relative;
     /**
      * @section Cards
@@ -1503,19 +1111,19 @@ body {
     .card header ~ .content {
       border-radius: 0 0 3px 3px; }
     .card header.border {
-      border-bottom: 1px solid #414141;
+      border-bottom: 1px solid #404040;
       border-radius: 3px 3px 0 0; }
     .card header > .actions {
       cursor: pointer;
       position: absolute;
       top: 5px;
       right: 5px; }
-      .card header > .actions svg {
-        fill: #869edb;
+      .card header > .actions .svg-icon {
+        fill: #859ddb;
         width: 11px;
         height: 11px;
         margin-left: 3px; }
-        .card header > .actions svglast-child {
+        .card header > .actions .svg-iconlast-child {
           margin-left: 0; }
   .card .content {
     border-radius: 3px;
@@ -1565,7 +1173,7 @@ button {
    * A quiet button is a button that looks like regular test until you hover over it (using the `quiet` class).
    *
    * ```html
-   * <button>Default</button>
+   * <button class="quiet">Default</button>
    * ```
    */
   /**
@@ -1583,7 +1191,6 @@ button {
   border: none;
   font-weight: 400;
   cursor: pointer;
-  text-transform: uppercase;
   /**
    * @section Buttons
    * @subsection Sizes
@@ -1659,16 +1266,21 @@ button {
    * ```
    */ }
   button.quiet {
-    color: #414141; }
+    color: #404040;
+    background: none; }
   button:not(.quiet) {
     color: white;
-    background-color: #aaaaaa; }
+    background-color: #a8a8a8; }
   button.border {
-    border: 1px solid #5e5e5e; }
+    border: 1px solid #5c5c5c; }
+  button:hover.quiet {
+    color: white; }
   button:hover:not([disabled]) {
-    background-color: #919191; }
+    background-color: #8f8f8f; }
   button:active:not([disabled]), button.is-active:not([disabled]) {
-    background-color: #919191; }
+    background-color: #8f8f8f; }
+  button:not(.quiet) {
+    text-transform: uppercase; }
   button:focus {
     outline: none; }
   button.small {
@@ -1688,7 +1300,7 @@ button {
      * A quiet button is a button that looks like regular test until you hover over it (using the `quiet` class).
      *
      * ```html
-     * <button>Default</button>
+     * <button class="quiet">Default</button>
      * ```
      */
     /**
@@ -1702,16 +1314,19 @@ button {
      * ```
      */ }
     button.primary.quiet {
-      color: #414141; }
+      color: #404040;
+      background: none; }
     button.primary:not(.quiet) {
       color: white;
-      background-color: #869edb; }
+      background-color: #859ddb; }
     button.primary.border {
-      border: 1px solid #2e4c9a; }
+      border: 1px solid #2e4c99; }
+    button.primary:hover.quiet {
+      color: white; }
     button.primary:hover:not([disabled]) {
-      background-color: #5f7ecf; }
+      background-color: #5e7ecf; }
     button.primary:active:not([disabled]), button.primary.is-active:not([disabled]) {
-      background-color: #5f7ecf; }
+      background-color: #5e7ecf; }
   button.caution {
     /**
      * @section Buttons
@@ -1720,7 +1335,7 @@ button {
      * A quiet button is a button that looks like regular test until you hover over it (using the `quiet` class).
      *
      * ```html
-     * <button>Default</button>
+     * <button class="quiet">Default</button>
      * ```
      */
     /**
@@ -1734,16 +1349,19 @@ button {
      * ```
      */ }
     button.caution.quiet {
-      color: #414141; }
+      color: #404040;
+      background: none; }
     button.caution:not(.quiet) {
       color: white;
-      background-color: #cfcf00; }
+      background-color: #cccc00; }
     button.caution.border {
-      border: 1px solid #363600; }
+      border: 1px solid #333300; }
+    button.caution:hover.quiet {
+      color: white; }
     button.caution:hover:not([disabled]) {
-      background-color: #9c9c00; }
+      background-color: #999900; }
     button.caution:active:not([disabled]), button.caution.is-active:not([disabled]) {
-      background-color: #9c9c00; }
+      background-color: #999900; }
   button.danger {
     /**
      * @section Buttons
@@ -1752,7 +1370,7 @@ button {
      * A quiet button is a button that looks like regular test until you hover over it (using the `quiet` class).
      *
      * ```html
-     * <button>Default</button>
+     * <button class="quiet">Default</button>
      * ```
      */
     /**
@@ -1766,16 +1384,19 @@ button {
      * ```
      */ }
     button.danger.quiet {
-      color: #414141; }
+      color: #404040;
+      background: none; }
     button.danger:not(.quiet) {
       color: white;
-      background-color: #b03a38; }
+      background-color: #ad3a38; }
     button.danger.border {
-      border: 1px solid #3c1413; }
+      border: 1px solid #3a1313; }
+    button.danger:hover.quiet {
+      color: white; }
     button.danger:hover:not([disabled]) {
-      background-color: #892d2c; }
+      background-color: #872d2c; }
     button.danger:active:not([disabled]), button.danger.is-active:not([disabled]) {
-      background-color: #892d2c; }
+      background-color: #872d2c; }
   button.safe {
     /**
      * @section Buttons
@@ -1784,7 +1405,7 @@ button {
      * A quiet button is a button that looks like regular test until you hover over it (using the `quiet` class).
      *
      * ```html
-     * <button>Default</button>
+     * <button class="quiet">Default</button>
      * ```
      */
     /**
@@ -1798,16 +1419,19 @@ button {
      * ```
      */ }
     button.safe.quiet {
-      color: #414141; }
+      color: #404040;
+      background: none; }
     button.safe:not(.quiet) {
       color: white;
-      background-color: #3eb038; }
+      background-color: #3ead38; }
     button.safe.border {
-      border: 1px solid #153c13; }
+      border: 1px solid #153a13; }
+    button.safe:hover.quiet {
+      color: white; }
     button.safe:hover:not([disabled]) {
-      background-color: #30892c; }
+      background-color: #30872c; }
     button.safe:active:not([disabled]), button.safe.is-active:not([disabled]) {
-      background-color: #30892c; }
+      background-color: #30872c; }
   button[disabled] {
     opacity: 0.5;
     cursor: not-allowed; }
@@ -1931,7 +1555,7 @@ button {
     border-radius: 3px 3px 0 0;
     z-index: 502; }
   .button-drop-down.is-active button {
-    background-color: #777777; }
+    background-color: #757575; }
   .button-drop-down.is-active .content {
     display: inherit; }
   .button-drop-down button {
@@ -1940,7 +1564,7 @@ button {
     display: none;
     border-radius: 0 3px 3px 3px;
     padding: 5px;
-    background-color: #777777;
+    background-color: #757575;
     z-index: 501; }
   .button-drop-down:not(.not-positioned) > .content {
     position: absolute;
@@ -2007,7 +1631,7 @@ button {
    * One functionality of extend text is the ability of tagging or selecting multiple values with in a text box.
    *
    * ```html
-   * <div class="extend-text is-active" style="width: 500px;">
+   * <div class="extend-text is-active" style="width: 100%;">
    *   <input class="display" type="text" />
    *   <div class="tag-container" style="top: 4px; left: 4px;">
    *     <ul class="tags">
@@ -2035,7 +1659,7 @@ button {
    * One functionality of extend text is the ability of doing an auto complete.
    *
    * ```html
-   * <div class="extend-text auto-complete" style="width: 500px;">
+   * <div class="extend-text auto-complete" style="width: 100%;">
    *   <div class="container">
    *     <input class="display" type="text" />
    *   </div>
@@ -2043,7 +1667,7 @@ button {
    * ```
    *
    * ```html
-   * <div class="extend-text is-active auto-complete" style="width: 500px;">
+   * <div class="extend-text is-active auto-complete" style="width: 100%;">
    *   <input class="display" type="text" />
    *   <div class="auto-complete-options" style="top: 25px;">
    *     <ul>
@@ -2062,7 +1686,7 @@ button {
    * If you want to allow the use to enter a value that the auto complete does not give you, you can use the `new-indicator` class.
    *
    * ```html
-   * <div class="extend-text auto-complete" style="width: 500px;">
+   * <div class="extend-text auto-complete" style="width: 100%;">
    *   <input class="display" type="text" />
    *   <div class="new-indicator">New</div>
    * </div>
@@ -2072,12 +1696,6 @@ button {
     border-radius: 5px 5px 0 0; }
   .extend-text input {
     width: 100%; }
-  .extend-text ul,
-  .extend-text li {
-    margin: 0;
-    padding: 0; }
-  .extend-text ul {
-    cursor: text; }
   .extend-text li {
     cursor: pointer; }
   .extend-text .tag-container {
@@ -2099,7 +1717,7 @@ button {
      * Add the `selected` class to a tag to change the border color.
      *
      * ```html
-     * <div class="extend-text is-active" style="width: 500px;">
+     * <div class="extend-text is-active" style="width: 100%;">
      *   <input class="display" type="text" />
      *   <div class="tag-container" style="top: 4px; left: 4px;">
      *     <ul class="tags">
@@ -2124,7 +1742,7 @@ button {
      * You can also add an svg icon to indicate you want to remove the tag by adding the svg with the `remove` class.
      *
      * ```html
-     * <div class="extend-text is-active" style="width: 500px;">
+     * <div class="extend-text is-active" style="width: 100%;">
      *   <input class="display" type="text" />
      *   <div class="tag-container" style="top: 4px; left: 4px;">
      *     <ul class="tags">
@@ -2174,7 +1792,7 @@ button {
      * To highlight an auto complete option, add the `is-focused` class to the item.
      *
      * ```html
-     * <div class="extend-text is-active auto-complete" style="width: 500px;">
+     * <div class="extend-text is-active auto-complete" style="width: 100%;">
      *   <input class="display" type="text" />
      *   <div class="auto-complete-options" style="top: 25px;">
      *     <ul>
@@ -2202,7 +1820,7 @@ button {
  * The Auto Complete and Tagging styling can co-exist.
  *
  * ```html
- * <div class="extend-text is-active auto-complete" style="width: 500px;">
+ * <div class="extend-text is-active auto-complete" style="width: 100%;">
  *   <input class="display" type="text" />
  *   <div class="tag-container" style="top: 4px; left: 4px;">
  *     <ul class="tags">
@@ -2240,8 +1858,12 @@ button {
  *
  * ```html
  * <div class="input-element valid">
+ *   <label>
+ *     Valid Extend Text
+ *     <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/check.svg" />
+ *   </label>
  *   <div class="container">
- *     <div class="extend-text is-active auto-complete" style="width: 500px;">
+ *     <div class="extend-text is-active auto-complete" style="width: 100%;">
  *       <input class="display" type="text" />
  *       <div class="tag-container" style="top: 4px; left: 4px;">
  *         <ul class="tags">
@@ -2268,7 +1890,6 @@ button {
  *       </div>
  *     </div>
  *   </div>
- *   <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/check.svg" />
  * </div>
  * ```
  *
@@ -2276,8 +1897,17 @@ button {
  *
  * ```html
  * <div class="input-element invalid">
+ *   <label>
+ *     Invalid Extend Text
+ *     <div class="tooltip">
+ *       <div class="handle">
+ *         <img class="svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/x.svg" />
+ *       </div>
+ *       <div class="content">Invalid</div>
+ *     </div>
+ *   </label>
  *   <div class="container">
- *     <div class="extend-text is-active auto-complete" style="width: 500px;">
+ *     <div class="extend-text is-active auto-complete" style="width: 100%;">
  *       <input class="display" type="text" />
  *       <div class="tag-container" style="top: 4px; left: 4px;">
  *         <ul class="tags">
@@ -2304,416 +1934,435 @@ button {
  *       </div>
  *     </div>
  *   </div>
- *   <div class="tooltip">
- *     <div class="handle">
- *       <img class="svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/x.svg" />
- *     </div>
- *     <div class="content">Invalid</div>
- *   </div>
  * </div>
  * ```
  */
 .invalid .extend-text .auto-complete-options {
-  border-color: #b03a38;
-  box-shadow: 0 0 4px #b03a38; }
+  border-color: #ad3a38;
+  box-shadow: 0 0 4px #ad3a38; }
 
 .valid .extend-text .auto-complete-options {
-  border-color: #3eb038;
-  box-shadow: 0 0 4px #3eb038; }
+  border-color: #3ead38;
+  box-shadow: 0 0 4px #3ead38; }
 
 /**
  * @section Forms
  *
- * These are the styles available for displaying forms.
- *
- * By default, `label` and `input` elements each display on there own line unless the `input` is wrapped within the `label`.
+ * Form are styled by wrapping input elements in an element with the class `input-element`.
  *
  * ```html
  * <form>
- *   <div>
- *     <label for="first-name">First Name</label>
- *     <input id="first-name" type="text" />
+ *   <div class="input-element valid plain">
+ *     <label for="first-name">
+ *       First Name
+ *       <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/check.svg" />
+ *     </label>
+ *     <input id="first-name" name="firstName" type="text" />
  *   </div>
- *   <div>
- *     <label for="last-name">Last Name</label>
- *     <input id="last-name" type="text" />
+ *   <div class="input-element invalid plain">
+ *     <label for="middle-name">
+ *       Middle Name
+ *       <div class="tooltip">
+ *         <div class="handle">
+ *           <img class="svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/x.svg" />
+ *         </div>
+ *         <div class="content">Invalid</div>
+ *       </div>
+ *     </label>
+ *     <input id="middle-name" name="middleName" type="text" />
  *   </div>
- *   <div>
- *     <label for="is-active"><input id="is-active" type="checkbox" /> Is Active</label>
+ *   <div class="input-element invalid">
+ *     <label for="last-name">
+ *       Last Name
+ *       <div class="tooltip">
+ *         <div class="handle">
+ *           <img class="svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/x.svg" />
+ *         </div>
+ *         <div class="content">Invalid</div>
+ *       </div>
+ *     </label>
+ *     <input id="last-name" name="lastName" type="text" />
  *   </div>
- *   <div>
- *     <label for="country">Select Country</label>
+ *   <div class="input-element">
+ *     <label>
+ *       Static Data
+ *     </label>
+ *     <div class="static-data">Sometimes you need to static data that is with-in a form</div>
+ *   </div>
+ *   <div class="input-element invalid">
+ *     <label>
+ *       Inline Checkboxes
+ *       <div class="tooltip">
+ *         <div class="handle">
+ *           <img class="svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/x.svg" />
+ *         </div>
+ *         <div class="content">Invalid</div>
+ *       </div>
+ *     </label>
+ *     <input id="checkbox1" name="checkbox1" type="checkbox" /><label for="checkbox1"> Checkbox 1</label>
+ *     <input id="checkbox2" name="checkbox2" type="checkbox" /><label for="checkbox2"> Checkbox 2</label>
+ *   </div>
+ *   <div class="input-element valid">
+ *     <label for="country">
+ *       Select Country
+ *       <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/check.svg" />
+ *     </label>
  *     <select id="country">
  *       <option>USA</option>
  *       <option>Other</option>
  *     </select>
- *   <div>
- *   <div>
- *     <label>Is Admin</label>
- *     <input id="is-admin-yes" name="isAdmin" type="radio"> <label for="is-admin-yes" />Yes</label>
- *     <input id="is-admin-no" name="isAdmin" type="radio" /> <label for="is-admin-no">No</label>
+ *   </div>
+ *   <div class="input-element valid">
+ *     <label for="bio">
+ *       Bio
+ *       <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/check.svg" />
+ *     </label>
+ *     <textarea></textarea>
+ *   </div>
+ *   <div class="input-element valid">
+ *     <label>
+ *       Inline Radio
+ *       <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/check.svg" />
+ *     </label>
+ *     <input id="radio-yes" name="radio" type="radio" /><label for="radio-yes"> Yes</label>
+ *     <input id="radio-no" name="radio" type="radio" /><label for="radio-no"> No</label>
+ *   </div>
+ *   <div class="input-element invalid">
+ *     <label>
+ *       Stacked Checkboxes
+ *       <div class="tooltip">
+ *         <div class="handle">
+ *           <img class="svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/x.svg" />
+ *         </div>
+ *         <div class="content">Invalid</div>
+ *       </div>
+ *     </label>
+ *     <label for="is-active"><input id="is-active" name="stackedCheckbox1" type="checkbox" /> Checkbox 1</label>
+ *     <label for="is-active"><input id="is-active" name="stackedCheckbox2" type="checkbox" /> Checkbox 2</label>
+ *   </div>
+ *   <div class="input-element valid">
+ *     <label>
+ *       Stacked Radio Boxes
+ *       <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/check.svg" />
+ *     </label>
+ *     <label for="stacked-radio-yes" /><input id="stacked-radio-yes" name="stackedRadio" type="radio"> Yes</label>
+ *     <label for="stacked-radio-no"><input id="stacked-radio-no" name="stackedRadio" type="radio" /> No</label>
  *   </div>
  * </form>
  * ```
  */
-form {
-  /**
-   * @section Forms
-   * @subsection Compact
-   *
-   * If you wish labels and input to be displayed on the same line regardless of how the dom is structure, add the `compact` class to the form.
-   *
-   * ```html
-   * <form class="compact">
-   *   <div>
-   *     <label for="first-name">First Name</label>
-   *     <input id="first-name" type="text" />
-   *   </div>
-   *   <div>
-   *     <label for="last-name">Last Name</label>
-   *     <input id="last-name" type="text" />
-   *   </div>
-   *   <div>
-   *     <input id="is-active" type="checkbox" /> <label for="is-active">Is Active</label>
-   *   </div>
-   *   <div>
-   *     <label for="country">Select Country</label>
-   *     <select id="country">
-   *       <option>USA</option>
-   *       <option>Other</option>
-   *     </select>
-   *   <div>
-   *   <div>
-   *     <label>Is Admin</label>
-   *     <input id="is-admin-yes" name="isAdmin" type="radio"> <label for="is-admin-yes" />Yes</label>
-   *     <input id="is-admin-no" name="isAdmin" type="radio" /> <label for="is-admin-no">No</label>
-   *   </div>
-   * </form>
-   * ```
-   */ }
-  form.compact label,
-  form.compact .label {
-    display: inline-block;
-    text-align: right;
-    padding-right: 0 10px 0 0; }
-  form .input-text {
-    display: inline-block; }
-
-label,
-.label {
+label {
   display: block;
   margin: 0 0 3px 0; }
+
+input,
+select {
+  background-color: white; }
+
+/**
+ * @section Forms
+ * @subsection Radio/Checkboxes
+ *
+ * When the label wraps the input for a radio/checkbox, the input will stack (unless in an inline input element).
+ *
+ * ```html
+ *   <div class="input-element">
+ *     <label>Stacked Radio Boxes</label>
+ *     <label for="stacked-radio-yes" /><input id="stacked-radio-yes" name="stackedRadio" type="radio"> Yes</label>
+ *     <label for="stacked-radio-no"><input id="stacked-radio-no" name="stackedRadio" type="radio" /> No</label>
+ *   </div>
+ * ```
+ *
+ * If you want them to stack but don't want to use in inline input element, just have the label after in the input without wrapping it.
+ *
+ * ```html
+ * <form>
+ *   <div class="input-element">
+ *     <label>Inline Checkboxes</label>
+ *     <input id="checkbox1" name="checkbox1" type="checkbox" /><label for="checkbox1"> Checkbox 1</label>
+ *     <input id="checkbox2" name="checkbox2" type="checkbox" /><label for="checkbox2"> Checkbox 2</label>
+ *   </div>
+ * </form>
+ * ```
+ */
+input[type="radio"],
+input[type="checkbox"] {
+  margin: 3px; }
 
 input ~ label {
   display: inline-block; }
 
-input:not([type]),
-input[type="text"],
+input:not([type="checkbox"]):not([type="radio"]),
 textarea {
   border-radius: 5px;
   border: 1px solid #595959;
   padding: 4px;
-  outline: none; }
-  input:not([type]):focus,
-  input[type="text"]:focus,
+  outline: none;
+  width: 100%; }
+  input:not([type="checkbox"]):not([type="radio"]):focus,
   textarea:focus {
     border-color: #091850;
     box-shadow: 0 0 4px #091850; }
 
-input[disabled] {
-  opacity: 0.7; }
-
-select {
-  background: transparent;
-  border: 0;
-  border-radius: 5px;
-  height: 25px;
-  outline: none;
-  border: 1px solid #595959; }
-
 /**
- * @section Input Element
+ * @section Forms
+ * @subsection Disabled
  *
- * There is a special structure that can be used by added the `input-element` class to a containing element to support custom data validation styling.
- *
- * ```html
- * <form>
- *   <div>
- *     <label for="first-name">First Name</label>
- *     <div class="input-element valid">
- *       <input id="first-name" type="text" />
- *       <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/check.svg" />
- *     </div>
- *   </div>
- *   <div>
- *     <label for="last-name">Last Name</label>
- *     <div class="input-element valid">
- *       <input id="last-name" type="text" />
- *       <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/check.svg" />
- *     </div>
- *   </div>
- *   <div>
- *     <div class="input-element invalid">
- *       <input id="is-active" type="checkbox" /> <label for="is-active">Is Active</label>
- *       <div class="tooltip">
- *         <div class="handle"><img class="svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/x.svg" /></div>
- *         <div class="content">Error message</div>
- *       </div>
- *     </div>
- *   </div>
- *   <div>
- *     <label for="country">Select Country</label>
- *     <div class="input-element invalid" data-input-type="select">
- *       <select id="country" style="width: 100px;">
- *         <option>USA</option>
- *         <option>Other</option>
- *       </select>
- *       <div class="tooltip">
- *         <div class="handle"><img class="svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/x.svg" /></div>
- *         <div class="content">Error message</div>
- *       </div>
- *     </div>
- *   <div>
- *   <div>
- *     <label for="bio">Bio</label>
- *     <div class="input-element invalid">
- *       <textarea id="bio">Bio</textarea>
- *       <div class="tooltip">
- *         <div class="handle"><img class="svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/x.svg" /></div>
- *         <div class="content">Error message</div>
- *       </div>
- *     </div>
- *   <div>
- *   <div>
- *     <label>Is Admin</label>
- *     <div class="input-element valid">
- *       <input id="is-admin-yes" name="isAdmin" type="radio"> <label for="is-admin-yes" />Yes</label>
- *       <input id="is-admin-no" name="isAdmin" type="radio" /> <label for="is-admin-no">No</label>
- *       <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/check.svg" />
- *     </div>
- *   </div>
- * </form>
- * ```
- *
- * Compact form.
+ * All form element will have an opacity if they are disabled.
  *
  * ```html
- * <form class="compact">
- *   <div>
- *     <label for="first-name">First Name</label>
- *     <div class="input-element valid">
- *       <input id="first-name" type="text" />
- *       <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/check.svg" />
- *     </div>
+ * <form >
+ *   <div class="input-element">
+ *     <label for="first-name">
+ *       First Name
+ *     </label>
+ *     <input id="first-name" name="firstName" type="text" value="First Name" disabled />
  *   </div>
- *   <div>
- *     <label for="last-name">Last Name</label>
- *     <div class="input-element valid">
- *       <input id="last-name" type="text" />
- *       <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/check.svg" />
- *     </div>
+ *   <div class="input-element ">
+ *     <label for="country">
+ *       Select Country
+ *     </label>
+ *     <select id="country" disabled>
+ *       <option>USA</option>
+ *       <option>Other</option>
+ *     </select>
  *   </div>
- *   <div>
- *     <div class="input-element invalid">
- *       <input id="is-active" type="checkbox" /> <label for="is-active">Is Active</label>
- *       <div class="tooltip">
- *         <div class="handle"><img class="svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/x.svg" /></div>
- *         <div class="content">Error message</div>
- *       </div>
- *     </div>
+ *   <div class="input-element">
+ *     <label for="bio">
+ *       Bio
+ *     </label>
+ *     <textarea disabled>Bio</textarea>
  *   </div>
- *   <div>
- *     <label for="country">Select Country</label>
- *     <div class="input-element invalid" data-input-type="select">
- *       <select id="country" style="width: 100px;">
- *         <option>USA</option>
- *         <option>Other</option>
- *       </select>
- *       <div class="tooltip">
- *         <div class="handle"><img class="svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/x.svg" /></div>
- *         <div class="content">Error message</div>
- *       </div>
- *     </div>
- *   <div>
- *   <div>
- *     <label for="bio">Bio</label>
- *     <div class="input-element invalid">
- *       <textarea id="bio">Bio</textarea>
- *       <div class="tooltip">
- *         <div class="handle"><img class="svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/x.svg" /></div>
- *         <div class="content">Error message</div>
- *       </div>
- *     </div>
- *   <div>
- *   <div>
- *     <label>Is Admin</label>
- *     <div class="input-element valid">
- *       <input id="is-admin-yes" name="isAdmin" type="radio"> <label for="is-admin-yes" />Yes</label>
- *       <input id="is-admin-no" name="isAdmin" type="radio" /> <label for="is-admin-no">No</label>
- *       <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/check.svg" />
- *     </div>
+ *   <div class="input-element">
+ *     <label>
+ *       Inline Radio
+ *     </label>
+ *     <input id="radio-yes" name="radio" type="radio" disabled /><label for="radio-yes"> Yes</label>
+ *     <input id="radio-no" name="radio" type="radio" disabled /><label for="radio-no"> No</label>
+ *   </div>
+ *   <div class="input-element ">
+ *     <label>
+ *       Stacked Checkboxes
+ *     </label>
+ *     <label for="is-active"><input id="is-active" name="stackedCheckbox1" type="checkbox" disabled /> Checkbox 1</label>
+ *     <label for="is-active"><input id="is-active" name="stackedCheckbox2" type="checkbox" disabled /> Checkbox 2</label>
  *   </div>
  * </form>
  * ```
  */
+input[disabled],
+select[disabled],
+textarea[disabled] {
+  opacity: 0.7;
+  cursor: not-allowed; }
+
+select {
+  border: 0;
+  border-radius: 5px;
+  height: 25px;
+  outline: none;
+  border: 1px solid #595959;
+  width: 100%; }
+
+select.inline,
+input:not([type="checkbox"]):not([type="radio"]).inline {
+  width: auto;
+  margin: 0 3px; }
+
 .input-element {
-  display: inline-block;
   position: relative;
+  padding: 5px 0;
   /**
-   * @section Input Element
-   * @subsection Plain
+   * @section Forms
+   * @subsection Inline Elements
    *
-   * By default, the `input` element will be colored based on validation however if you wish to keep in `input` itself plain, add the `plain` class to the
-   * container element.
+   * If you wish for a label and input of an `input-element` to be inline, add the `inline` class to the `input-element` element.
    *
-   * ```html
-   * <label>Label:</label>
-   * <div class="input-element invalid plain">
-   *   <input type="text" />
-   *   <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/x.svg" />
-   * </div>
-   * <label>Label:</label>
-   * <div class="input-element valid plain">
-   *   <input type="text" />
-   *   <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/check.svg" />
-   * </div>
-   * ```
-   */
-  /**
-   * @section Input Element
-   * @subsection Icon
-   *
-   * You you provide an icon for the input element that is SVG, you just need to add the `icon` class to the element.
-   *
-   * ```html
-   * <label>Label:</label>
-   * <div class="input-element valid">
-   *   <input type="text" />
-   *   <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/check.svg" />
-   * </div>
-   * ```
-   */
-  /**
-   * @section Input Element
-   * @subsection Tooltip
-   *
-   * You you provide tooltip to for example, display an error message if the validation failed.
-   *
-   * ```html
-   * <label>Label:</label>
-   * <div class="input-element invalid">
-   *   <input type="text" />
-   *   <div class="tooltip">
-   *     <div class="handle"><img class="svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/x.svg" /></div>
-   *     <div class="content">Error message</div>
+   * <div class="message notice">
+   *   <div class="content">
+   *     When doing an inline form, if you wish for the label to line up, you must give them a specific width.
    *   </div>
    * </div>
+   *
+   * <style type="text/css">
+   * #inline-form .input-element > label:first-child {
+   *   width: 200px;
+   * }
+   * </style>
+   * ```html
+   * <form id="inline-form">
+   *   <div class="input-element inline valid">
+   *     <label for="first-name">
+   *       First Name
+   *       <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/check.svg" />
+   *     </label>
+   *     <input id="first-name" name="firstName" type="text" />
+   *   </div>
+   *   <div class="input-element inline">
+   *     <label for="last-name">
+   *       Last Name
+   *       <div class="tooltip u-hide">
+   *         <div class="handle">
+   *           <img class="svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/x.svg" />
+   *         </div>
+   *         <div class="content">Invalid</div>
+   *       </div>
+   *     </label>
+   *     <input id="last-name" name="lastName" type="text" />
+   *   </div>
+   *   <div class="input-element inline">
+   *     <label>
+   *       Static Data
+   *     </label>
+   *     <div class="static-data">Sometimes you need to static data that is with-in a form</div>
+   *   </div>
+   *   <div class="input-element inline valid">
+   *     <label>
+   *       Inline Checkboxes
+   *       <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/check.svg" />
+   *     </label>
+   *     <input id="checkbox1" name="checkbox1" type="checkbox" /><label for="checkbox1"> Checkbox 1</label>
+   *     <input id="checkbox2" name="checkbox2" type="checkbox" /><label for="checkbox2"> Checkbox 2</label>
+   *   </div>
+   *   <div class="input-element inline valid">
+   *     <label for="country">
+   *       Select Country
+   *       <div class="tooltip">
+   *         <div class="handle">
+   *           <img class="svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/x.svg" />
+   *         </div>
+   *         <div class="content">Invalid</div>
+   *       </div>
+   *     </label>
+   *     <select id="country">
+   *       <option>USA</option>
+   *       <option>Other</option>
+   *     </select>
+   *   </div>
+   *   <div class="input-element inline">
+   *     <label for="bio">
+   *       Bio
+   *       <div class="tooltip u-hide">
+   *         <div class="handle">
+   *           <img class="svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/x.svg" />
+   *         </div>
+   *         <div class="content">Invalid</div>
+   *       </div>
+   *     </label>
+   *     <textarea></textarea>
+   *   </div>
+   *   <div class="input-element inline invalid">
+   *     <label>
+   *       Inline Radio
+   *       <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/check.svg" />
+   *     </label>
+   *     <input id="radio-yes" name="radio" type="radio" /><label for="radio-yes"> Yes</label>
+   *     <input id="radio-no" name="radio" type="radio" /><label for="radio-no"> No</label>
+   *   </div>
+   *   <div class="input-element inline valid">
+   *     <label>
+   *       Stacked Checkboxes
+   *       <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/check.svg" />
+   *     </label>
+   *     <label for="is-active"><input id="is-active" name="stackedCheckbox1" type="checkbox" /> Checkbox 1</label>
+   *     <label for="is-active"><input id="is-active" name="stackedCheckbox2" type="checkbox" /> Checkbox 2</label>
+   *   </div>
+   *   <div class="input-element inline invalid">
+   *     <label>
+   *       Stacked Radio Boxes
+   *       <div class="tooltip">
+   *         <div class="handle">
+   *           <img class="svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/x.svg" />
+   *         </div>
+   *         <div class="content">Invalid</div>
+   *       </div>
+   *     </label>
+   *     <label for="stacked-radio-yes" /><input id="stacked-radio-yes" name="stackedRadio" type="radio"> Yes</label>
+   *     <label for="stacked-radio-no"><input id="stacked-radio-no" name="stackedRadio" type="radio" /> No</label>
+   *   </div>
+   * </form>
    * ```
    */
   /**
-   * @section Input Element
-   * @subsection Messages
+   * @section Forms
+   * @subsection Message
    *
-   * You can display messages within an input element if you don't want to display them as a tooltip
+   * You can use a message to display errors.
    *
    * ```html
-   * <label>Label:</label>
-   * <div class="input-element invalid">
-   *   <input type="text" />
-   *   <div class="message danger">
-   *     <div>This field is required</div>
-   *     <div>this field is too short</div>
+   *   <div class="input-element">
+   *     <label>Stacked Radio Boxes</label>
+   *     <label for="stacked-radio-yes" /><input id="stacked-radio-yes" name="stackedRadio" type="radio"> Yes</label>
+   *     <label for="stacked-radio-no"><input id="stacked-radio-no" name="stackedRadio" type="radio" /> No</label>
+   *     <div class="message danger">
+   *       <header>Required</header>
+   *     </div>
    *   </div>
-   * </div>
    * ```
    */ }
-  .input-element input:not([type]),
-  .input-element input[type="text"],
-  .input-element textarea {
-    padding-right: 25px; }
+  .input-element .static-data {
+    display: block;
+    width: 100%; }
+  .input-element.inline label {
+    text-align: right;
+    padding: 0 10px 0 0; }
+  .input-element.inline label,
+  .input-element.inline input,
+  .input-element.inline select,
+  .input-element.inline textarea,
+  .input-element.inline .static-data {
+    display: inline-block; }
   .input-element .tooltip,
   .input-element .icon {
-    position: absolute;
-    top: 4px;
-    right: 5px; }
-  .input-element select ~ .tooltip,
-  .input-element select ~ .icon {
-    right: 22px; }
-  .input-element input[type="checkbox"] ~ .tooltip,
-  .input-element input[type="checkbox"] ~ .icon {
-    top: 0px;
-    right: -21px; }
-  .input-element input[type="radio"] ~ .tooltip,
-  .input-element input[type="radio"] ~ .icon {
-    top: -2px;
-    right: -21px; }
+    position: relative;
+    top: 3px;
+    display: inline-block;
+    margin-left: 0 0 0 5px; }
   .input-element .message {
     display: block;
-    margin-top: 10px; }
-  .input-element:not(.plain) {
-    /**
-     * @section Input Element
-     * @subsection Invalid
-     *
-     * If an input element is invalid, you need to add the `invalid` class on the container.
-     *
-     * ```html
-     * <label>Label:</label>
-     * <div class="input-element invalid">
-     *   <input type="text" />
-     *   <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/x.svg" />
-     * </div>
-     * ```
-     */
-    /**
-     * @section Input Element
-     * @subsection Valid
-     *
-     * If an input element is valid, you need to add the `valid` class on the container.
-     *
-     * ```html
-     * <label>Label:</label>
-     * <div class="input-element valid">
-     *   <input type="text" />
-     *   <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/check.svg" />
-     * </div>
-     * ```
-     */ }
-    .input-element:not(.plain).invalid input,
-    .input-element:not(.plain).invalid textarea,
-    .input-element:not(.plain).invalid select {
-      border-color: #b03a38;
-      background-color: #f9eeee; }
-      .input-element:not(.plain).invalid input:focus,
-      .input-element:not(.plain).invalid textarea:focus,
-      .input-element:not(.plain).invalid select:focus {
-        box-shadow: 0 0 4px #b03a38; }
-    .input-element:not(.plain).valid input,
-    .input-element:not(.plain).valid textarea,
-    .input-element:not(.plain).valid select {
-      border-color: #3eb038;
-      background-color: #eef9ee; }
-      .input-element:not(.plain).valid input:focus,
-      .input-element:not(.plain).valid textarea:focus,
-      .input-element:not(.plain).valid select:focus {
-        box-shadow: 0 0 4px #3eb038; }
+    margin-top: 10px 0 0 0; }
   .input-element.invalid .icon,
   .input-element.invalid .tooltip .handle {
-    fill: #7a0200; }
+    fill: #750200; }
   .input-element.invalid .tooltip .content {
-    color: #7a0200; }
+    color: #750200; }
   .input-element.valid .icon,
   .input-element.valid .tooltip .handle {
-    fill: #007e01; }
+    fill: #007a01; }
   .input-element.valid .tooltip .content {
-    color: #007e01; }
+    color: #007a01; }
 
-form.compact .input-element input[type="checkbox"] ~ .tooltip,
-form.compact .input-element input[type="checkbox"] ~ .icon {
-  top: 0px; }
-form.compact .input-element input[type="radio"] ~ .tooltip,
-form.compact .input-element input[type="radio"] ~ .icon {
-  top: -2px; }
+.invalid:not(.plain) input:not([type="checkbox"]):not([type="radio"]),
+.invalid:not(.plain) textarea,
+.invalid:not(.plain) select {
+  border-color: #ad3a38;
+  background-color: #fdf7f7; }
+  .invalid:not(.plain) input:not([type="checkbox"]):not([type="radio"]):focus,
+  .invalid:not(.plain) textarea:focus,
+  .invalid:not(.plain) select:focus {
+    box-shadow: 0 0 4px #ad3a38; }
+
+.valid:not(.plain) input:not([type="checkbox"]):not([type="radio"]),
+.valid:not(.plain) textarea,
+.valid:not(.plain) select {
+  border-color: #3ead38;
+  background-color: #f8fdf7; }
+  .valid:not(.plain) input:not([type="checkbox"]):not([type="radio"]):focus,
+  .valid:not(.plain) textarea:focus,
+  .valid:not(.plain) select:focus {
+    box-shadow: 0 0 4px #3ead38; }
+
+.invalid .icon,
+.invalid .tooltip .handle {
+  fill: #750200; }
+.invalid .tooltip .content {
+  color: #750200; }
+
+.valid .icon,
+.valid .tooltip .handle {
+  fill: #007a01; }
+.valid .tooltip .content {
+  color: #007a01; }
 
 /**
  * @section Notify
@@ -2723,8 +2372,9 @@ form.compact .input-element input[type="radio"] ~ .icon {
  * ```html
  * <a id="default" class="show-notify" href>click me to show default notify (auto removed in 2 seconds)</a>
  * <div class="notify message notice" data-id="default">
- *   <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/info.svg" />
- *   <div class="content">This is a notification message.</div>
+ *   <header class="with-icon">
+ *     <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/info.svg" />This is a notification message.
+ *   </header>
  * </div>
  * ```
  *
@@ -2733,8 +2383,9 @@ form.compact .input-element input[type="radio"] ~ .icon {
  * ```html
  * <a id="positioned" class="show-notify" href>click me to show positioned notify (auto removed in 2 seconds)</a>
  * <div class="notify message danger" data-id="positioned" style="top: 300px; left: 150px; right: auto;">
- *   <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/x.svg" />
- *   <div class="content">This is a positioned notification message.</div>
+ *   <header class="with-icon">
+ *     <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/x.svg" />This is a positioned notification message.
+ *   </header>
  * </div>
  * ```
  *
@@ -2857,30 +2508,50 @@ form.compact .input-element input[type="radio"] ~ .icon {
  *
  * ```html
  * <ul>
- *   <li><a class="show-revealing-panel" href data-position="center">click me to show revealing panel center (auto removed in 2 seconds)</a></li>
- *   <li><a class="show-revealing-panel" href data-position="left">click me to show revealing panel left (auto removed in 2 seconds)</a></li>
- *   <li><a class="show-revealing-panel" href data-position="top">click me to show revealing panel top (auto removed in 2 seconds)</a></li>
- *   <li><a class="show-revealing-panel" href data-position="right">click me to show revealing panel right (auto removed in 2 seconds)</a></li>
- *   <li><a class="show-revealing-panel" href data-position="bottom">click me to show revealing panel bottom (auto removed in 2 seconds)</a></li>
+ *   <li><a class="show-revealing-panel" href data-position="center">click me to show revealing panel center (hit escape to close)</a></li>
+ *   <li><a class="show-revealing-panel" href data-position="left">click me to show revealing panel left (hit escape to close)</a></li>
+ *   <li><a class="show-revealing-panel" href data-position="top">click me to show revealing panel top (hit escape to close)</a></li>
+ *   <li><a class="show-revealing-panel" href data-position="right">click me to show revealing panel right (hit escape to close)</a></li>
+ *   <li><a class="show-revealing-panel" href data-position="bottom">click me to show revealing panel bottom (hit escape to close)</a></li>
  * </ul>
  * <div class="revealing-panel">
  *   <div class="site-overlay"></div>
- *   <div class="content">Revealing panel content</div>
+ *   <div class="content">
+ *     Revealing panel content.  The content auto set the over to scroll, just ahead and just try...
+ *     <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+ *     <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+ *     <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+ *     BOTTOM!!!
+ *   </div>
  * </div>
  * ```
  *
  * <script type="text/javascript">
  * $(document).ready(function() {
+ *   var cssSizes = {
+ *     center: {width: '500px'},
+ *     left: {width: '500px'},
+ *     right: {width: '500px'},
+ *     top: {height: '500px'},
+ *     bottom: {height: '500px'}
+ *   };
+ *   var clearCss = {width: '', height: ''};
+ *
  *   $('.show-revealing-panel').click(function(event) {
  *     event.preventDefault();
  *     var position = $(this).data('position');
+ *
+ *     $('.revealing-panel .content').css(cssSizes[position]);
  *     $('.revealing-panel').addClass('is-active').addClass(position);
  *     $('.site-overlay').addClass('is-active');
+ *   });
  *
- *     setTimeout(function() {
- *       $('.revealing-panel').removeClass('is-active').removeClass(position);
+ *   $(document).keydown(function(event) {
+ *     if(event.which === 27) {
+ *       $('.revealing-panel').removeClass('is-active').css(clearCss).removeClass('center left top right bottom');
+ *       $('.revealing-panel .content').css(clearCss);
  *       $('.site-overlay').removeClass('is-active');
- *     }, 2000);
+ *     }
  *   });
  * });
  * </script>
@@ -2916,42 +2587,34 @@ form.compact .input-element input[type="radio"] ~ .icon {
   .revealing-panel.absolute > .content {
     position: absolute; }
   .revealing-panel.center > .content {
-    top: 50%;
-    left: 50%;
+    top: 50px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    max-height: 500px;
     border-radius: 5px;
     display: none;
     border: 1px solid black;
-    height: 500px;
-    width: 500px;
-    margin: calc(-500px / 2) 0 0 calc(-500px / 2);
     /*&.reveal,
     &.reveal-add,
     &.reveal-remove {
       display: inline-block;
     }*/ }
-  .revealing-panel.left.is-active > .content {
-    width: 500px; }
   .revealing-panel.left > .content {
     top: 0;
     left: 0;
     bottom: 0;
     width: 0; }
-  .revealing-panel.right.is-active > .content {
-    width: 500px; }
   .revealing-panel.right > .content {
     top: 0;
     right: 0;
     bottom: 0;
     width: 0; }
-  .revealing-panel.top.is-active > .content {
-    height: 500px; }
   .revealing-panel.top > .content {
     top: 0;
     left: 0;
     right: 0;
     height: 0; }
-  .revealing-panel.bottom.is-active > .content {
-    height: 500px; }
   .revealing-panel.bottom > .content {
     bottom: 0;
     left: 0;
@@ -2961,7 +2624,7 @@ form.compact .input-element input[type="radio"] ~ .icon {
     position: fixed;
     z-index: 11000;
     background-color: white;
-    overflow: hidden;
+    overflow: auto;
     display: none;
     padding: 8px; }
   .revealing-panel.is-active > .content {
@@ -3070,18 +2733,18 @@ form.compact .input-element input[type="radio"] ~ .icon {
 .tabs .tab {
   padding: 3px;
   display: inline-block;
-  border: 1px solid #414141;
+  border: 1px solid #404040;
   border-bottom: none;
   cursor: pointer; }
 
 .tabs .tab.is-active {
-  background-color: #c1c1c1; }
+  background-color: #bfbfbf; }
 
 .tabs .tab-content {
   display: none; }
 
 .tabs .tab-content.is-active {
-  border-top: 1px solid #414141;
+  border-top: 1px solid #404040;
   display: block; }
 
 /**
@@ -3129,7 +2792,7 @@ form.compact .input-element input[type="radio"] ~ .icon {
     border: 1px solid black;
     border-radius: 3px;
     display: none;
-    z-index: 1; }
+    z-index: 3; }
 
 /**
  * @section Tree
@@ -3225,26 +2888,73 @@ form.compact .input-element input[type="radio"] ~ .icon {
  * Messages are elements to display a piece of information that stands out from most of the other content.
  *
  * ```html
- * <div class="message">This is a generic message.</div>
+ * <div class="message">
+ *   <header>This is a generic message</header>
+ * </div>
  * ```
  */
 .message {
   display: inline-block;
   padding: 5px;
   border: 1px solid gray;
+  border-left-width: 5px;
   border-radius: 3px;
   /**
    * @section Messages
-   * @subsection Icon
+   * @subsection Header
    *
-   * Messages element can also have an icon.
+   * Messages can have a header.
    *
    * If you are using an icon, then you must wrap you message content in an element with the `content` class.
    *
    * ```html
    * <div class="message">
-   *   <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/check.svg" />
-   *   <div class="content">This is a generic message.</div>
+   *   <header>
+   *     This is a generic message.
+   *   </header>
+   * </div>
+   * ```
+   *
+   * Header can also have an icon my adding the `with-icon` class to the header.
+   *
+   * ```html
+   * <div class="message safe">
+   *   <header class="with-icon">
+   *     <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/check.svg" />This is a safe message.
+   *   </header>
+   * </div>
+   * ```
+   */
+  /**
+   * @section Messages
+   * @subsection Content
+   *
+   * In addition to a header, you can also have content for the message.
+   *
+   * ```html
+   * <div class="message safe">
+   *   <header class="with-icon">
+   *     <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/check.svg" />This is a safe message.
+   *   </header>
+   *   <div class="content">
+   *     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vitae quam imperdiet, mollis lorem in, volutpat diam. Donec fermentum, tortor non consequat posuere, turpis mauris fringilla lorem, vel laoreet magna nulla sed lectus. Sed ac ullamcorper orci. Praesent pulvinar ex.<p>
+   *     <ul>
+   *       <li>Item 1</li>
+   *       <li>Item 2</li>
+   *       <li>Item 3</li>
+   *       <li>Item 4</li>
+   *     </ul>
+   *   </div>
+   * </div>
+   * ```
+   *
+   * You can also have content with a header.
+   *
+   * ```html
+   * <div class="message safe">
+   *   <div class="content">
+   *     Some simple message.
+   *   </div>
    * </div>
    * ```
    */
@@ -3258,8 +2968,9 @@ form.compact .input-element input[type="radio"] ~ .icon {
    *
    * ```html
    * <div class="message safe">
-   *   <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/check.svg" />
-   *   <div class="content">This is a generic message.</div>
+   *   <header class="with-icon">
+   *     <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/check.svg" />This is a safe message.
+   *   </header>
    * </div>
    * ```
    *
@@ -3267,8 +2978,9 @@ form.compact .input-element input[type="radio"] ~ .icon {
    *
    * ```html
    * <div class="message notice">
-   *   <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/info.svg" />
-   *   <div class="content">This is a generic message.</div>
+   *   <header class="with-icon">
+   *     <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/info.svg" />This is a notice message.
+   *   </header>
    * </div>
    * ```
    *
@@ -3276,8 +2988,9 @@ form.compact .input-element input[type="radio"] ~ .icon {
    *
    * ```html
    * <div class="message caution">
-   *   <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/question-mark.svg" />
-   *   <div class="content">This is a generic message.</div>
+   *   <header class="with-icon">
+   *     <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/question-mark.svg" />This is a caution message.
+   *   </header>
    * </div>
    * ```
    *
@@ -3285,51 +2998,49 @@ form.compact .input-element input[type="radio"] ~ .icon {
    *
    * ```html
    * <div class="message danger">
-   *   <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/x.svg" />
-   *   <div class="content">This is a generic message.</div>
+   *   <header class="with-icon">
+   *     <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/x.svg" />This is a danger message.
+   *   </header>
    * </div>
    * ```
    */ }
   .message:not(.notify) {
     position: relative; }
+  .message header {
+    position: relative;
+    font-size: 1.8rem; }
+    .message header.with-icon {
+      padding-left: 2.05rem; }
   .message .icon {
     position: absolute;
-    top: 2px;
-    left: 2px;
-    width: 21px;
-    height: 21px;
-    padding: 3px;
-    border-radius: 10.5px; }
-  .message .content {
-    margin-left: 21px; }
+    bottom: 3px;
+    left: 0;
+    width: 1.6rem;
+    height: 1.6rem; }
   .message.safe {
-    background-color: #eef9ee;
-    color: #007e01;
-    fill: #eef9ee;
-    border-color: #3eb038; }
-    .message.safe .icon {
-      background-color: #3eb038; }
+    background-color: #f8fdf7;
+    fill: #3ead38;
+    border-color: #3ead38; }
+    .message.safe header {
+      color: #007a01; }
   .message.notice {
-    background-color: #e5e5f4;
-    color: #0002ab;
-    fill: #e5e5f4;
+    background-color: #f8f8fc;
+    fill: #091850;
     border-color: #091850; }
-    .message.notice .icon {
-      background-color: #091850; }
+    .message.notice header {
+      color: #0002a8; }
   .message.caution {
-    background-color: #f1f2ab;
-    color: #7e7e00;
-    fill: #f1f2ab;
-    border-color: #7e7e00; }
-    .message.caution .icon {
-      background-color: #7e7e00; }
+    background-color: #e7b384;
+    fill: #df8029;
+    border-color: #df8029; }
+    .message.caution header {
+      color: #df8029; }
   .message.danger {
-    background-color: #f9eeee;
-    color: #7a0200;
-    fill: #f9eeee;
-    border-color: #b03a38; }
-    .message.danger .icon {
-      background-color: #b03a38; }
+    background-color: #fdf7f7;
+    fill: #ad3a38;
+    border-color: #ad3a38; }
+    .message.danger header {
+      color: #750200; }
 
 /**
  * @section Progress Bars
@@ -3409,21 +3120,21 @@ form.compact .input-element input[type="radio"] ~ .icon {
     height: 16px;
     background-color: #e6e6e6; }
   .progress-bar.safe {
-    border-color: #3eb038; }
+    border-color: #3ead38; }
     .progress-bar.safe .indicator {
-      background-color: #eef9ee; }
+      background-color: #ade4aa; }
   .progress-bar.notice {
     border-color: #091850; }
     .progress-bar.notice .indicator {
-      background-color: #e5e5f4; }
+      background-color: #b0b0dd; }
   .progress-bar.caution {
-    border-color: #7e7e00; }
+    border-color: #df8029; }
     .progress-bar.caution .indicator {
-      background-color: #f1f2ab; }
+      background-color: #e7b384; }
   .progress-bar.danger {
-    border-color: #b03a38; }
+    border-color: #ad3a38; }
     .progress-bar.danger .indicator {
-      background-color: #f9eeee; }
+      background-color: #d78584; }
 
 /**
  * @section Search Query
@@ -3520,18 +3231,8 @@ form.compact .input-element input[type="radio"] ~ .icon {
      * </div>
      * ```
      */ }
-    .parsing .inputs.invalid textarea {
-      border-color: #b03a38;
-      background-color: #f9eeee; }
-    .parsing .inputs.invalid .svg-icon {
-      fill: #7a0200; }
-    .parsing .inputs.valid textarea {
-      border-color: #3eb038;
-      background-color: #eef9ee; }
-    .parsing .inputs.valid .svg-icon {
-      fill: #007e01; }
     .parsing .inputs.empty .svg-icon {
-      fill: #414141; }
+      fill: #404040; }
   .parsing .input-container {
     position: relative;
     display: inline-block; }
@@ -3552,3 +3253,321 @@ form.compact .input-element input[type="radio"] ~ .icon {
     position: absolute;
     top: 4px;
     right: 5px; }
+
+/**
+ * @section Tables
+ *
+ * These are how tables look by default
+ *
+ * ```html
+ * <table>
+ *   <thead>
+ *     <tr>
+ *       <th>Column 1</th>
+ *       <th>Column 2</th>
+ *       <th>Column 3</th>
+ *       <th>Column 4</th>
+ *       <th>Column 5</th>
+ *     </tr>
+ *   </thead>
+ *   <tbody>
+ *     <tr>
+ *       <td>Row 1-1</td>
+ *       <td>Row 1-2</td>
+ *       <td>Row 1-3</td>
+ *       <td>Row 1-4</td>
+ *       <td>Row 1-5</td>
+ *     </tr>
+ *     <tr>
+ *       <td>Row 2-1</td>
+ *       <td>Row 2-2</td>
+ *       <td>Row 2-3</td>
+ *       <td>Row 2-4</td>
+ *       <td>Row 2-5</td>
+ *     </tr>
+ *     <tr>
+ *       <td>Row 3-1</td>
+ *       <td>Row 3-2</td>
+ *       <td>Row 3-3</td>
+ *       <td>Row 3-4</td>
+ *       <td>Row 3-5</td>
+ *     </tr>
+ *     <tr>
+ *       <td>Row 4-1</td>
+ *       <td>Row 4-2</td>
+ *       <td>Row 4-3</td>
+ *       <td>Row 4-4</td>
+ *       <td>Row 4-5</td>
+ *     </tr>
+ *     <tr>
+ *       <td>Row 5-1</td>
+ *       <td>Row 5-2</td>
+ *       <td>Row 5-3</td>
+ *       <td>Row 5-4</td>
+ *       <td>Row 5-5</td>
+ *     </tr>
+ *   </tbody>
+ * </table>
+ * ```
+ */
+table {
+  margin: 5px; }
+
+thead tr {
+  background-color: #779ddb;
+  color: white; }
+
+tbody tr:nth-child(even) {
+  background-color: #e1e9f6; }
+
+th,
+td {
+  padding: 5px;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black; }
+  th:first-child,
+  td:first-child {
+    border-left: 1px solid black; }
+  th:last-child,
+  td:last-child {
+    border-right: 1px solid black; }
+
+/**
+ * @section Loading Indicator
+ *
+ * This is a element you can use to indicator to the user the something is loading
+ *
+ * ```html
+ * <div style="background-color: gray; width: 500px; height: 300px; position: relative;">
+ *   <div class="loading u-center">
+ *     <span class="indicator u-center-vertical"></span>
+ *     <span class="indicator u-center-vertical"></span>
+ *     <span class="indicator u-center-vertical"></span>
+ *     <span class="indicator u-center-vertical"></span>
+ *   </div>
+ * </div>
+ * ```
+ */
+.loading {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 14px;
+  width: 56px;
+  background-color: #404040;
+  border: 1px solid black;
+  border-radius: 7px; }
+  .loading .indicator {
+    opacity: 0; }
+  .loading .indicator:nth-child(1) {
+    left: 3px;
+    -webkit-animation: loading-fade 0.8s linear 0s infinite;
+    -moz-animation: loading-fade 0.8s linear 0s infinite;
+    animation: loading-fade 0.8s linear 0s infinite;
+    height: 8px;
+    width: 8px;
+    border-radius: 4px;
+    background-color: white; }
+  .loading .indicator:nth-child(2) {
+    left: 17px;
+    -webkit-animation: loading-fade 0.8s linear 0.1s infinite;
+    -moz-animation: loading-fade 0.8s linear 0.1s infinite;
+    animation: loading-fade 0.8s linear 0.1s infinite;
+    height: 8px;
+    width: 8px;
+    border-radius: 4px;
+    background-color: white; }
+  .loading .indicator:nth-child(3) {
+    left: 31px;
+    -webkit-animation: loading-fade 0.8s linear 0.2s infinite;
+    -moz-animation: loading-fade 0.8s linear 0.2s infinite;
+    animation: loading-fade 0.8s linear 0.2s infinite;
+    height: 8px;
+    width: 8px;
+    border-radius: 4px;
+    background-color: white; }
+  .loading .indicator:nth-child(4) {
+    left: 45px;
+    -webkit-animation: loading-fade 0.8s linear 0.3s infinite;
+    -moz-animation: loading-fade 0.8s linear 0.3s infinite;
+    animation: loading-fade 0.8s linear 0.3s infinite;
+    height: 8px;
+    width: 8px;
+    border-radius: 4px;
+    background-color: white; }
+
+@-webkit-keyframes loading-fade {
+  0% {
+    opacity: 0; }
+  1% {
+    opacity: 0.8; }
+  100% {
+    opacity: 0; } }
+@-moz-keyframes loading-fade {
+  0% {
+    opacity: 0; }
+  1% {
+    opacity: 0.8; }
+  100% {
+    opacity: 0; } }
+@keyframes loading-fade {
+  0% {
+    opacity: 0; }
+  1% {
+    opacity: 0.8; }
+  100% {
+    opacity: 0; } }
+/**
+ * @section Feature Indicator
+ *
+ * This is an element that should be used to indicate features to new users or new features to all users.
+ *
+ * ```html
+ * <div style="width: 24px; height: 24px; border: 1px solid black;">
+ *   <div class="revealing-panel center">
+ *     <div class="feature-indicator handle">
+ *       <span class="indicator"></span>
+ *     </div>
+ *     <div class="site-overlay"></div>
+ *     <div class="content">
+ *       This would be the description of the new feature.  Press escape to close.
+ *     </div>
+ *   </div>
+ * </div>
+ * ```
+ *
+ * <script type="text/javascript">
+ * $(document).ready(function() {
+ *   $('.revealing-panel').click(function(event) {
+ *     event.preventDefault();
+ *     $('.revealing-panel').addClass('is-active');
+ *     $('.site-overlay').addClass('is-active');
+ *     $('.feature-indicator').remove();
+ *   });
+ *
+ *   $(document).keydown(function(event) {
+ *     if(event.which === 27) {
+ *       $('.revealing-panel').removeClass('is-active').remove();
+ *     }
+ *   });
+ * });
+ * </script>
+ */
+.feature-indicator {
+  -webkit-animation: feature-indicator-fade 0.75s linear 0s infinite;
+  -moz-animation: feature-indicator-fade 0.75s linear 0s infinite;
+  animation: feature-indicator-fade 0.75s linear 0s infinite;
+  display: inline-block;
+  position: absolute;
+  border: 2px solid gray;
+  cursor: pointer;
+  border-radius: 50%; }
+  .feature-indicator .indicator {
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-animation: indicator-fade 0.75s linear 0s infinite;
+    -moz-animation: indicator-fade 0.75s linear 0s infinite;
+    animation: indicator-fade 0.75s linear 0s infinite;
+    display: inline-block;
+    border-radius: 50%;
+    background-color: gray; }
+
+@-webkit-keyframes indicator-fade {
+  0% {
+    opacity: 0.3;
+    width: 2px;
+    height: 2px;
+    margin: 2px; }
+  50% {
+    opacity: 0.1;
+    width: 14px;
+    height: 14px;
+    margin: 2px; }
+  100% {
+    opacity: 0.3;
+    width: 2px;
+    height: 2px;
+    margin: 2px; } }
+@-moz-keyframes indicator-fade {
+  0% {
+    opacity: 0.3;
+    width: 2px;
+    height: 2px;
+    margin: 2px; }
+  50% {
+    opacity: 0.1;
+    width: 14px;
+    height: 14px;
+    margin: 2px; }
+  100% {
+    opacity: 0.3;
+    width: 2px;
+    height: 2px;
+    margin: 2px; } }
+@keyframes indicator-fade {
+  0% {
+    opacity: 0.3;
+    width: 2px;
+    height: 2px;
+    margin: 2px; }
+  50% {
+    opacity: 0.1;
+    width: 14px;
+    height: 14px;
+    margin: 2px; }
+  100% {
+    opacity: 0.3;
+    width: 2px;
+    height: 2px;
+    margin: 2px; } }
+@-webkit-keyframes feature-indicator-fade {
+  0% {
+    width: 10px;
+    height: 10px;
+    margin: 6px;
+    border-color: rgba(128, 128, 128, 0.3); }
+  50% {
+    width: 22px;
+    height: 22px;
+    margin: 0;
+    border-color: rgba(128, 128, 128, 0.1); }
+  100% {
+    width: 10px;
+    height: 10px;
+    margin: 6px;
+    border-color: rgba(128, 128, 128, 0.3); } }
+@-moz-keyframes feature-indicator-fade {
+  0% {
+    width: 10px;
+    height: 10px;
+    margin: 6px;
+    border-color: rgba(128, 128, 128, 0.3); }
+  50% {
+    width: 22px;
+    height: 22px;
+    margin: 0;
+    border-color: rgba(128, 128, 128, 0.1); }
+  100% {
+    width: 10px;
+    height: 10px;
+    margin: 6px;
+    border-color: rgba(128, 128, 128, 0.3); } }
+@keyframes feature-indicator-fade {
+  0% {
+    width: 10px;
+    height: 10px;
+    margin: 6px;
+    border-color: rgba(128, 128, 128, 0.3); }
+  50% {
+    width: 22px;
+    height: 22px;
+    margin: 0;
+    border-color: rgba(128, 128, 128, 0.1); }
+  100% {
+    width: 10px;
+    height: 10px;
+    margin: 6px;
+    border-color: rgba(128, 128, 128, 0.3); } }
+
+/*# sourceMappingURL=main.css.map */
