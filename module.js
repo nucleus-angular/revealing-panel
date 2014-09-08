@@ -18,7 +18,7 @@ angular.module('nag.revealingPanel', [
 
     //cache indexes so we don't have to search on the resize event
     _.forEach(document.styleSheets, function(styleSheet, sIndex) {
-      if(!styleSheetIndex && styleSheetIndex !== 0) {
+      if(!styleSheetIndex && styleSheetIndex !== 0 && styleSheet) {
         _.forEach(styleSheet.rules, function(rule, rIndex) {
           if(!ruleIndex && ruleIndex !== 0 && rule.selectorText === '.revealing-panel.center > .content') {
             styleSheetIndex = sIndex;
@@ -28,13 +28,16 @@ angular.module('nag.revealingPanel', [
       }
     });
 
-    var initialMaxHeight = Math.max(document.documentElement.clientHeight, window.innerHeight || 0) - (spacing * 2);
-    document.styleSheets[styleSheetIndex].rules[ruleIndex].style.maxHeight = initialMaxHeight + 'px';
+    //if we can't file the rule, then we can't dynamically update it
+    if(styleSheetIndex !== undefined && ruleIndex !== undefined) {
+      var initialMaxHeight = Math.max(document.documentElement.clientHeight, window.innerHeight || 0) - (spacing * 2);
+      document.styleSheets[styleSheetIndex].rules[ruleIndex].style.maxHeight = initialMaxHeight + 'px';
 
-    $(window).bind('resize.revealingPanel', function() {
-      var newMaxHeight = Math.max(document.documentElement.clientHeight, window.innerHeight || 0) - (spacing * 2);
-      document.styleSheets[styleSheetIndex].rules[ruleIndex].style.maxHeight = newMaxHeight + 'px';
-    });
+      $(window).bind('resize.revealingPanel', function() {
+        var newMaxHeight = Math.max(document.documentElement.clientHeight, window.innerHeight || 0) - (spacing * 2);
+        document.styleSheets[styleSheetIndex].rules[ruleIndex].style.maxHeight = newMaxHeight + 'px';
+      });
+    }
   }
 ])
 .run([

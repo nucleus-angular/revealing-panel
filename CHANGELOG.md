@@ -4,6 +4,7 @@ Each change log are assumed to be accompanied by associated unit test and docume
 
 ## master
 
+- added some checks to prevent errors if revealing panel style not found for modification
 - added event to window on resize to updated the max height accordingly for centered positioned panels
 - added config to set initial max height for centered positioned panels
 - removed callback support as they are no longer supported
